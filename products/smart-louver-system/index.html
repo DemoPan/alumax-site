@@ -13,7 +13,20 @@
     main > :first-child { margin-top: 0 !important; }
     main > :last-child { margin-bottom: 0 !important; }
   }
-  ::-webkit-scrollbar { display: none; }
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.45) transparent;
+  }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.65); border: 0; }
+  ::-webkit-scrollbar-corner { background: transparent; }
   body.admin-bar > header { top: 32px; }
   @media screen and (max-width: 782px) {
     body.admin-bar > header { top: 46px; }
@@ -905,7 +918,7 @@ tailwind.config = {
             action="/wp-admin/admin-post.php">
             <input type="hidden" name="action" value="alumax_inquiry">
             <input type="hidden" name="inquiry_page" value="Smart Louver System">
-            <input type="hidden" id="alumax_inquiry_nonce" name="alumax_inquiry_nonce" value="e7e8489ad5" /><input type="hidden" name="_wp_http_referer" value="/products/smart-louver-system/" />            <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+            <input type="hidden" id="alumax_inquiry_nonce" name="alumax_inquiry_nonce" value="519e079c79" /><input type="hidden" name="_wp_http_referer" value="/products/smart-louver-system/" />            <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
               <input type="text" name="inquiry_website" tabindex="-1" autocomplete="off">
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
