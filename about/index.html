@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en-US">
 
 <head>
   <meta charset="UTF-8">
@@ -185,7 +185,58 @@ tailwind.config = {
 <meta name="generator" content="WordPress 7.1.3" />
 <link rel="canonical" href="/about/" />
 <link rel='shortlink' href='/?p=51' />
-</head>
+<script>(() => {
+	if (window.parent === window) return;
+	let hostOrigin;
+	let apple;
+	let navigationId;
+	const reportAdminBar = () => {
+		if (!hostOrigin) return;
+		window.parent.postMessage({ type: 'studio:preview:admin-bar-state', visible: (() => {
+	if (document.contentType && document.contentType !== 'text/html') return null;
+	const bar = document.getElementById('wpadminbar');
+	if (!bar) return false;
+	if (bar.checkVisibility) return bar.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true });
+	const style = getComputedStyle(bar);
+	return bar.getClientRects().length > 0 && style.visibility === 'visible' && style.opacity !== '0';
+})(), url: location.href, title: document.title, navigationId }, hostOrigin);
+	};
+	window.addEventListener('pagehide', () => {
+		if (hostOrigin) window.parent.postMessage({ type: 'studio:preview:navigating', navigationId }, hostOrigin);
+	});
+	window.addEventListener('pageshow', reportAdminBar);
+	window.addEventListener('hashchange', reportAdminBar);
+	window.addEventListener('popstate', reportAdminBar);
+	window.addEventListener('message', (event) => {
+		if (event.source !== window.parent) return;
+		if (event.data?.type === 'studio:preview:read-admin-bar') {
+			if (event.origin === hostOrigin) reportAdminBar();
+			return;
+		}
+		if (event.data?.type === 'studio:preview:login') {
+			if (!hostOrigin || event.origin !== hostOrigin || location.pathname.split('/').some((part) => ['wp-admin', 'wp-login.php', 'wp-signup.php', 'wp-activate.php'].includes(part))) return;
+			const login = new URL('/studio-auto-login', location.href);
+			login.searchParams.set('redirect_to', location.href);
+			location.assign(login.toString());
+			return;
+		}
+		if (event.data?.type !== 'studio:preview-shortcuts:init') return;
+		if ((!event.origin.startsWith('http://') && !event.origin.startsWith('https://')) || typeof event.data.apple !== 'boolean') return;
+		hostOrigin = event.origin;
+		apple = event.data.apple;
+		navigationId = event.data.navigationId;
+		reportAdminBar();
+	});
+	document.addEventListener('keydown', (event) => {
+		if (!hostOrigin || location.pathname.split('/').includes('wp-admin')) return;
+		const primary = apple ? event.metaKey && !event.ctrlKey : event.ctrlKey && !event.metaKey;
+		if (!primary || event.altKey || event.shiftKey || event.repeat || event.isComposing || event.getModifierState('AltGraph')) return;
+		if (event.code !== 'KeyK') return;
+		event.preventDefault();
+		event.stopPropagation();
+		window.parent.postMessage({ type: 'studio:preview-shortcuts:command-palette' }, hostOrigin);
+	}, true);
+})();</script></head>
 
 <body class="wp-singular page-template-default page page-id-51 wp-theme-alumax bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-white">
     <header
@@ -271,7 +322,7 @@ tailwind.config = {
       <div class="absolute inset-0 opacity-20 pointer-events-none mix-blend-screen"
         style="background-image: radial-gradient(#d6e4f9 1px, transparent 1px); background-size: 32px 32px;"></div>
       <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin relative z-10 space-y-8">
-        <!-- BREADCRUMB（Hero 内嵌深色版） -->
+        <!-- BREADCRUMB (Hero Embedded Dark) -->
 <nav aria-label="Breadcrumb"
   class="flex items-center flex-wrap gap-2 font-label text-xs tracking-wider text-primary-fixed-dim uppercase">
   <a class="hover:text-secondary-fixed transition-colors flex items-center gap-1"
@@ -628,7 +679,7 @@ tailwind.config = {
   <footer class="w-full bg-[#0d1b2a] text-white border-t border-white/10">
     <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-lg">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-xl">
-        <!-- Col 1 & 2: Brand, Summary & Social Media Icons（品牌信息在「站点设置」编辑） -->
+        <!-- Col 1 & 2: Brand, Summary & Social Media Icons -->
         <div class="lg:col-span-2 space-y-space-md">
           <div class="flex items-center gap-3">
                                     <svg class="h-8 w-8 text-secondary-fixed" fill="currentColor" viewBox="0 0 40 40">
@@ -664,12 +715,12 @@ tailwind.config = {
                             BMS IoT Ready            </span>
                       </div>
         </div>
-        <!-- Col 3: Products（自动读取最新 10 个产品） -->
+        <!-- Col 3: Products -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Products</div>
           <ul class="space-y-space-xs">
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
-                href="/products/smart-louver-system/">Smart Louver System</a></li>
+                href="/products/smart-motorized-aluminum-louvers/">Smart Motorized Aluminum Louvers</a></li>
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
                 href="/products/solid-aluminum-cladding-panels/">Solid Aluminum Cladding Panels</a></li>
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
@@ -690,7 +741,7 @@ tailwind.config = {
                 href="/products/aluminum-composite-panels/">Aluminum Composite Panels</a></li>
                       </ul>
         </div>
-        <!-- Col 4: Projects（自动读取最新 10 个项目） -->
+        <!-- Col 4: Projects -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Projects</div>
           <ul class="space-y-space-xs">
@@ -702,7 +753,7 @@ tailwind.config = {
                 href="/projects/kafd-tower-3-financial-center/">KAFD Tower 3 Financial Center</a></li>
                       </ul>
         </div>
-        <!-- Col 5: Global Headquarters（信息在「站点设置」编辑） -->
+        <!-- Col 5: Global Headquarters -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Global Headquarters</div>
           <p class="font-body-sm text-body-sm text-slate-300">Engineering Consultation &amp; Overseas Export Support Center.</p>
@@ -740,7 +791,7 @@ tailwind.config = {
     </div>
   </footer>
 
-  <!-- WhatsApp 悬浮按钮：号码/预填消息/二维码在「联系我们设置」配置，号码留空则不显示 -->
+  <!-- WhatsApp floating button -->
     <div class="fixed bottom-6 right-6 z-50 group">
         <div class="absolute bottom-full right-0 mb-3 w-44 p-3 bg-white shadow-2xl border border-outline-variant/30 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 pointer-events-none">
       <img src="/wp-content/uploads/2026/11/whatsapp_qrcode.png" alt="WhatsApp QR Code" class="w-full h-auto">

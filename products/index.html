@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en-US">
 
 <head>
   <meta charset="UTF-8">
@@ -34,7 +34,7 @@
 </style>
     <link rel='dns-prefetch' href='//cdn.tailwindcss.com' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel="alternate" type="application/rss+xml" title="alumax &raquo; ProductsFeed" href="/products/feed/" />
+<link rel="alternate" type="application/rss+xml" title="alumax &raquo; Products Feed" href="/products/feed/" />
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -187,7 +187,58 @@ tailwind.config = {
 </script>
 <link rel="https://api.w.org/" href="http://localhost:8881/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 7.1.3" />
-</head>
+<script>(() => {
+	if (window.parent === window) return;
+	let hostOrigin;
+	let apple;
+	let navigationId;
+	const reportAdminBar = () => {
+		if (!hostOrigin) return;
+		window.parent.postMessage({ type: 'studio:preview:admin-bar-state', visible: (() => {
+	if (document.contentType && document.contentType !== 'text/html') return null;
+	const bar = document.getElementById('wpadminbar');
+	if (!bar) return false;
+	if (bar.checkVisibility) return bar.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true });
+	const style = getComputedStyle(bar);
+	return bar.getClientRects().length > 0 && style.visibility === 'visible' && style.opacity !== '0';
+})(), url: location.href, title: document.title, navigationId }, hostOrigin);
+	};
+	window.addEventListener('pagehide', () => {
+		if (hostOrigin) window.parent.postMessage({ type: 'studio:preview:navigating', navigationId }, hostOrigin);
+	});
+	window.addEventListener('pageshow', reportAdminBar);
+	window.addEventListener('hashchange', reportAdminBar);
+	window.addEventListener('popstate', reportAdminBar);
+	window.addEventListener('message', (event) => {
+		if (event.source !== window.parent) return;
+		if (event.data?.type === 'studio:preview:read-admin-bar') {
+			if (event.origin === hostOrigin) reportAdminBar();
+			return;
+		}
+		if (event.data?.type === 'studio:preview:login') {
+			if (!hostOrigin || event.origin !== hostOrigin || location.pathname.split('/').some((part) => ['wp-admin', 'wp-login.php', 'wp-signup.php', 'wp-activate.php'].includes(part))) return;
+			const login = new URL('/studio-auto-login', location.href);
+			login.searchParams.set('redirect_to', location.href);
+			location.assign(login.toString());
+			return;
+		}
+		if (event.data?.type !== 'studio:preview-shortcuts:init') return;
+		if ((!event.origin.startsWith('http://') && !event.origin.startsWith('https://')) || typeof event.data.apple !== 'boolean') return;
+		hostOrigin = event.origin;
+		apple = event.data.apple;
+		navigationId = event.data.navigationId;
+		reportAdminBar();
+	});
+	document.addEventListener('keydown', (event) => {
+		if (!hostOrigin || location.pathname.split('/').includes('wp-admin')) return;
+		const primary = apple ? event.metaKey && !event.ctrlKey : event.ctrlKey && !event.metaKey;
+		if (!primary || event.altKey || event.shiftKey || event.repeat || event.isComposing || event.getModifierState('AltGraph')) return;
+		if (event.code !== 'KeyK') return;
+		event.preventDefault();
+		event.stopPropagation();
+		window.parent.postMessage({ type: 'studio:preview-shortcuts:command-palette' }, hostOrigin);
+	}, true);
+})();</script></head>
 
 <body class="archive post-type-archive post-type-archive-product wp-theme-alumax bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-white">
     <header
@@ -326,7 +377,7 @@ tailwind.config = {
         <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin space-y-4">
           <!-- Top Tier: Primary Application Tabs & View Switcher -->
           <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
-            <!-- Application Filter Tabs（动态读取产品分类，后台 产品 → 产品分类 配置） -->
+            <!-- Application Filter Tabs，  →   -->
             <div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0" id="filter-tabs">
                             <button
                 class="filter-tab active px-4 py-2 rounded font-label-md text-label-md uppercase tracking-wider bg-primary text-on-primary whitespace-nowrap transition-colors"
@@ -354,7 +405,7 @@ tailwind.config = {
                 Solar &amp; Shading (2)
               </button>
                           </div>
-            <!-- View Mode Switch（服务端切换：?view=list 时所有卡片用主推卡样式） -->
+            <!-- View Mode Switch: ?view=list  -->
                         <div class="flex items-center gap-3">
               <div class="flex items-center bg-surface-container-high p-1 rounded">
                 <a class="p-1.5 rounded bg-surface-container-lowest text-primary shadow-sm"
@@ -444,15 +495,15 @@ tailwind.config = {
           </div>
           <!-- PRODUCT CARDS GRID -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-container">
-                                                        <!-- FEATURED CARD: Smart Louver System -->
+                                                        <!-- FEATURED CARD: Smart Motorized Aluminum Louvers -->
 <div
   class="product-item product-card--featured lg:col-span-2 bg-[#0d1b2a] text-white rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col justify-between group"
   data-categories="solar-shading"
-  data-specs="actuator motor 24v dc ip66 linear | rotation arc 0° to 105° infinite | blade span up to 6000mm unstayed | wind tolerance category 5 typhoon |">
+  data-specs="actuator motor 24v dc ip66 linear | rotation arc 0° to 105° infinite | blade span up to 6000mm unstayed | wind tolerance category 5 typhoon | surface finish powder coating / pvdf / anodizing | customization blade scale, ral colors |">
   <div class="grid grid-cols-1 md:grid-cols-12 h-full">
     <!-- Image half -->
     <div class="md:col-span-6 relative min-h-[300px] md:min-h-full bg-black overflow-hidden">
-      <img alt="Smart Louver System"
+      <img alt="Smart Motorized Aluminum Louvers"
         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
         src="/wp-content/uploads/2026/10/system-parameter-configurator.jpg">
       <div
@@ -474,9 +525,9 @@ tailwind.config = {
             System</span>
         </div>
                 <h3 class="font-display-lg text-headline-lg uppercase font-bold text-white leading-tight">
-          Smart Louver System        </h3>
+          Smart Motorized Aluminum Louvers        </h3>
         <div class="font-body-sm text-body-sm text-slate-300">
-          Motorized linear actuator system offering 0°-90° continuous rotation. Integrates directly into central BACnet, Modbus, and KNX BMS networks for dynamic solar deflection and glare management. Class 12 typhoon-tested extruded 6063-T6 aerofoil blades.        </div>
+          Our motorized aluminum louvers provide effective solar shading, reduce cooling loads, and enhance the building facade with a clean, modern appearance. Engineered for high wind load performance and seamless architectural integration.        </div>
                 <!-- Quick spec indicators -->
         <div class="grid grid-cols-2 gap-3 font-label-sm text-label-sm">
                     <div class="bg-white/5 p-2.5 rounded border border-white/10">
@@ -495,12 +546,20 @@ tailwind.config = {
             <span class="text-slate-400 block text-[11px] uppercase">Wind Tolerance:</span>
             <span class="text-white font-semibold">Category 5 Typhoon</span>
           </div>
+                    <div class="bg-white/5 p-2.5 rounded border border-white/10">
+            <span class="text-slate-400 block text-[11px] uppercase">Surface Finish:</span>
+            <span class="text-white font-semibold">Powder Coating / PVDF / Anodizing</span>
+          </div>
+                    <div class="bg-white/5 p-2.5 rounded border border-white/10">
+            <span class="text-slate-400 block text-[11px] uppercase">Customization:</span>
+            <span class="text-white font-semibold">Blade scale, RAL colors</span>
+          </div>
                   </div>
               </div>
       <!-- Buttons -->
       <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-white/10">
         <a class="flex-1 inline-flex items-center justify-center gap-2 h-11 bg-secondary hover:bg-secondary/90 text-on-secondary font-headline-sm text-label-sm uppercase tracking-wider rounded transition-colors font-semibold"
-          href="/products/smart-louver-system/">
+          href="/products/smart-motorized-aluminum-louvers/">
           <span class="material-symbols-outlined text-sm">tune</span>
           <span class="">View Product</span>
         </a>
@@ -1005,7 +1064,7 @@ tailwind.config = {
           </div>
         </div>
       </section>
-      <!-- 6. 公共询价表单（与产品详情页一致，提交进后台「询价记录」） -->
+      <!-- 6. ， -->
       <section class="w-full bg-primary-container text-on-primary py-16 lg:py-24" id="rfq-section">
   <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -1048,7 +1107,7 @@ tailwind.config = {
             action="/wp-admin/admin-post.php">
             <input type="hidden" name="action" value="alumax_inquiry">
             <input type="hidden" name="inquiry_page" value="Hexagonal Honeycomb Composite Panel">
-            <input type="hidden" id="alumax_inquiry_nonce" name="alumax_inquiry_nonce" value="9af21e9381" /><input type="hidden" name="_wp_http_referer" value="/products/" />            <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+            <input type="hidden" id="alumax_inquiry_nonce" name="alumax_inquiry_nonce" value="7865817c90" /><input type="hidden" name="_wp_http_referer" value="/products/" />            <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
               <input type="text" name="inquiry_website" tabindex="-1" autocomplete="off">
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1105,7 +1164,7 @@ tailwind.config = {
           </form>
           <script>
             (function () {
-              // 提交结果横幅只显示一次：清掉 URL 里的 inquiry 参数，刷新后不再出现
+              // Submission result banner shown once: clear query param from URL so refresh does not trigger
               if (window.history.replaceState) {
                 var url = new URL(window.location.href);
                 if (url.searchParams.has('inquiry')) {
@@ -1122,7 +1181,7 @@ tailwind.config = {
                 });
               }
 
-              // 必填校验 + fetch 提交：静态导出后直接调 WP REST 接口，数据仍入后台「询价记录」
+              // Required validation + fetch submit: directly call WP REST endpoint after static export
               var form = document.getElementById('alumax-inquiry-form');
               if (!form) { return; }
               var api = "http:\/\/localhost:8881\/wp-json\/alumax\/v1\/inquiry";
@@ -1235,7 +1294,7 @@ tailwind.config = {
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         // 1. DYNAMIC CATEGORY & PARAMETER FILTERING
-        // 分类标签联动后台「产品分类」；参数下拉与产品的「产品特性」字段文本匹配
+        // 「」；「」
         const tabs = document.querySelectorAll('.filter-tab');
         const products = document.querySelectorAll('.product-item');
         const productCount = document.getElementById('product-count');
@@ -1454,7 +1513,7 @@ tailwind.config = {
   <footer class="w-full bg-[#0d1b2a] text-white border-t border-white/10">
     <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-lg">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-xl">
-        <!-- Col 1 & 2: Brand, Summary & Social Media Icons（品牌信息在「站点设置」编辑） -->
+        <!-- Col 1 & 2: Brand, Summary & Social Media Icons -->
         <div class="lg:col-span-2 space-y-space-md">
           <div class="flex items-center gap-3">
                                     <svg class="h-8 w-8 text-secondary-fixed" fill="currentColor" viewBox="0 0 40 40">
@@ -1490,12 +1549,12 @@ tailwind.config = {
                             BMS IoT Ready            </span>
                       </div>
         </div>
-        <!-- Col 3: Products（自动读取最新 10 个产品） -->
+        <!-- Col 3: Products -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Products</div>
           <ul class="space-y-space-xs">
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
-                href="/products/smart-louver-system/">Smart Louver System</a></li>
+                href="/products/smart-motorized-aluminum-louvers/">Smart Motorized Aluminum Louvers</a></li>
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
                 href="/products/solid-aluminum-cladding-panels/">Solid Aluminum Cladding Panels</a></li>
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
@@ -1516,7 +1575,7 @@ tailwind.config = {
                 href="/products/aluminum-composite-panels/">Aluminum Composite Panels</a></li>
                       </ul>
         </div>
-        <!-- Col 4: Projects（自动读取最新 10 个项目） -->
+        <!-- Col 4: Projects -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Projects</div>
           <ul class="space-y-space-xs">
@@ -1528,7 +1587,7 @@ tailwind.config = {
                 href="/projects/kafd-tower-3-financial-center/">KAFD Tower 3 Financial Center</a></li>
                       </ul>
         </div>
-        <!-- Col 5: Global Headquarters（信息在「站点设置」编辑） -->
+        <!-- Col 5: Global Headquarters -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Global Headquarters</div>
           <p class="font-body-sm text-body-sm text-slate-300">Engineering Consultation &amp; Overseas Export Support Center.</p>
@@ -1566,7 +1625,7 @@ tailwind.config = {
     </div>
   </footer>
 
-  <!-- WhatsApp 悬浮按钮：号码/预填消息/二维码在「联系我们设置」配置，号码留空则不显示 -->
+  <!-- WhatsApp floating button -->
     <div class="fixed bottom-6 right-6 z-50 group">
         <div class="absolute bottom-full right-0 mb-3 w-44 p-3 bg-white shadow-2xl border border-outline-variant/30 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 pointer-events-none">
       <img src="/wp-content/uploads/2026/11/whatsapp_qrcode.png" alt="WhatsApp QR Code" class="w-full h-auto">

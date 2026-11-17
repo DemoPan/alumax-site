@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en-US">
 
 <head>
   <meta charset="UTF-8">
@@ -185,7 +185,58 @@ tailwind.config = {
 <meta name="generator" content="WordPress 7.1.3" />
 <link rel="canonical" href="/products/corrugated-core-aluminum-composite-panel/" />
 <link rel='shortlink' href='/?p=36' />
-</head>
+<script>(() => {
+	if (window.parent === window) return;
+	let hostOrigin;
+	let apple;
+	let navigationId;
+	const reportAdminBar = () => {
+		if (!hostOrigin) return;
+		window.parent.postMessage({ type: 'studio:preview:admin-bar-state', visible: (() => {
+	if (document.contentType && document.contentType !== 'text/html') return null;
+	const bar = document.getElementById('wpadminbar');
+	if (!bar) return false;
+	if (bar.checkVisibility) return bar.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true });
+	const style = getComputedStyle(bar);
+	return bar.getClientRects().length > 0 && style.visibility === 'visible' && style.opacity !== '0';
+})(), url: location.href, title: document.title, navigationId }, hostOrigin);
+	};
+	window.addEventListener('pagehide', () => {
+		if (hostOrigin) window.parent.postMessage({ type: 'studio:preview:navigating', navigationId }, hostOrigin);
+	});
+	window.addEventListener('pageshow', reportAdminBar);
+	window.addEventListener('hashchange', reportAdminBar);
+	window.addEventListener('popstate', reportAdminBar);
+	window.addEventListener('message', (event) => {
+		if (event.source !== window.parent) return;
+		if (event.data?.type === 'studio:preview:read-admin-bar') {
+			if (event.origin === hostOrigin) reportAdminBar();
+			return;
+		}
+		if (event.data?.type === 'studio:preview:login') {
+			if (!hostOrigin || event.origin !== hostOrigin || location.pathname.split('/').some((part) => ['wp-admin', 'wp-login.php', 'wp-signup.php', 'wp-activate.php'].includes(part))) return;
+			const login = new URL('/studio-auto-login', location.href);
+			login.searchParams.set('redirect_to', location.href);
+			location.assign(login.toString());
+			return;
+		}
+		if (event.data?.type !== 'studio:preview-shortcuts:init') return;
+		if ((!event.origin.startsWith('http://') && !event.origin.startsWith('https://')) || typeof event.data.apple !== 'boolean') return;
+		hostOrigin = event.origin;
+		apple = event.data.apple;
+		navigationId = event.data.navigationId;
+		reportAdminBar();
+	});
+	document.addEventListener('keydown', (event) => {
+		if (!hostOrigin || location.pathname.split('/').includes('wp-admin')) return;
+		const primary = apple ? event.metaKey && !event.ctrlKey : event.ctrlKey && !event.metaKey;
+		if (!primary || event.altKey || event.shiftKey || event.repeat || event.isComposing || event.getModifierState('AltGraph')) return;
+		if (event.code !== 'KeyK') return;
+		event.preventDefault();
+		event.stopPropagation();
+		window.parent.postMessage({ type: 'studio:preview-shortcuts:command-palette' }, hostOrigin);
+	}, true);
+})();</script></head>
 
 <body class="wp-singular product-template-default single single-product postid-36 wp-theme-alumax bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-white">
     <header
@@ -265,12 +316,12 @@ tailwind.config = {
   <div class="flex flex-col w-full bg-surface text-on-surface">
     <section class="relative w-full bg-primary-container overflow-hidden min-h-[580px] lg:min-h-[640px] flex items-center">
       <div class="absolute inset-0 bg-cover bg-center z-0"
-      style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIQ6MU_jPyUZhhqBnmtEtEuW0FxCAuEev8iP1grvP4EmU7-_eaSn4tN3aQJ5JbYPzHN7bRKacwdFCx7y8uAmQjsTsaQak5hoWv2arDuS38dL6dCmVry0Wn--zBMVyx0HFrsAz9pCt4_E9koqKXwdK9-PmTQ_xLAA4L8EfpanT5q_hCSP81WpWCjYGq3cpXo2i48BjyCeRaUfoVI2LO90H20IMQ52JcHxVWtmOgFLM');"></div>
+      style="background-image: url('/wp-content/uploads/alumax-img-7d6634c76c.jpg');"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-primary-container via-primary-container/80 to-transparent z-0 opacity-90"></div>
   <div class="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/70 to-transparent z-0"></div>
 
   <div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 pt-28 lg:pt-32 pb-16 lg:pb-24 w-full flex flex-col justify-between h-full gap-10">
-    <!-- BREADCRUMB（Hero 内嵌深色版） -->
+    <!-- BREADCRUMB (Hero Embedded Dark) -->
 <nav aria-label="Breadcrumb"
   class="flex items-center flex-wrap gap-2 font-label text-xs tracking-wider text-primary-fixed-dim uppercase">
   <a class="hover:text-secondary-fixed transition-colors flex items-center gap-1"
@@ -297,8 +348,9 @@ tailwind.config = {
             <span>Request Specimen Kit &amp; BOQ Quote</span>
             <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
           </a>
-                          <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-surface-container-highest/20 backdrop-blur-md text-on-primary font-headline text-xs font-semibold uppercase tracking-wider border border-outline-variant/30 shadow-sm hover:bg-surface-container-highest/30 transition-colors"
-            href="#technical-specifications">
+                                    <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-surface-container-highest/20 backdrop-blur-md text-on-primary font-headline text-xs font-semibold uppercase tracking-wider border border-outline-variant/30 shadow-sm hover:bg-surface-container-highest/30 transition-colors"
+            href="#technical-specifications"
+             data-datasheet-pdf>
                           <span class="material-symbols-outlined text-[18px]">download</span>
                         <span>TDS Spec Sheet (3.9 MB)</span>
           </a>
@@ -351,7 +403,7 @@ tailwind.config = {
       <div class="lg:col-span-5 relative group overflow-hidden bg-surface-container shadow-md">
         <img class="w-full h-[360px] sm:h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
           alt="Corrugated core aluminum panel cutaway showing sinusoidal wave core roll-bonded between aluminum skins."
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK8QNZGGNOSVBjbS3gftadZTZxzOsvhj0yc3iRw0AreeTQJaob1kMrj_NriMAlvDsDYNb39hXGrEXXarO6_hBLTv2g-yH6cQS5lQrx1qSBZVQGTLCkNCXXkGBHtB9JBG-w41qrFXqNEoPDZQsJHrycExKIbgrAz3srR0YHb5D-8Zj9Z2l0L0IUujTCNLGgxWSuczWDC_E20wFfvoV6mlgWbzyV9pdsi0taLIPndwU">
+          src="/wp-content/uploads/alumax-img-1a6cd5b463.jpg">
         <div class="absolute inset-0 bg-primary-container/20 group-hover:bg-primary-container/30 transition-colors"></div>
                   <button class="absolute bottom-6 left-6 inline-flex items-center gap-3 px-5 py-3 bg-surface-container-lowest/95 backdrop-blur-md text-on-surface hover:text-secondary shadow-lg font-headline text-xs font-semibold uppercase tracking-wider transition-all"
             type="button">
@@ -362,7 +414,7 @@ tailwind.config = {
           </button>
               </div>
       <div class="lg:col-span-7 flex flex-col">
-        <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Systems Architecture // 系统介绍</span>
+        <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Systems Architecture</span>
         <h2 class="font-headline font-bold text-2xl sm:text-3xl lg:text-4xl text-primary tracking-tight mb-4">
           What is the ALU-CC-4000 Corrugated Core Panel?        </h2>
         <p class="font-body text-sm sm:text-base text-on-surface-variant leading-relaxed mb-8">
@@ -412,7 +464,7 @@ tailwind.config = {
 <section class="w-full bg-surface py-16 lg:py-24">
   <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
     <div class="flex flex-col mb-12">
-      <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Key Advantages // 核心优势</span>
+      <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Key Advantages</span>
       <h2 class="font-headline font-bold text-2xl sm:text-3xl lg:text-4xl text-primary tracking-tight">
         Why Choose Our Corrugated Core Panels?      </h2>
               <p class="font-body text-sm text-on-surface-variant mt-2 max-w-2xl">
@@ -423,7 +475,7 @@ tailwind.config = {
           <div class="h-48 overflow-hidden bg-surface-container-high relative">
             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               alt="Wave core section of corrugated aluminum composite panel."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkcM2A1HnAwPT_5zUw1XMLvv33VXbrrZVPAsYu3VddsP1NEx2j7E2lfjzfTsJ46P3MHJho2hdjXWuds9oNiLhxhBXHOxeXMNOiDqPmb2_B8ARDHyoxehaqN1G2Fh0pk2nVYvMnrTa0_fZq0iZJj9ZEfkIYgOufKqcMvfxkVpAG-Fcw3DQolZkRNhN10jPS0XXM_6dmXbvlx_JsSMH18U2XdgD3FJ0gH96_hezajms">
+              src="/wp-content/uploads/alumax-img-e860c81f25.jpg">
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
@@ -438,7 +490,7 @@ tailwind.config = {
           <div class="h-48 overflow-hidden bg-surface-container-high relative">
             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               alt="Profile caliper measurement of corrugated core panel thickness."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXKUTZ8n5QxxfgPQQYmbnhEYdXXzJP4j3R68LeGkIMXv-ERbgK2RbHaTDSuS-G9zgJ_QkrrrkVx6RGigrEkzN-_mNAOf9rn9cdyMwm9DVyFSyFDv2_aj171OrXoV8B56K6TcIVav2ZkfpcQZISQSABVRxMr2uuFBFSftsfyhCQYmALkr-GCWbClVMNDKa3MNNpmHCeiIVjIzlg_DWo5-4wT05R5bBYe1QZ4m7DWok">
+              src="/wp-content/uploads/alumax-img-f0deb9fad1.jpg">
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
@@ -453,7 +505,7 @@ tailwind.config = {
           <div class="h-48 overflow-hidden bg-surface-container-high relative">
             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               alt="Concealed joint mounting detail of corrugated core facade panel."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjbIfMHawUgutcryDxdKRZPI8QdKewHWWJo8KSDdvw9_NMAIqIk9nQg_vDi_Z_QbVmQXl6gT5iDqqMKt4sfcffuKQROQwv33pfwb4IUR2XVLSWgl1ZjIk_psLF1vHF_WGFJ3hwem6q5cRhmuJMaPGl_eyfsHZMk8WU5UQZEBcLRriCiXCdLAb6J6hadASdW_I38OLuB1ke_zTzOqej50t72eEVNeZBPm4LtDyvGLs">
+              src="/wp-content/uploads/alumax-img-76d6a0b581.jpg">
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
@@ -468,7 +520,7 @@ tailwind.config = {
           <div class="h-48 overflow-hidden bg-surface-container-high relative">
             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               alt="Airport terminal envelope clad with corrugated core aluminum panels."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIQ6MU_jPyUZhhqBnmtEtEuW0FxCAuEev8iP1grvP4EmU7-_eaSn4tN3aQJ5JbYPzHN7bRKacwdFCx7y8uAmQjsTsaQak5hoWv2arDuS38dL6dCmVry0Wn--zBMVyx0HFrsAz9pCt4_E9koqKXwdK9-PmTQ_xLAA4L8EfpanT5q_hCSP81WpWCjYGq3cpXo2i48BjyCeRaUfoVI2LO90H20IMQ52JcHxVWtmOgFLM">
+              src="/wp-content/uploads/alumax-img-7d6634c76c.jpg">
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
@@ -485,7 +537,7 @@ tailwind.config = {
 <section class="w-full bg-surface-container-low py-16 lg:py-24" id="technical-specifications">
   <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
     <div class="flex flex-col mb-10">
-      <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Technical Specifications // 技术参数</span>
+      <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Technical Specifications</span>
       <h2 class="font-headline font-bold text-2xl sm:text-3xl lg:text-4xl text-primary tracking-tight">
         Mechanical Strength &amp; Fire Physics Matrix      </h2>
     </div>
@@ -531,13 +583,15 @@ tailwind.config = {
             </div>
                   </div>
                   <div class="flex flex-wrap items-center gap-3 pt-6 mt-4 border-t border-surface-variant">
-                          <a class="inline-flex items-center gap-2 px-5 py-3 bg-primary-container text-on-primary hover:bg-secondary font-headline text-xs font-semibold uppercase tracking-wider transition-colors"
-                href="#">
+                                        <a class="inline-flex items-center gap-2 px-5 py-3 bg-primary-container text-on-primary hover:bg-secondary font-headline text-xs font-semibold uppercase tracking-wider transition-colors"
+                href="#rfq-section"
+                >
                 <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
                 <span>TDS Spec Sheet (3.9 MB)</span>
               </a>
-                          <a class="inline-flex items-center gap-2 px-5 py-3 bg-surface-container text-on-surface hover:bg-surface-container-high font-headline text-xs font-semibold uppercase tracking-wider transition-colors"
-                href="#">
+                                        <a class="inline-flex items-center gap-2 px-5 py-3 bg-surface-container text-on-surface hover:bg-surface-container-high font-headline text-xs font-semibold uppercase tracking-wider transition-colors"
+                href="#rfq-section"
+                >
                 <span class="material-symbols-outlined text-[16px]">view_in_ar</span>
                 <span>Revit BIM Families (LOD 400)</span>
               </a>
@@ -585,7 +639,7 @@ tailwind.config = {
 <section class="w-full bg-surface py-16 lg:py-24">
   <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
     <div class="flex flex-col mb-12">
-      <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Color &amp; Coating // 色板</span>
+      <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Color &amp; Coating</span>
       <h2 class="font-headline font-bold text-2xl sm:text-3xl text-primary tracking-tight">
         Coil-Coated Fluorocarbon Finishes      </h2>
               <p class="font-body text-sm text-on-surface-variant mt-2 max-w-2xl">
@@ -627,7 +681,7 @@ tailwind.config = {
 <section class="w-full bg-surface-container-low py-16 lg:py-24">
   <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
     <div class="flex flex-col mb-12">
-      <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Fabrication &amp; Joinery Details // 节点详图</span>
+      <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Fabrication &amp; Joinery Details</span>
       <h2 class="font-headline font-bold text-2xl sm:text-3xl lg:text-4xl text-primary tracking-tight">
         Standard Milling Profiles &amp; Cassette Assembly      </h2>
               <p class="font-body text-sm text-on-surface-variant mt-2 max-w-2xl">
@@ -690,13 +744,13 @@ tailwind.config = {
 <section class="w-full bg-surface py-16 lg:py-24" id="installation">
   <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
     <div class="flex flex-col mb-12">
-              <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Installation // 安装方式</span>
+              <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Installation</span>
             <h2 class="font-headline font-bold text-2xl sm:text-3xl lg:text-4xl text-primary tracking-tight">
         Subframe Integration &amp; Movement Joints      </h2>
               <p class="font-body text-sm text-on-surface-variant mt-2 max-w-2xl">
           Concealed cassette fixing with engineered movement joints for large-format corrugated core envelopes.        </p>
           </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div class="flex flex-col bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group">
                     <div class="p-5 flex flex-col flex-1">
                           <span class="font-label text-[10px] text-secondary font-bold uppercase mb-1">DETAIL 02 // Z-CLIP</span>
@@ -722,7 +776,7 @@ tailwind.config = {
   <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
       <div>
-        <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Case References // 工程案例</span>
+        <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Case References</span>
         <h2 class="font-headline font-bold text-2xl sm:text-3xl lg:text-4xl text-primary tracking-tight">
           Global Completed Landmark Projects        </h2>
       </div>
@@ -737,7 +791,7 @@ tailwind.config = {
           <div class="h-56 overflow-hidden bg-surface-container-high relative">
             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               alt="Doha Metro Red Line station concourse envelope."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnwZDSDmn8M_7IU1qmMXNvxy4hwmcKVL3p2UA7UlZk4JSz-0_TgDlyNHXzoIMW7vzUy9F9A6279jEWZyuqH9Ue2j2lXMnb0uyFZVqNFYVcZw744OvRhSvTlyb42jNs5FDmgmiTQ_SShI4J-LounatdAAgFeKoSVUJ8RpukQa0_vQ7zaf5IeXyh_ZhjHcb_c9QH2soAsMKtLpL-05Ab_4rct9_rr9ZV5kAEX8Nq5Qk">
+              src="/wp-content/uploads/alumax-img-8445ed5715.jpg">
                           <div class="absolute bottom-3 left-3 px-2 py-1 bg-primary-container/90 text-primary-fixed font-label text-[10px]">
                 DOHA, QATAR</div>
                       </div>
@@ -754,7 +808,7 @@ tailwind.config = {
           <div class="h-56 overflow-hidden bg-surface-container-high relative">
             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               alt="IFEMA North Exhibition Expansion in Madrid Spain."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDA6uHoNW1YZECIbfZrSlNPCHu9NzZs0w8jyb4NC-SjCtAaLmBuhAHZX7Gqomi_BwARg-hpFXc-HV4STLKlqlRmLvwiVFtDc1-kg0zQ89wVQLkBjG0CRu6fqraYUoQSwrXfkczatw5c5ptQi0lYun8H3U1MSomXX1F783IBXS6C7JaEJj5au8qX35GwMqvOEGydVfICS-ngy33ZrC9r4YGPv-qUe06mamx4xVLq5U">
+              src="/wp-content/uploads/alumax-img-a794ad543a.jpg">
                           <div class="absolute bottom-3 left-3 px-2 py-1 bg-primary-container/90 text-primary-fixed font-label text-[10px]">
                 MADRID, SPAIN</div>
                       </div>
@@ -771,7 +825,7 @@ tailwind.config = {
           <div class="h-56 overflow-hidden bg-surface-container-high relative">
             <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               alt="King Abdullah Financial District Station portal in Riyadh Saudi Arabia."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV3ozKaa0dSp7tUe8PkQ521b2zYyeYQv3_9KKJ6Jzx323cnIPUworQAtFPqDID4cye3Zfn_SGVcHu-w0QyxuTVsVfhfiUF7HVBug9YCcQR-xWecellVlXILDXUsdDp_MXmcEaSbrOjsKBSbjOywPNGn7n67zn-mgWtZ27BAs6RD0rbderAp36iBdigH3yrbVRSAMk5q15QloEteXBQRH9kWkHGvHRO-xNnflQAWis">
+              src="/wp-content/uploads/alumax-img-6d92563ece.jpg">
                           <div class="absolute bottom-3 left-3 px-2 py-1 bg-primary-container/90 text-primary-fixed font-label text-[10px]">
                 RIYADH, KSA</div>
                       </div>
@@ -792,7 +846,7 @@ tailwind.config = {
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
       <!-- Left: Value Propositions -->
       <div class="lg:col-span-5 flex flex-col">
-        <span class="font-label text-xs font-semibold tracking-widest text-secondary-fixed uppercase mb-2">Direct Factory Procurement // 商务及打样</span>
+        <span class="font-label text-xs font-semibold tracking-widest text-secondary-fixed uppercase mb-2">Direct Factory Procurement</span>
         <h2 class="font-headline font-bold text-3xl sm:text-4xl text-on-primary tracking-tight mb-4">
           Request Project Quotation &amp; Specimen Kit        </h2>
         <p class="font-body text-sm text-on-primary-container leading-relaxed mb-8">
@@ -838,7 +892,7 @@ tailwind.config = {
             action="/wp-admin/admin-post.php">
             <input type="hidden" name="action" value="alumax_inquiry">
             <input type="hidden" name="inquiry_page" value="Corrugated Core Aluminum Composite Panel">
-            <input type="hidden" id="alumax_inquiry_nonce" name="alumax_inquiry_nonce" value="9af21e9381" /><input type="hidden" name="_wp_http_referer" value="/products/corrugated-core-aluminum-composite-panel/" />            <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+            <input type="hidden" id="alumax_inquiry_nonce" name="alumax_inquiry_nonce" value="7865817c90" /><input type="hidden" name="_wp_http_referer" value="/products/corrugated-core-aluminum-composite-panel/" />            <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
               <input type="text" name="inquiry_website" tabindex="-1" autocomplete="off">
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -895,7 +949,7 @@ tailwind.config = {
           </form>
           <script>
             (function () {
-              // 提交结果横幅只显示一次：清掉 URL 里的 inquiry 参数，刷新后不再出现
+              // Submission result banner shown once: clear query param from URL so refresh does not trigger
               if (window.history.replaceState) {
                 var url = new URL(window.location.href);
                 if (url.searchParams.has('inquiry')) {
@@ -912,7 +966,7 @@ tailwind.config = {
                 });
               }
 
-              // 必填校验 + fetch 提交：静态导出后直接调 WP REST 接口，数据仍入后台「询价记录」
+              // Required validation + fetch submit: directly call WP REST endpoint after static export
               var form = document.getElementById('alumax-inquiry-form');
               if (!form) { return; }
               var api = "http:\/\/localhost:8881\/wp-json\/alumax\/v1\/inquiry";
@@ -991,10 +1045,180 @@ tailwind.config = {
 </section>
   </div>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (!window.jspdf) return;
+  var DATA = {"product":"Corrugated Core Aluminum Composite Panel","date":"2026-11-17","eyebrow":"Technical Specifications","title":"Mechanical Strength & Fire Physics Matrix","tableTitle":"Certified Performance Matrix","tableRef":"SPEC REV: 2025.04.B","rows":[["Combustibility Classification","Class A1 \u2014 no smoke s1, no droplets d0 \uff5c EN 13501-1 \/ BS 476 Pt 4"],["Areal Weight (4.0mm System)","4.32 kg\/m\u00b2 (\u221262% vs solid plate) \uff5c ISO 1183"],["Flexural Rigidity (E \u00d7 I)","0.245 \u00d7 10\u00b9\u00b9 N\u00b7mm\u00b2\/m \uff5c ASTM C393 \/ EN 14509"],["Shear Resistance Across Ribs","2.85 MPa continuous corrugation \uff5c ASTM C273 \/ EN 12090"],["Peel Strength (Skin to Core)","98.6 N\u00b7mm\/mm molecular hot roll-bond \uff5c ASTM D1781 climbing drum"],["Max Wind Pressure Resistance","\u00b1 5.4 kPa (L\/180 pass @ 1500mm span) \uff5c ASTM E330"],["Thermal Decomposition VOCs","Zero toxic gases \/ 0% smoke release \uff5c EN ISO 11925-2"],["Max Envelope Span","1,500 \u00d7 6,000 mm custom roll-form lengths"]],"cards":[{"title":"Sinusoidal Geometry Principle","tag":"FLUTE 2.8MM \u00b10.05","caption":"The patented 12.5mm wave-pitch core acts as an infinite series of structural I-beams, converting face loads into tensile\/compressive vectors along continuous flutes"},{"title":"Internal Micro-Cavity Ventilation","tag":"1,420 MM\u00b2\/M FLOW","caption":"Open sinusoidal channels permit linear micro-aeration along the flute orientation \u2014 prevents internal hydrostatic pressure spikes and accelerates thermal dissipation in desert climates."},{"title":"Circular Mono-Material Stream","tag":"> 35% RECYCLED","caption":"100% aluminum composition requires zero delamination sorting during decommissioning; retired cassettes melt directly into secondary ingot stock at less than 5% original smelting energy."}]};
+  // jsPDF default font only supports Latin-1; lazy load CJK font if needed
+  var FONT_URL = 'https://cdn.jsdelivr.net/gh/StellarCN/scp_zh@master/fonts/SimHei.ttf';
+  var fontPromise = null;
+  function loadFontB64() {
+    if (!fontPromise) {
+      fontPromise = fetch(FONT_URL).then(function (r) {
+        if (!r.ok) throw new Error('font fetch failed');
+        return r.arrayBuffer();
+      }).then(function (buf) {
+        var bytes = new Uint8Array(buf), binary = '', chunk = 0x8000;
+        for (var i = 0; i < bytes.length; i += chunk) {
+          binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+        }
+        return btoa(binary);
+      });
+    }
+    return fontPromise;
+  }
+  // Greek letter mu mapping to Latin-1 equivalent for helvetica support
+  function sanitize(s) { return String(s == null ? '' : s).replace(/\u03BC/g, '\u00B5'); }
+  function isLatin(s) { return !/[^\u0000-\u00FF]/.test(s); }
+
+  function buildPdf(fontB64) {
+    var doc = new window.jspdf.jsPDF({ unit: 'mm', format: 'a4' });
+    var hasCjkFont = !!fontB64;
+    if (hasCjkFont) {
+      doc.addFileToVFS('simhei.ttf', fontB64);
+      doc.addFont('simhei.ttf', 'simhei', 'normal');
+    }
+    function T(s) {
+      var v = sanitize(s);
+      if (!hasCjkFont) {
+        // Font fallback cleanup
+        v = v.replace(/[\u3000-\u9fff\uff00-\uffef]+/g, '').replace(/\s*\/\/\s*$/, '').trim();
+      }
+      return v;
+    }
+    function setFont(bold, s) {
+      if (hasCjkFont && s !== undefined && !isLatin(sanitize(s))) {
+        doc.setFont('simhei', 'normal');
+      } else {
+        doc.setFont('helvetica', bold ? 'bold' : 'normal');
+      }
+    }
+    var pageW = 210, margin = 14;
+
+    // Header dark banner
+    doc.setFillColor(13, 27, 42);
+    doc.rect(0, 0, pageW, 28, 'F');
+    setFont(true);
+    doc.setFontSize(9);
+    doc.setTextColor(255, 221, 181);
+    doc.text('ALUMAX ARCHITECTURAL', margin, 10);
+    doc.setFontSize(16);
+    doc.setTextColor(255, 255, 255);
+    setFont(true, DATA.product);
+    doc.text(T(DATA.product), margin, 19);
+    setFont(false);
+    doc.setFontSize(8);
+    doc.setTextColor(186, 200, 220);
+    doc.text('TECHNICAL DATASHEET · ' + DATA.date, margin, 25);
+
+    var y = 38;
+    if (DATA.eyebrow) {
+      setFont(false, DATA.eyebrow);
+      doc.setFontSize(8);
+      doc.setTextColor(123, 88, 37);
+      doc.text(T(DATA.eyebrow).toUpperCase(), margin, y);
+      y += 6;
+    }
+    if (DATA.title) {
+      setFont(true, DATA.title);
+      doc.setFontSize(13);
+      doc.setTextColor(13, 27, 42);
+      doc.text(doc.splitTextToSize(T(DATA.title), pageW - margin * 2), margin, y);
+      y += 8;
+    }
+    if (DATA.tableRef) {
+      setFont(false, DATA.tableRef);
+      doc.setFontSize(7);
+      doc.setTextColor(116, 119, 125);
+      doc.text(T(DATA.tableRef), margin, y);
+      y += 4;
+    }
+
+    // Specification table
+    doc.autoTable({
+      startY: y + 2,
+      head: [[T(DATA.tableTitle), '']],
+      body: DATA.rows.map(function (r) { return [T(r[0]), T(r[1])]; }),
+      styles: { fontSize: 8.5, cellPadding: 2.2, textColor: [68, 71, 76], font: 'helvetica' },
+      headStyles: { fillColor: [13, 27, 42], textColor: 255, fontSize: 9, font: 'helvetica', fontStyle: 'bold' },
+      alternateRowStyles: { fillColor: [242, 244, 246] },
+      margin: { left: margin, right: margin },
+      columnStyles: { 0: { fontStyle: 'bold', cellWidth: 62, textColor: [25, 28, 30] } },
+      didParseCell: function (data) {
+        // Switch font for CJK cells
+        var raw = data.cell.raw != null ? String(data.cell.raw) : '';
+        if (hasCjkFont && !isLatin(raw)) {
+          data.cell.styles.font = 'simhei';
+          data.cell.styles.fontStyle = 'normal';
+        }
+      }
+    });
+    y = doc.lastAutoTable.finalY + 8;
+
+    // Engineering cards text info
+    if (DATA.cards && DATA.cards.length) {
+      setFont(true);
+      doc.setFontSize(10);
+      doc.setTextColor(13, 27, 42);
+      doc.text('Engineering Schematics', margin, y);
+      y += 5;
+      DATA.cards.forEach(function (card) {
+        if (y > 270) { doc.addPage(); y = 20; }
+        var head = T(card.title) + (card.tag ? '  [' + T(card.tag) + ']' : '');
+        setFont(true, head);
+        doc.setFontSize(8.5);
+        doc.setTextColor(25, 28, 30);
+        doc.text(head, margin, y);
+        y += 4;
+        if (card.caption) {
+          setFont(false, card.caption);
+          doc.setFontSize(7.5);
+          doc.setTextColor(116, 119, 125);
+          var lines = doc.splitTextToSize(T(card.caption), pageW - margin * 2);
+          doc.text(lines, margin, y);
+          y += lines.length * 3.5 + 2;
+        } else {
+          y += 2;
+        }
+      });
+    }
+
+    // Footer
+    var pageCount = doc.getNumberOfPages();
+    for (var i = 1; i <= pageCount; i++) {
+      doc.setPage(i);
+      setFont(false);
+      doc.setFontSize(7);
+      doc.setTextColor(150, 153, 158);
+      doc.text('© ' + new Date().getFullYear() + ' ALUMAX Architectural Envelopes Co., Ltd. · export@alumax-facade.com', margin, 292);
+      doc.text('Page ' + i + ' / ' + pageCount, pageW - margin, 292, { align: 'right' });
+    }
+    return doc;
+  }
+
+  document.querySelectorAll('[data-datasheet-pdf]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      btn.style.opacity = '0.6';
+      btn.style.pointerEvents = 'none';
+      loadFontB64().catch(function () { return null; }).then(function (b64) {
+        var doc = buildPdf(b64);
+        var filename = sanitize(DATA.product).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') + '-datasheet.pdf';
+        doc.save(filename);
+      }).finally(function () {
+        btn.style.opacity = '';
+        btn.style.pointerEvents = '';
+      });
+    });
+  });
+});
+</script>
   <footer class="w-full bg-[#0d1b2a] text-white border-t border-white/10">
     <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-lg">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-xl">
-        <!-- Col 1 & 2: Brand, Summary & Social Media Icons（品牌信息在「站点设置」编辑） -->
+        <!-- Col 1 & 2: Brand, Summary & Social Media Icons -->
         <div class="lg:col-span-2 space-y-space-md">
           <div class="flex items-center gap-3">
                                     <svg class="h-8 w-8 text-secondary-fixed" fill="currentColor" viewBox="0 0 40 40">
@@ -1030,12 +1254,12 @@ tailwind.config = {
                             BMS IoT Ready            </span>
                       </div>
         </div>
-        <!-- Col 3: Products（自动读取最新 10 个产品） -->
+        <!-- Col 3: Products -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Products</div>
           <ul class="space-y-space-xs">
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
-                href="/products/smart-louver-system/">Smart Louver System</a></li>
+                href="/products/smart-motorized-aluminum-louvers/">Smart Motorized Aluminum Louvers</a></li>
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
                 href="/products/solid-aluminum-cladding-panels/">Solid Aluminum Cladding Panels</a></li>
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
@@ -1056,7 +1280,7 @@ tailwind.config = {
                 href="/products/aluminum-composite-panels/">Aluminum Composite Panels</a></li>
                       </ul>
         </div>
-        <!-- Col 4: Projects（自动读取最新 10 个项目） -->
+        <!-- Col 4: Projects -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Projects</div>
           <ul class="space-y-space-xs">
@@ -1068,7 +1292,7 @@ tailwind.config = {
                 href="/projects/kafd-tower-3-financial-center/">KAFD Tower 3 Financial Center</a></li>
                       </ul>
         </div>
-        <!-- Col 5: Global Headquarters（信息在「站点设置」编辑） -->
+        <!-- Col 5: Global Headquarters -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Global Headquarters</div>
           <p class="font-body-sm text-body-sm text-slate-300">Engineering Consultation &amp; Overseas Export Support Center.</p>
@@ -1106,7 +1330,7 @@ tailwind.config = {
     </div>
   </footer>
 
-  <!-- WhatsApp 悬浮按钮：号码/预填消息/二维码在「联系我们设置」配置，号码留空则不显示 -->
+  <!-- WhatsApp floating button -->
     <div class="fixed bottom-6 right-6 z-50 group">
         <div class="absolute bottom-full right-0 mb-3 w-44 p-3 bg-white shadow-2xl border border-outline-variant/30 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 pointer-events-none">
       <img src="/wp-content/uploads/2026/11/whatsapp_qrcode.png" alt="WhatsApp QR Code" class="w-full h-auto">

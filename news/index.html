@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en-US">
 
 <head>
   <meta charset="UTF-8">
@@ -34,7 +34,7 @@
 </style>
     <link rel='dns-prefetch' href='//cdn.tailwindcss.com' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel="alternate" type="application/rss+xml" title="alumax &raquo; NewsFeed" href="/news/feed/" />
+<link rel="alternate" type="application/rss+xml" title="alumax &raquo; News Feed" href="/news/feed/" />
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -182,7 +182,58 @@ tailwind.config = {
 </script>
 <link rel="https://api.w.org/" href="http://localhost:8881/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 7.1.3" />
-</head>
+<script>(() => {
+	if (window.parent === window) return;
+	let hostOrigin;
+	let apple;
+	let navigationId;
+	const reportAdminBar = () => {
+		if (!hostOrigin) return;
+		window.parent.postMessage({ type: 'studio:preview:admin-bar-state', visible: (() => {
+	if (document.contentType && document.contentType !== 'text/html') return null;
+	const bar = document.getElementById('wpadminbar');
+	if (!bar) return false;
+	if (bar.checkVisibility) return bar.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true });
+	const style = getComputedStyle(bar);
+	return bar.getClientRects().length > 0 && style.visibility === 'visible' && style.opacity !== '0';
+})(), url: location.href, title: document.title, navigationId }, hostOrigin);
+	};
+	window.addEventListener('pagehide', () => {
+		if (hostOrigin) window.parent.postMessage({ type: 'studio:preview:navigating', navigationId }, hostOrigin);
+	});
+	window.addEventListener('pageshow', reportAdminBar);
+	window.addEventListener('hashchange', reportAdminBar);
+	window.addEventListener('popstate', reportAdminBar);
+	window.addEventListener('message', (event) => {
+		if (event.source !== window.parent) return;
+		if (event.data?.type === 'studio:preview:read-admin-bar') {
+			if (event.origin === hostOrigin) reportAdminBar();
+			return;
+		}
+		if (event.data?.type === 'studio:preview:login') {
+			if (!hostOrigin || event.origin !== hostOrigin || location.pathname.split('/').some((part) => ['wp-admin', 'wp-login.php', 'wp-signup.php', 'wp-activate.php'].includes(part))) return;
+			const login = new URL('/studio-auto-login', location.href);
+			login.searchParams.set('redirect_to', location.href);
+			location.assign(login.toString());
+			return;
+		}
+		if (event.data?.type !== 'studio:preview-shortcuts:init') return;
+		if ((!event.origin.startsWith('http://') && !event.origin.startsWith('https://')) || typeof event.data.apple !== 'boolean') return;
+		hostOrigin = event.origin;
+		apple = event.data.apple;
+		navigationId = event.data.navigationId;
+		reportAdminBar();
+	});
+	document.addEventListener('keydown', (event) => {
+		if (!hostOrigin || location.pathname.split('/').includes('wp-admin')) return;
+		const primary = apple ? event.metaKey && !event.ctrlKey : event.ctrlKey && !event.metaKey;
+		if (!primary || event.altKey || event.shiftKey || event.repeat || event.isComposing || event.getModifierState('AltGraph')) return;
+		if (event.code !== 'KeyK') return;
+		event.preventDefault();
+		event.stopPropagation();
+		window.parent.postMessage({ type: 'studio:preview-shortcuts:command-palette' }, hostOrigin);
+	}, true);
+})();</script></head>
 
 <body class="archive post-type-archive post-type-archive-news wp-theme-alumax bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-white">
     <header
@@ -298,7 +349,7 @@ tailwind.config = {
                   Global Exhibition                </span>
                                                 <span
                   class="px-2.5 py-1 bg-white/10 text-secondary-fixed backdrop-blur-md font-label text-[11px] uppercase tracking-wider">
-                  10 月 10, 2026 · 1 min read                </span>
+                  Oct 10, 2026 · 1 min read                </span>
                               </div>
               <h1
                 class="font-headline text-[32px] sm:text-[44px] lg:text-[48px] font-bold text-white tracking-tight leading-tight">
@@ -351,7 +402,7 @@ tailwind.config = {
                   Landmark Milestone                </span>
                                                 <span
                   class="px-2.5 py-1 bg-white/10 text-secondary-fixed backdrop-blur-md font-label text-[11px] uppercase tracking-wider">
-                  10 月 10, 2026 · 1 min read                </span>
+                  Oct 10, 2026 · 1 min read                </span>
                               </div>
               <h1
                 class="font-headline text-[32px] sm:text-[44px] lg:text-[48px] font-bold text-white tracking-tight leading-tight">
@@ -404,7 +455,7 @@ tailwind.config = {
                   Global Expansion                </span>
                                                 <span
                   class="px-2.5 py-1 bg-white/10 text-secondary-fixed backdrop-blur-md font-label text-[11px] uppercase tracking-wider">
-                  10 月 10, 2026 · 1 min read                </span>
+                  Oct 10, 2026 · 1 min read                </span>
                               </div>
               <h1
                 class="font-headline text-[32px] sm:text-[44px] lg:text-[48px] font-bold text-white tracking-tight leading-tight">
@@ -558,7 +609,7 @@ tailwind.config = {
                 <div class="flex items-center gap-3 font-label text-[12px] text-on-surface-variant mb-3">
                   <span class="flex items-center gap-1"><span
                       class="material-symbols-outlined text-[14px] text-secondary">calendar_today</span>
-                    10 月 10, 2026</span>
+                    Oct 10, 2026</span>
                   <span>•</span>
                   <span>1 min read</span>
                 </div>
@@ -567,7 +618,7 @@ tailwind.config = {
                   <a href="/news/whitepaper-published-mitigating-desert-thermal-shock-with-high-tensile-aa5052-h32-alloy/">Whitepaper Published: Mitigating Desert Thermal Shock with High-Tensile AA5052-H32 Alloy</a>
                 </h3>
                 <p class="font-body text-[13px] text-on-surface-variant line-clamp-2 mb-6 leading-relaxed">
-                  An empirical analysis of expan&hellip;                </p>
+                  An empirical analysis of expansion coefficient control and oil-canning mitigation across large-span continuous cassette panels.                </p>
               </div>
               <div class="pt-4 border-t border-surface-container-high flex items-center justify-between">
                 <span class="font-label text-[11px] text-on-surface-variant uppercase font-medium">Dispatch //
@@ -602,7 +653,7 @@ tailwind.config = {
                 <div class="flex items-center gap-3 font-label text-[12px] text-on-surface-variant mb-3">
                   <span class="flex items-center gap-1"><span
                       class="material-symbols-outlined text-[14px] text-secondary">calendar_today</span>
-                    10 月 10, 2026</span>
+                    Oct 10, 2026</span>
                   <span>•</span>
                   <span>1 min read</span>
                 </div>
@@ -611,7 +662,7 @@ tailwind.config = {
                   <a href="/news/kafd-tower-3-in-riyadh-completes-installation-of-14200-m%c2%b2-alumax-kinetic-louvers/">KAFD Tower 3 in Riyadh Completes Installation of 14,200 m² ALUMAX Kinetic Louvers</a>
                 </h3>
                 <p class="font-body text-[13px] text-on-surface-variant line-clamp-2 mb-6 leading-relaxed">
-                  Engineered for extreme desert &hellip;                </p>
+                  Engineered for extreme desert diurnal cycling, the installation features custom gold anodized extruded fins with autonomous astronomical clock positioning.                </p>
               </div>
               <div class="pt-4 border-t border-surface-container-high flex items-center justify-between">
                 <span class="font-label text-[11px] text-on-surface-variant uppercase font-medium">Dispatch //
@@ -643,7 +694,7 @@ tailwind.config = {
                 <div class="flex items-center gap-3 font-label text-[12px] text-on-surface-variant mb-3">
                   <span class="flex items-center gap-1"><span
                       class="material-symbols-outlined text-[14px] text-secondary">calendar_today</span>
-                    10 月 10, 2026</span>
+                    Oct 10, 2026</span>
                   <span>•</span>
                   <span>1 min read</span>
                 </div>
@@ -652,7 +703,7 @@ tailwind.config = {
                   <a href="/news/alumax-showcases-next-gen-dynamic-solar-louvers-at-the-big-5-dubai-2025/">ALUMAX Showcases Next-Gen Dynamic Solar Louvers at The Big 5 Dubai 2025</a>
                 </h3>
                 <p class="font-body text-[13px] text-on-surface-variant line-clamp-2 mb-6 leading-relaxed">
-                  Unveiled in Hall 2, ALUMAX&#039;s m&hellip;                </p>
+                  Unveiled in Hall 2, ALUMAX&#039;s motorized solar blade arrays demonstrated autonomous solar tracking synchronized with BACnet &amp; KNX systems.                </p>
               </div>
               <div class="pt-4 border-t border-surface-container-high flex items-center justify-between">
                 <span class="font-label text-[11px] text-on-surface-variant uppercase font-medium">Dispatch //
@@ -686,7 +737,7 @@ tailwind.config = {
             <!-- Info & Excerpt -->
             <div class="md:col-span-5 lg:col-span-6 space-y-2">
               <div class="flex flex-wrap items-center gap-3 font-label text-[11px] text-on-surface-variant">
-                <span class="text-secondary font-semibold">10 月 10, 2026</span>
+                <span class="text-secondary font-semibold">Oct 10, 2026</span>
                 <span>•</span>
                 <span>1 min read</span>
                               </div>
@@ -695,7 +746,7 @@ tailwind.config = {
                 <a href="/news/whitepaper-published-mitigating-desert-thermal-shock-with-high-tensile-aa5052-h32-alloy/">Whitepaper Published: Mitigating Desert Thermal Shock with High-Tensile AA5052-H32 Alloy</a>
               </h3>
               <p class="font-body text-[13px] text-on-surface-variant line-clamp-2 leading-relaxed">
-                An empirical analysis of expansion c&hellip;              </p>
+                An empirical analysis of expansion coefficient control and oil-canning mitigation across large-span continuous cassette panels.              </p>
                           </div>
             <!-- Right CTA Button -->
             <div class="md:col-span-3 lg:col-span-3 flex md:justify-end">
@@ -723,7 +774,7 @@ tailwind.config = {
             <!-- Info & Excerpt -->
             <div class="md:col-span-5 lg:col-span-6 space-y-2">
               <div class="flex flex-wrap items-center gap-3 font-label text-[11px] text-on-surface-variant">
-                <span class="text-secondary font-semibold">10 月 10, 2026</span>
+                <span class="text-secondary font-semibold">Oct 10, 2026</span>
                 <span>•</span>
                 <span>1 min read</span>
                                 <span>•</span>
@@ -734,7 +785,7 @@ tailwind.config = {
                 <a href="/news/kafd-tower-3-in-riyadh-completes-installation-of-14200-m%c2%b2-alumax-kinetic-louvers/">KAFD Tower 3 in Riyadh Completes Installation of 14,200 m² ALUMAX Kinetic Louvers</a>
               </h3>
               <p class="font-body text-[13px] text-on-surface-variant line-clamp-2 leading-relaxed">
-                Engineered for extreme desert diurna&hellip;              </p>
+                Engineered for extreme desert diurnal cycling, the installation features custom gold anodized extruded fins with autonomous astronomical clock positioning.              </p>
                           </div>
             <!-- Right CTA Button -->
             <div class="md:col-span-3 lg:col-span-3 flex md:justify-end">
@@ -762,7 +813,7 @@ tailwind.config = {
             <!-- Info & Excerpt -->
             <div class="md:col-span-5 lg:col-span-6 space-y-2">
               <div class="flex flex-wrap items-center gap-3 font-label text-[11px] text-on-surface-variant">
-                <span class="text-secondary font-semibold">10 月 10, 2026</span>
+                <span class="text-secondary font-semibold">Oct 10, 2026</span>
                 <span>•</span>
                 <span>1 min read</span>
                               </div>
@@ -771,7 +822,7 @@ tailwind.config = {
                 <a href="/news/alumax-showcases-next-gen-dynamic-solar-louvers-at-the-big-5-dubai-2025/">ALUMAX Showcases Next-Gen Dynamic Solar Louvers at The Big 5 Dubai 2025</a>
               </h3>
               <p class="font-body text-[13px] text-on-surface-variant line-clamp-2 leading-relaxed">
-                Unveiled in Hall 2, ALUMAX&#039;s motoriz&hellip;              </p>
+                Unveiled in Hall 2, ALUMAX&#039;s motorized solar blade arrays demonstrated autonomous solar tracking synchronized with BACnet &amp; KNX systems.              </p>
                             <div class="flex flex-wrap gap-2 pt-1">
                                 <span class="font-label text-[10px] px-2 py-0.5 bg-surface-container text-on-surface-variant">BAU 2025</span>
                               </div>
@@ -833,7 +884,7 @@ tailwind.config = {
     </section>
 
   <!-- ========================================================================= -->
-  <!-- NEWSLETTER SIGNUP (可在后台「新闻 → 新闻页设置」配置，标题留空则不显示)     -->
+  <!-- NEWSLETTER SIGNUP ( → ，)     -->
   <!-- ========================================================================= -->
       <section class="w-full bg-[#0a0d12] text-white py-16 lg:py-20 relative overflow-hidden">
       <div class="max-w-4xl mx-auto px-margin-mobile md:px-margin text-center space-y-6">
@@ -1011,8 +1062,8 @@ tailwind.config = {
 
       // -------------------------------------------------------------
       // 3. FILTERS: category tabs + year
-      // 统一状态过滤，纯前端实现，静态导出后同样可用
-      // （无 JS 时年份下拉仍回退为服务端 GET 筛选）
+      // ，，
+      // （ JS  GET ）
       // -------------------------------------------------------------
       const filterTabs = document.querySelectorAll('.filter-tab');
       const cardItems = document.querySelectorAll('.news-item');
@@ -1059,7 +1110,7 @@ tailwind.config = {
   <footer class="w-full bg-[#0d1b2a] text-white border-t border-white/10">
     <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin pt-space-xl pb-space-lg">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl pb-space-xl">
-        <!-- Col 1 & 2: Brand, Summary & Social Media Icons（品牌信息在「站点设置」编辑） -->
+        <!-- Col 1 & 2: Brand, Summary & Social Media Icons -->
         <div class="lg:col-span-2 space-y-space-md">
           <div class="flex items-center gap-3">
                                     <svg class="h-8 w-8 text-secondary-fixed" fill="currentColor" viewBox="0 0 40 40">
@@ -1095,12 +1146,12 @@ tailwind.config = {
                             BMS IoT Ready            </span>
                       </div>
         </div>
-        <!-- Col 3: Products（自动读取最新 10 个产品） -->
+        <!-- Col 3: Products -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Products</div>
           <ul class="space-y-space-xs">
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
-                href="/products/smart-louver-system/">Smart Louver System</a></li>
+                href="/products/smart-motorized-aluminum-louvers/">Smart Motorized Aluminum Louvers</a></li>
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
                 href="/products/solid-aluminum-cladding-panels/">Solid Aluminum Cladding Panels</a></li>
                         <li class="font-body-sm text-body-sm text-slate-300"><a class="hover:text-white transition-colors"
@@ -1121,7 +1172,7 @@ tailwind.config = {
                 href="/products/aluminum-composite-panels/">Aluminum Composite Panels</a></li>
                       </ul>
         </div>
-        <!-- Col 4: Projects（自动读取最新 10 个项目） -->
+        <!-- Col 4: Projects -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Projects</div>
           <ul class="space-y-space-xs">
@@ -1133,7 +1184,7 @@ tailwind.config = {
                 href="/projects/kafd-tower-3-financial-center/">KAFD Tower 3 Financial Center</a></li>
                       </ul>
         </div>
-        <!-- Col 5: Global Headquarters（信息在「站点设置」编辑） -->
+        <!-- Col 5: Global Headquarters -->
         <div class="space-y-space-md">
           <div class="font-headline-sm text-headline-sm text-white uppercase font-bold">Global Headquarters</div>
           <p class="font-body-sm text-body-sm text-slate-300">Engineering Consultation &amp; Overseas Export Support Center.</p>
@@ -1171,7 +1222,7 @@ tailwind.config = {
     </div>
   </footer>
 
-  <!-- WhatsApp 悬浮按钮：号码/预填消息/二维码在「联系我们设置」配置，号码留空则不显示 -->
+  <!-- WhatsApp floating button -->
     <div class="fixed bottom-6 right-6 z-50 group">
         <div class="absolute bottom-full right-0 mb-3 w-44 p-3 bg-white shadow-2xl border border-outline-variant/30 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 pointer-events-none">
       <img src="/wp-content/uploads/2026/11/whatsapp_qrcode.png" alt="WhatsApp QR Code" class="w-full h-auto">
