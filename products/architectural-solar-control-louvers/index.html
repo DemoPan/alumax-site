@@ -223,7 +223,7 @@ tailwind.config = {
 		}
 		if (event.data?.type === 'studio:preview:login') {
 			if (!hostOrigin || event.origin !== hostOrigin || location.pathname.split('/').some((part) => ['wp-admin', 'wp-login.php', 'wp-signup.php', 'wp-activate.php'].includes(part))) return;
-			const login = new URL('/studio-auto-login', location.href);
+			const login = new URL(window.studioAutoLoginUrl || '/studio-auto-login', location.href);
 			login.searchParams.set('redirect_to', location.href);
 			location.assign(login.toString());
 			return;
@@ -410,8 +410,8 @@ tailwind.config = {
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
       <div class="lg:col-span-5 relative group overflow-hidden bg-surface-container shadow-md">
         <img class="w-full h-[360px] sm:h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
-          alt=""
-          src="">
+          alt="Detailed close-up architectural photograph of extruded 6063-T6 aluminum S-blade profile."
+          src="/wp-content/uploads/alumax-img-ab9e91858a.jpg">
         <div class="absolute inset-0 bg-primary-container/20 group-hover:bg-primary-container/30 transition-colors"></div>
               </div>
       <div class="lg:col-span-7 flex flex-col">
@@ -423,54 +423,38 @@ tailwind.config = {
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                           <div class="flex items-start gap-4 p-4 bg-surface-container-lowest shadow-sm">
                 <div class="w-10 h-10 bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
-                  <span class="material-symbols-outlined text-[22px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>43</b><br />
-</span>
+                  <span class="material-symbols-outlined text-[22px]">waves</span>
                 </div>
                 <div class="flex flex-col">
                   <h3 class="font-headline font-bold text-sm text-on-surface">Aerodynamic S-Blade Geometry</h3>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5"><br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>47</b><br />
-</p>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">Proprietary S-curved profile creates multiple internal water traps that arrest wind-driven rain droplets and channel water to hidden perimeter drains.</p>
                 </div>
               </div>
                           <div class="flex items-start gap-4 p-4 bg-surface-container-lowest shadow-sm">
                 <div class="w-10 h-10 bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
-                  <span class="material-symbols-outlined text-[22px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>43</b><br />
-</span>
+                  <span class="material-symbols-outlined text-[22px]">visibility_off</span>
                 </div>
                 <div class="flex flex-col">
                   <h3 class="font-headline font-bold text-sm text-on-surface">Continuous Unbroken Sightlines</h3>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5"><br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>47</b><br />
-</p>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">Concealed vertical stringer carriers and hidden splice joints eliminate visible external fasteners across hundreds of continuous facade meters.</p>
                 </div>
               </div>
                           <div class="flex items-start gap-4 p-4 bg-surface-container-lowest shadow-sm">
                 <div class="w-10 h-10 bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
-                  <span class="material-symbols-outlined text-[22px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>43</b><br />
-</span>
+                  <span class="material-symbols-outlined text-[22px]">wb_sunny</span>
                 </div>
                 <div class="flex flex-col">
                   <h3 class="font-headline font-bold text-sm text-on-surface">Substantial Solar Heat Blockage</h3>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5"><br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>47</b><br />
-</p>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">Blocks up to 85% of direct solar heat gain, slashing peak building cooling loads and eliminating occupant window glare.</p>
                 </div>
               </div>
                           <div class="flex items-start gap-4 p-4 bg-surface-container-lowest shadow-sm">
                 <div class="w-10 h-10 bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
-                  <span class="material-symbols-outlined text-[22px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>43</b><br />
-</span>
+                  <span class="material-symbols-outlined text-[22px]">view_in_ar</span>
                 </div>
                 <div class="flex flex-col">
                   <h3 class="font-headline font-bold text-sm text-on-surface">Architectural Structural Extrusions</h3>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5"><br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>47</b><br />
-</p>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">High-strength 6063-T6 structural alloy with reinforced internal webs resisting typhoon-level positive and negative wind pressures.</p>
                 </div>
               </div>
                       </div>
@@ -494,15 +478,11 @@ tailwind.config = {
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
-              <span class="material-symbols-outlined text-[20px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>33</b><br />
-</span>
+              <span class="material-symbols-outlined text-[20px]">water_drop</span>
             </div>
             <h3 class="font-headline font-bold text-base text-on-surface mb-2">AMCA 500-L &amp; EN 13030 Class A Water Defense</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              <br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>37</b><br />
-            </p>
+              Achieves a 99.8% water rejection effectiveness rating under 13 m/s wind-driven rain simulations, protecting sensitive MEP equipment.            </p>
           </div>
         </div>
               <div class="flex flex-col bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group">
@@ -513,15 +493,11 @@ tailwind.config = {
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
-              <span class="material-symbols-outlined text-[20px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>33</b><br />
-</span>
+              <span class="material-symbols-outlined text-[20px]">layers</span>
             </div>
             <h3 class="font-headline font-bold text-base text-on-surface mb-2">Continuous Concealed Stringer Mounting</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              <br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>37</b><br />
-            </p>
+              Snap-on structural brackets secure blades onto heavy-duty vertical stringers with zero face-screw penetration and built-in thermal expansion relief.            </p>
           </div>
         </div>
               <div class="flex flex-col bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group">
@@ -532,15 +508,11 @@ tailwind.config = {
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
-              <span class="material-symbols-outlined text-[20px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>33</b><br />
-</span>
+              <span class="material-symbols-outlined text-[20px]">air</span>
             </div>
             <h3 class="font-headline font-bold text-base text-on-surface mb-2">50%–60% Optimized Free Airflow Area</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              <br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>37</b><br />
-            </p>
+              Engineered blade pitch delivers maximum volumetric airflow rate, reducing fan power consumption in mechanical ventilation shafts.            </p>
           </div>
         </div>
               <div class="flex flex-col bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group">
@@ -551,15 +523,11 @@ tailwind.config = {
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
-              <span class="material-symbols-outlined text-[20px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>33</b><br />
-</span>
+              <span class="material-symbols-outlined text-[20px]">palette</span>
             </div>
             <h3 class="font-headline font-bold text-base text-on-surface mb-2">30-Year High-Performance PVDF Finish</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              <br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>37</b><br />
-            </p>
+              AAMA 2605 compliant 3-coat fluoropolymer coating resists severe UV degradation, chemical pollution, and coastal salt spray.            </p>
           </div>
         </div>
           </div>
@@ -576,79 +544,56 @@ tailwind.config = {
       <!-- Left: Engineering Spec Table -->
       <div class="lg:col-span-7 flex flex-col bg-surface-container-lowest shadow-sm p-6 sm:p-8">
         <div class="flex items-center justify-between pb-4 border-b border-surface-variant mb-4">
-          <span class="font-headline font-bold text-base text-primary"></span>
+          <span class="font-headline font-bold text-base text-primary">Solar Control Louvers Engineering Specifications</span>
+                      <span class="font-label text-xs text-on-surface-variant uppercase">AMCA 500-L / EN 13030</span>
                   </div>
         <div class="flex flex-col divide-y divide-surface-container-high text-xs">
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Extrusion Material Alloy</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">Architectural Extruded Aluminum Alloy AA6063-T6 / AA6063-T5</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Blade Profile Typologies</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">S-Blade (Rain-Defense), Aerofoil / Airfoil (Sunshade), Acoustic Perforated</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Standard Blade Depths</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">100 mm, 150 mm, 200 mm, 300 mm, 450 mm (Custom up to 600 mm)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Extrusion Wall Thickness</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">2.0 mm to 3.0 mm heavy-wall structural profiles</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Nominal Free Area Ratio</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">50% to 60% nominal free area (AMCA 500-L certified)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Water Penetration Rating</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">Class A under EN 13030 (99.8% water rejection at 13 m/s wind &amp; 75 mm/h rain)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Structural Wind Resistance</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">ASTM E330 tested up to ±4.80 kPa hurricane design load</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Max Blade Span Capability</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">Up to 3,500 mm unsupported span / Continuous spliced span up to 6,000 mm</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Concealed Mounting Substructure</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">Concealed extruded 6063-T6 structural stringer brackets with anti-vibration EPDM pads</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Thermal Expansion Relief</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">Integrated expansion splices accommodating up to 6mm movement per 3-meter section</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Surface Finish Specification</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">70% Kynar 500 PVDF (3-coat ≥ 35μm), Powder Coat (≥ 60μm), or Class I Anodized (≥ 25μm)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Design Service Life</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">30-Year Fluoropolymer Performance Guarantee against blistering, peeling, and corrosion</span>
             </div>
                   </div>
@@ -815,6 +760,33 @@ tailwind.config = {
         <p class="font-body text-sm text-on-primary-container leading-relaxed mb-8">
           Submit your project requirements and our engineering team will respond with a tailored specification and quotation within 24 business hours.        </p>
         <div class="flex flex-col space-y-5">
+                      <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-sm bg-surface-container-highest/20 text-secondary-fixed flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">upload_file</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline font-semibold text-sm text-on-primary">Upload CAD / PDF Drawings</span>
+                <span class="font-body text-xs text-on-primary-container">We accept .DWG, .DXF, .RVT, and .PDF tender packages.</span>
+              </div>
+            </div>
+                      <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-sm bg-surface-container-highest/20 text-secondary-fixed flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">architecture</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline font-semibold text-sm text-on-primary">Share Project Details</span>
+                <span class="font-body text-xs text-on-primary-container">Specify blade profiles, continuous span length, free area requirement &amp; finish.</span>
+              </div>
+            </div>
+                      <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-sm bg-surface-container-highest/20 text-secondary-fixed flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">verified</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline font-semibold text-sm text-on-primary">Get a Customized Solution</span>
+                <span class="font-body text-xs text-on-primary-container">Comprehensive BOQ estimate, 3D section details &amp; lead times within 24 hours.</span>
+              </div>
+            </div>
                   </div>
       </div>
       <!-- Right: RFQ Form Card -->
@@ -822,6 +794,7 @@ tailwind.config = {
         <div class="bg-surface-container-lowest text-on-surface p-6 sm:p-10 shadow-xl">
           <div class="flex items-center justify-between pb-4 border-b border-surface-variant mb-6">
             <h3 class="font-headline font-bold text-lg text-primary">Direct Factory Specification RFQ</h3>
+                          <span class="font-label text-xs text-secondary font-semibold">24H RESPONSE</span>
                       </div>
                     <form class="flex flex-col space-y-4" id="alumax-inquiry-form" method="post" enctype="multipart/form-data" novalidate
             action="/wp-admin/admin-post.php">
@@ -877,7 +850,7 @@ tailwind.config = {
             <div class="pt-2">
               <button class="w-full h-12 bg-primary-container text-on-primary font-headline text-xs font-semibold uppercase tracking-wider hover:bg-secondary hover:text-on-secondary transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm"
                 type="submit">
-                <span></span>
+                <span>Submit Inquiry</span>
                 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
               </button>
             </div>
@@ -980,36 +953,12 @@ tailwind.config = {
 </section>
   </div>
 </main>
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   if (!window.jspdf) return;
-  var DATA = {"product":"Architectural Solar Control Louvers","date":"2026-11-18","eyebrow":"Technical Specifications","title":"Product Parameters & Engineering Details","tableTitle":"","tableRef":"","rows":[[null,"Architectural Extruded Aluminum Alloy AA6063-T6 \/ AA6063-T5"],[null,"S-Blade (Rain-Defense), Aerofoil \/ Airfoil (Sunshade), Acoustic Perforated"],[null,"100 mm, 150 mm, 200 mm, 300 mm, 450 mm (Custom up to 600 mm)"],[null,"2.0 mm to 3.0 mm heavy-wall structural profiles"],[null,"50% to 60% nominal free area (AMCA 500-L certified)"],[null,"Class A under EN 13030 (99.8% water rejection at 13 m\/s wind & 75 mm\/h rain)"],[null,"ASTM E330 tested up to \u00b14.80 kPa hurricane design load"],[null,"Up to 3,500 mm unsupported span \/ Continuous spliced span up to 6,000 mm"],[null,"Concealed extruded 6063-T6 structural stringer brackets with anti-vibration EPDM pads"],[null,"Integrated expansion splices accommodating up to 6mm movement per 3-meter section"],[null,"70% Kynar 500 PVDF (3-coat \u2265 35\u03bcm), Powder Coat (\u2265 60\u03bcm), or Class I Anodized (\u2265 25\u03bcm)"],[null,"30-Year Fluoropolymer Performance Guarantee against blistering, peeling, and corrosion"]],"cards":[{"title":"EN 13030 Class A Water Barrier","tag":"","caption":""}]};
+  var DATA = {"product":"Architectural Solar Control Louvers","date":"2026-11-18","eyebrow":"Technical Specifications","title":"Product Parameters & Engineering Details","tableTitle":"Solar Control Louvers Engineering Specifications","tableRef":"AMCA 500-L \/ EN 13030","rows":[["Extrusion Material Alloy","Architectural Extruded Aluminum Alloy AA6063-T6 \/ AA6063-T5"],["Blade Profile Typologies","S-Blade (Rain-Defense), Aerofoil \/ Airfoil (Sunshade), Acoustic Perforated"],["Standard Blade Depths","100 mm, 150 mm, 200 mm, 300 mm, 450 mm (Custom up to 600 mm)"],["Extrusion Wall Thickness","2.0 mm to 3.0 mm heavy-wall structural profiles"],["Nominal Free Area Ratio","50% to 60% nominal free area (AMCA 500-L certified)"],["Water Penetration Rating","Class A under EN 13030 (99.8% water rejection at 13 m\/s wind & 75 mm\/h rain)"],["Structural Wind Resistance","ASTM E330 tested up to \u00b14.80 kPa hurricane design load"],["Max Blade Span Capability","Up to 3,500 mm unsupported span \/ Continuous spliced span up to 6,000 mm"],["Concealed Mounting Substructure","Concealed extruded 6063-T6 structural stringer brackets with anti-vibration EPDM pads"],["Thermal Expansion Relief","Integrated expansion splices accommodating up to 6mm movement per 3-meter section"],["Surface Finish Specification","70% Kynar 500 PVDF (3-coat \u2265 35\u03bcm), Powder Coat (\u2265 60\u03bcm), or Class I Anodized (\u2265 25\u03bcm)"],["Design Service Life","30-Year Fluoropolymer Performance Guarantee against blistering, peeling, and corrosion"]],"cards":[{"title":"EN 13030 Class A Water Barrier","tag":"","caption":""}]};
   // jsPDF default font only supports Latin-1; lazy load CJK font if needed
   var FONT_URL = 'https://cdn.jsdelivr.net/gh/StellarCN/scp_zh@master/fonts/SimHei.ttf';
   var fontPromise = null;

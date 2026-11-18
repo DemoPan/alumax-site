@@ -223,7 +223,7 @@ tailwind.config = {
 		}
 		if (event.data?.type === 'studio:preview:login') {
 			if (!hostOrigin || event.origin !== hostOrigin || location.pathname.split('/').some((part) => ['wp-admin', 'wp-login.php', 'wp-signup.php', 'wp-activate.php'].includes(part))) return;
-			const login = new URL('/studio-auto-login', location.href);
+			const login = new URL(window.studioAutoLoginUrl || '/studio-auto-login', location.href);
 			login.searchParams.set('redirect_to', location.href);
 			location.assign(login.toString());
 			return;
@@ -410,8 +410,8 @@ tailwind.config = {
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
       <div class="lg:col-span-5 relative group overflow-hidden bg-surface-container shadow-md">
         <img class="w-full h-[360px] sm:h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
-          alt=""
-          src="">
+          alt="Cross-section of aluminum honeycomb composite panel showing high-density hexagonal core."
+          src="/wp-content/uploads/alumax-img-919e6fa092.jpg">
         <div class="absolute inset-0 bg-primary-container/20 group-hover:bg-primary-container/30 transition-colors"></div>
               </div>
       <div class="lg:col-span-7 flex flex-col">
@@ -423,54 +423,38 @@ tailwind.config = {
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                           <div class="flex items-start gap-4 p-4 bg-surface-container-lowest shadow-sm">
                 <div class="w-10 h-10 bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
-                  <span class="material-symbols-outlined text-[22px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>43</b><br />
-</span>
+                  <span class="material-symbols-outlined text-[22px]">hexagon</span>
                 </div>
                 <div class="flex flex-col">
                   <h3 class="font-headline font-bold text-sm text-on-surface">Aerospace Sandwich Architecture</h3>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5"><br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>47</b><br />
-</p>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">Interconnected hexagonal cells evenly distribute shear, tension, and compressive stresses across the entire plane, eliminating localized stress concentrations.</p>
                 </div>
               </div>
                           <div class="flex items-start gap-4 p-4 bg-surface-container-lowest shadow-sm">
                 <div class="w-10 h-10 bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
-                  <span class="material-symbols-outlined text-[22px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>43</b><br />
-</span>
+                  <span class="material-symbols-outlined text-[22px]">scale</span>
                 </div>
                 <div class="flex flex-col">
                   <h3 class="font-headline font-bold text-sm text-on-surface">Exceptional Strength-to-Weight Ratio</h3>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5"><br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>47</b><br />
-</p>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">Weighing only one-fifth of solid aluminum and one-tenth of steel of equivalent rigidity, drastically lightening facade dead load.</p>
                 </div>
               </div>
                           <div class="flex items-start gap-4 p-4 bg-surface-container-lowest shadow-sm">
                 <div class="w-10 h-10 bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
-                  <span class="material-symbols-outlined text-[22px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>43</b><br />
-</span>
+                  <span class="material-symbols-outlined text-[22px]">volume_off</span>
                 </div>
                 <div class="flex flex-col">
                   <h3 class="font-headline font-bold text-sm text-on-surface">Acoustic &amp; Thermal Isolation</h3>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5"><br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>47</b><br />
-</p>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">Thousands of closed hexagonal micro-air chambers suppress thermal conduction and dampen airborne sound and rain drumming vibrations.</p>
                 </div>
               </div>
                           <div class="flex items-start gap-4 p-4 bg-surface-container-lowest shadow-sm">
                 <div class="w-10 h-10 bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
-                  <span class="material-symbols-outlined text-[22px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>43</b><br />
-</span>
+                  <span class="material-symbols-outlined text-[22px]">aspect_ratio</span>
                 </div>
                 <div class="flex flex-col">
                   <h3 class="font-headline font-bold text-sm text-on-surface">Ultra-Large Format Capability</h3>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5"><br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\intro.php</b> on line <b>47</b><br />
-</p>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">Fabricated in seamless architectural formats up to 2,200 mm width and 6,000 mm length with continuous panel plane integrity.</p>
                 </div>
               </div>
                       </div>
@@ -494,15 +478,11 @@ tailwind.config = {
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
-              <span class="material-symbols-outlined text-[20px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>33</b><br />
-</span>
+              <span class="material-symbols-outlined text-[20px]">fitness_center</span>
             </div>
             <h3 class="font-headline font-bold text-base text-on-surface mb-2">500% Higher Flexural Rigidity</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              <br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>37</b><br />
-            </p>
+              With a flexural rigidity rating exceeding 450 N·m², our 20mm panels provide more than 5 times the bending resistance of 3.0mm solid sheet under equivalent wind loads.            </p>
           </div>
         </div>
               <div class="flex flex-col bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group">
@@ -513,15 +493,11 @@ tailwind.config = {
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
-              <span class="material-symbols-outlined text-[20px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>33</b><br />
-</span>
+              <span class="material-symbols-outlined text-[20px]">local_fire_department</span>
             </div>
             <h3 class="font-headline font-bold text-base text-on-surface mb-2">Class A2 Non-Combustible Safety</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              <br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>37</b><br />
-            </p>
+              Continuous mineral/aluminum cellular core construction emits zero toxic fumes or flaming droplets, fully compliant with global high-rise cladding fire safety codes.            </p>
           </div>
         </div>
               <div class="flex flex-col bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group">
@@ -532,15 +508,11 @@ tailwind.config = {
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
-              <span class="material-symbols-outlined text-[20px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>33</b><br />
-</span>
+              <span class="material-symbols-outlined text-[20px]">straighten</span>
             </div>
             <h3 class="font-headline font-bold text-base text-on-surface mb-2">Zero Oil-Canning Monolithic Flatness</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              <br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>37</b><br />
-            </p>
+              Deflection kept strictly below 0.5 mm per meter ensures razor-sharp facade reflections and mirror-flat architectural aesthetics even under intense solar exposure.            </p>
           </div>
         </div>
               <div class="flex flex-col bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group">
@@ -551,15 +523,11 @@ tailwind.config = {
           </div>
           <div class="p-6 flex flex-col flex-1">
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
-              <span class="material-symbols-outlined text-[20px]"><br />
-<b>Warning</b>:  Undefined array key "icon" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>33</b><br />
-</span>
+              <span class="material-symbols-outlined text-[20px]">link</span>
             </div>
             <h3 class="font-headline font-bold text-base text-on-surface mb-2">Automated Continuous Hot-Lamination</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              <br />
-<b>Warning</b>:  Undefined array key "text" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\advantages.php</b> on line <b>37</b><br />
-            </p>
+              Proprietary automated roller-press bonding with high-tensile epoxy adhesive achieves drum peel strength exceeding 120 N·mm/mm, eliminating delamination risk.            </p>
           </div>
         </div>
           </div>
@@ -576,79 +544,56 @@ tailwind.config = {
       <!-- Left: Engineering Spec Table -->
       <div class="lg:col-span-7 flex flex-col bg-surface-container-lowest shadow-sm p-6 sm:p-8">
         <div class="flex items-center justify-between pb-4 border-b border-surface-variant mb-4">
-          <span class="font-headline font-bold text-base text-primary"></span>
+          <span class="font-headline font-bold text-base text-primary">Hexagonal Honeycomb Engineering Specifications</span>
+                      <span class="font-label text-xs text-on-surface-variant uppercase">ASTM C393 / EN 13501-1</span>
                   </div>
         <div class="flex flex-col divide-y divide-surface-container-high text-xs">
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Standard Panel Thickness</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">10 mm, 15 mm, 20 mm, 25 mm, 50 mm (Custom up to 100 mm)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Facing Sheet Caliber</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">Top: 0.8 mm – 1.5 mm / Back: 0.5 mm – 1.0 mm (AA3003-H24 / AA5052)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Honeycomb Core Foil</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">AA3003-H19 foil, cell size 1/4&quot; (6.35 mm) or 3/8&quot; (9.52 mm), foil thickness 0.04–0.06 mm</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Maximum Panel Dimensions</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">Standard: 1,500 × 4,000 mm / Oversized Custom: 2,200 × 6,000 mm</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Unit Area Weight</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">Approx. 5.5 kg/m² (10mm) to 7.8 kg/m² (25mm)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Flexural Rigidity (EI)</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">EI ≥ 450 N·m² (20mm thickness, ASTM C393)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Roller Drum Peel Strength</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">≥ 120 N·mm/mm (ASTM D1781)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Compressive Strength</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">≥ 1.8 MPa (ASTM C365)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Tensile Shear Strength</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">≥ 1.5 MPa (ASTM C273)</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Reaction to Fire</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">EN 13501-1 Class A2-s1,d0 / ASTM E84 Class A</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Surface Finish Specification</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">70% Kynar 500 / Hylar 5000 PVDF (3-coat ≥ 35μm) or FEVE Fluorocarbon</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
-              <span class="font-headline font-semibold text-on-surface"><br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\template-parts\product-sections\specs.php</b> on line <b>34</b><br />
-</span>
+              <span class="font-headline font-semibold text-on-surface">Design Service Life</span>
               <span class="sm:col-span-2 font-body text-on-surface-variant">20+ Year Exterior Durability Guarantee against chalking, fading, and delamination</span>
             </div>
                   </div>
@@ -815,6 +760,33 @@ tailwind.config = {
         <p class="font-body text-sm text-on-primary-container leading-relaxed mb-8">
           Submit your project requirements and our engineering team will respond with a tailored specification and quotation within 24 business hours.        </p>
         <div class="flex flex-col space-y-5">
+                      <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-sm bg-surface-container-highest/20 text-secondary-fixed flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">upload_file</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline font-semibold text-sm text-on-primary">Upload CAD / PDF Drawings</span>
+                <span class="font-body text-xs text-on-primary-container">We accept .DWG, .DXF, .RVT, and .PDF tender packages.</span>
+              </div>
+            </div>
+                      <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-sm bg-surface-container-highest/20 text-secondary-fixed flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">architecture</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline font-semibold text-sm text-on-primary">Share Project Details</span>
+                <span class="font-body text-xs text-on-primary-container">Specify panel dimensions, alloy skin caliber, wind criteria &amp; core depth.</span>
+              </div>
+            </div>
+                      <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-sm bg-surface-container-highest/20 text-secondary-fixed flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">verified</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-headline font-semibold text-sm text-on-primary">Get a Customized Solution</span>
+                <span class="font-body text-xs text-on-primary-container">Comprehensive BOQ estimate, 3D section details &amp; lead times within 24 hours.</span>
+              </div>
+            </div>
                   </div>
       </div>
       <!-- Right: RFQ Form Card -->
@@ -822,6 +794,7 @@ tailwind.config = {
         <div class="bg-surface-container-lowest text-on-surface p-6 sm:p-10 shadow-xl">
           <div class="flex items-center justify-between pb-4 border-b border-surface-variant mb-6">
             <h3 class="font-headline font-bold text-lg text-primary">Direct Factory Specification RFQ</h3>
+                          <span class="font-label text-xs text-secondary font-semibold">24H RESPONSE</span>
                       </div>
                     <form class="flex flex-col space-y-4" id="alumax-inquiry-form" method="post" enctype="multipart/form-data" novalidate
             action="/wp-admin/admin-post.php">
@@ -877,7 +850,7 @@ tailwind.config = {
             <div class="pt-2">
               <button class="w-full h-12 bg-primary-container text-on-primary font-headline text-xs font-semibold uppercase tracking-wider hover:bg-secondary hover:text-on-secondary transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm"
                 type="submit">
-                <span></span>
+                <span>Submit Inquiry</span>
                 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
               </button>
             </div>
@@ -980,36 +953,12 @@ tailwind.config = {
 </section>
   </div>
 </main>
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
-<br />
-<b>Warning</b>:  Undefined array key "name" in <b>E:\code\alumax\wp-content\themes\alumax\inc\product-page-content.php</b> on line <b>687</b><br />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   if (!window.jspdf) return;
-  var DATA = {"product":"Hexagonal Honeycomb Composite Panels","date":"2026-11-18","eyebrow":"Technical Specifications","title":"Product Parameters & Engineering Details","tableTitle":"","tableRef":"","rows":[[null,"10 mm, 15 mm, 20 mm, 25 mm, 50 mm (Custom up to 100 mm)"],[null,"Top: 0.8 mm \u2013 1.5 mm \/ Back: 0.5 mm \u2013 1.0 mm (AA3003-H24 \/ AA5052)"],[null,"AA3003-H19 foil, cell size 1\/4\" (6.35 mm) or 3\/8\" (9.52 mm), foil thickness 0.04\u20130.06 mm"],[null,"Standard: 1,500 \u00d7 4,000 mm \/ Oversized Custom: 2,200 \u00d7 6,000 mm"],[null,"Approx. 5.5 kg\/m\u00b2 (10mm) to 7.8 kg\/m\u00b2 (25mm)"],[null,"EI \u2265 450 N\u00b7m\u00b2 (20mm thickness, ASTM C393)"],[null,"\u2265 120 N\u00b7mm\/mm (ASTM D1781)"],[null,"\u2265 1.8 MPa (ASTM C365)"],[null,"\u2265 1.5 MPa (ASTM C273)"],[null,"EN 13501-1 Class A2-s1,d0 \/ ASTM E84 Class A"],[null,"70% Kynar 500 \/ Hylar 5000 PVDF (3-coat \u2265 35\u03bcm) or FEVE Fluorocarbon"],[null,"20+ Year Exterior Durability Guarantee against chalking, fading, and delamination"]],"cards":[{"title":"EI 450 N\u00b7m\u00b2 vs Solid Plate","tag":"","caption":""}]};
+  var DATA = {"product":"Hexagonal Honeycomb Composite Panels","date":"2026-11-18","eyebrow":"Technical Specifications","title":"Product Parameters & Engineering Details","tableTitle":"Hexagonal Honeycomb Engineering Specifications","tableRef":"ASTM C393 \/ EN 13501-1","rows":[["Standard Panel Thickness","10 mm, 15 mm, 20 mm, 25 mm, 50 mm (Custom up to 100 mm)"],["Facing Sheet Caliber","Top: 0.8 mm \u2013 1.5 mm \/ Back: 0.5 mm \u2013 1.0 mm (AA3003-H24 \/ AA5052)"],["Honeycomb Core Foil","AA3003-H19 foil, cell size 1\/4\" (6.35 mm) or 3\/8\" (9.52 mm), foil thickness 0.04\u20130.06 mm"],["Maximum Panel Dimensions","Standard: 1,500 \u00d7 4,000 mm \/ Oversized Custom: 2,200 \u00d7 6,000 mm"],["Unit Area Weight","Approx. 5.5 kg\/m\u00b2 (10mm) to 7.8 kg\/m\u00b2 (25mm)"],["Flexural Rigidity (EI)","EI \u2265 450 N\u00b7m\u00b2 (20mm thickness, ASTM C393)"],["Roller Drum Peel Strength","\u2265 120 N\u00b7mm\/mm (ASTM D1781)"],["Compressive Strength","\u2265 1.8 MPa (ASTM C365)"],["Tensile Shear Strength","\u2265 1.5 MPa (ASTM C273)"],["Reaction to Fire","EN 13501-1 Class A2-s1,d0 \/ ASTM E84 Class A"],["Surface Finish Specification","70% Kynar 500 \/ Hylar 5000 PVDF (3-coat \u2265 35\u03bcm) or FEVE Fluorocarbon"],["Design Service Life","20+ Year Exterior Durability Guarantee against chalking, fading, and delamination"]],"cards":[{"title":"EI 450 N\u00b7m\u00b2 vs Solid Plate","tag":"","caption":""}]};
   // jsPDF default font only supports Latin-1; lazy load CJK font if needed
   var FONT_URL = 'https://cdn.jsdelivr.net/gh/StellarCN/scp_zh@master/fonts/SimHei.ttf';
   var fontPromise = null;

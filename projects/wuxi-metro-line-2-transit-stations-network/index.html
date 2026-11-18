@@ -223,7 +223,7 @@ tailwind.config = {
 		}
 		if (event.data?.type === 'studio:preview:login') {
 			if (!hostOrigin || event.origin !== hostOrigin || location.pathname.split('/').some((part) => ['wp-admin', 'wp-login.php', 'wp-signup.php', 'wp-activate.php'].includes(part))) return;
-			const login = new URL('/studio-auto-login', location.href);
+			const login = new URL(window.studioAutoLoginUrl || '/studio-auto-login', location.href);
 			login.searchParams.set('redirect_to', location.href);
 			location.assign(login.toString());
 			return;
