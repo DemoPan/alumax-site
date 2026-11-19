@@ -1,0 +1,36 @@
+name: Deploy to Production (aluviona.com)
+
+on:
+  # 方式 1：在 GitHub 网页 Actions 页面点击 "Run workflow" 按钮一键发布
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '发布说明（如：更新案例封面、发布新产品等）'
+        required: false
+        default: 'Manual production deploy'
+
+  # 方式 2：推送到 production 分支时自动触发发布
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    name: 🚀 Deploy to aluviona.com via FTP
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: 📂 通过 FTP 同步到生产服务器
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || 21 }}
+          local-dir: ./
+          server-dir: ${{ secrets.FTP_SERVER_DIR || '/public_html/' }}
+          dangerous-clean-slate: false
