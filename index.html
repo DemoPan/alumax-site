@@ -68,7 +68,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 
 <link rel='stylesheet' id='alumax-fonts-local-css' href='/wp-content/themes/alumax/assets/css/fonts.css?ver=1795182200' media='all' />
-<link rel='stylesheet' id='alumax-main-css' href='/wp-content/themes/alumax/assets/css/main.min.css?ver=1795182296' media='all' />
+<link rel='stylesheet' id='alumax-main-css' href='/wp-content/themes/alumax/assets/css/main.min.css?ver=1795410843' media='all' />
 <link rel="https://api.w.org/" href="http://localhost:8881/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 7.1.3" />
 <script>(() => {
@@ -347,18 +347,35 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <!-- ========================================================================= -->
     <!-- SECTION 1: IMMERSIVE FULL-VIEWPORT HERO WITH TECHNICAL METADATA BADGES    -->
     <!-- ========================================================================= -->
+        <!-- ========================================================================= -->
+    <!-- SECTION 1: STRATEGIC ENTERPRISE FOCUS BOARD (HERO WITH LINKED CAROUSEL)   -->
+    <!-- ========================================================================= -->
     <section
-      class="relative w-full min-h-screen flex flex-col justify-between pt-24 pb-12 bg-[#0d1b2a] text-white overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <img alt="Kinetic Facade Architecture"
-          class="w-full h-full object-cover opacity-35 transition-opacity duration-700" id="hero-bg-slide"
-          src="/wp-content/uploads/alumax-site-a976756a20.jpg">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#0d1b2a] via-[#0d1b2a]/60 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-[#0d1b2a] via-[#0d1b2a]/75 to-transparent"></div>
+      class="relative w-full min-h-[92vh] lg:min-h-screen flex flex-col justify-between pt-24 pb-8 bg-[#0d1b2a] text-white overflow-hidden"
+      id="hero-strategic-section">
+
+      <!-- Background Layers Container (Stack with CSS Crossfade & Ken Burns Scale) -->
+      <div class="absolute inset-0 z-0 overflow-hidden" id="hero-bg-container">
+                <div
+          class="hero-bg-layer absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out transform opacity-65 scale-100 pointer-events-auto"
+          data-bg-index="0"
+          style="background-image: url('/wp-content/uploads/alumax-site-a976756a20.jpg');"></div>
+                <div
+          class="hero-bg-layer absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out transform opacity-0 scale-105 pointer-events-none"
+          data-bg-index="1"
+          style="background-image: url('/wp-content/uploads/alumax-site-6d8e8a28dd.jpg');"></div>
+                <div
+          class="hero-bg-layer absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out transform opacity-0 scale-105 pointer-events-none"
+          data-bg-index="2"
+          style="background-image: url('/wp-content/uploads/alumax-site-9e0d7c5ef9.jpg');"></div>
+                <!-- Directional Gradients for Maximum Contrast on Left, Architectural Clarity on Right -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#0d1b2a] via-[#0d1b2a]/85 via-50% to-[#0d1b2a]/30 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0d1b2a] via-transparent to-black/30 pointer-events-none"></div>
         <div class="absolute inset-0 opacity-10 pointer-events-none"
           style="background-image: radial-gradient(#d6e4f9 1px, transparent 1px); background-size: 36px 36px;"></div>
       </div>
-                  <!-- Top Telemetry & Badges -->
+
+      <!-- Top Telemetry & Global Trust Badges -->
       <div class="relative z-10 max-w-[1440px] w-full mx-auto px-margin-mobile md:px-margin pt-4">
         <div
           class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 font-label-sm text-label-sm">
@@ -366,160 +383,127 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <span
               class="inline-flex items-center gap-2 px-3 py-1 bg-secondary/30 border border-secondary/50 rounded-full text-secondary-fixed font-semibold tracking-wider uppercase">
               <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-              Live Presentation Mode
+              Enterprise Focus Dispatch
             </span>
-            <span class="hidden md:inline text-slate-300 font-label-sm">ASTM E84 Class A • EN 13501-1 Non-Combustible A2
-              • CWCT Tested</span>
+            <span class="hidden md:inline text-slate-300 font-label-sm">ASTM E84 Class A • EN 13501-1 Non-Combustible A2 • CWCT Tested</span>
           </div>
           <div class="flex items-center gap-6 text-slate-300">
             <span class="flex items-center gap-1.5"><span
                 class="material-symbols-outlined text-secondary text-sm">hub</span> Global LOD 400 BIM</span>
             <span class="flex items-center gap-1.5"><span
-                class="material-symbols-outlined text-secondary text-sm">precision_manufacturing</span> World-Class Supply Chain</span>
+                class="material-symbols-outlined text-secondary text-sm">precision_manufacturing</span> 85,000 m² Smart Campus</span>
             <span class="flex items-center gap-1.5"><span
-                class="material-symbols-outlined text-secondary text-sm">precision_manufacturing</span> ISO 9001 / CE
-              Certified</span>
+                class="material-symbols-outlined text-secondary text-sm">verified_user</span> ISO 9001 Certified</span>
           </div>
         </div>
       </div>
-      <!-- Hero Content -->
+
+      <!-- Hero Main Content (Full Width Impact, Right Telemetry Box Deleted) -->
       <div class="relative z-10 max-w-[1440px] w-full mx-auto px-margin-mobile md:px-margin my-auto py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-8 space-y-6">
-            <div
-              class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 border border-white/15 rounded-full font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider backdrop-blur-md">
-              <span class="material-symbols-outlined text-base">architecture</span>
-              <span class="">ARCHITECTURAL METAL SOLUTIONS // Shaping Architecture with Metal.</span>
-            </div>
-            <h1
-              class="font-display-xl text-display-xl uppercase tracking-tight text-white leading-tight font-bold max-w-4xl">
-              Engineered Architectural Metals &amp; Adaptive Facade Systems            </h1>
-            <p class="font-body-lg text-body-lg text-slate-300 max-w-3xl leading-relaxed">
-              World-class OEM/ODM manufacturer delivering precision-engineered motorized sunshades, ultra-flat honeycomb composite panels, and solid aluminum curtain walls built to withstand extreme windloads and seismic conditions.            </p>
-            <!-- Technical Metadata Metric Badges -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2 pb-2 max-w-3xl">
-                            <div class="bg-white/5 border border-white/10 p-4 rounded-lg backdrop-blur-md">
-                <span
-                  class="font-display-lg text-display-lg text-secondary-fixed block leading-none font-bold">A2</span>
-                <span class="font-label-sm text-label-sm text-slate-300 uppercase mt-1 block">ASTM E84 Class A Fire Code</span>
-              </div>
-                            <div class="bg-white/5 border border-white/10 p-4 rounded-lg backdrop-blur-md">
-                <span
-                  class="font-display-lg text-display-lg text-white block leading-none font-bold">25-Yr</span>
-                <span class="font-label-sm text-label-sm text-slate-300 uppercase mt-1 block">Fluorocarbon PVDF Warranty</span>
-              </div>
-                            <div class="bg-white/5 border border-white/10 p-4 rounded-lg backdrop-blur-md">
-                <span
-                  class="font-display-lg text-display-lg text-secondary-fixed block leading-none font-bold">1,200+</span>
-                <span class="font-label-sm text-label-sm text-slate-300 uppercase mt-1 block">Landmark Installations</span>
-              </div>
-                            <div class="bg-white/5 border border-white/10 p-4 rounded-lg backdrop-blur-md">
-                <span
-                  class="font-display-lg text-display-lg text-white block leading-none font-bold">85,000 m²</span>
-                <span class="font-label-sm text-label-sm text-slate-300 uppercase mt-1 block">Smart Fabrication Campus</span>
-              </div>
-                          </div>
+        <div class="max-w-4xl space-y-6 transition-all duration-300 ease-out" id="hero-content-wrap">
+          <!-- Kicker Badge -->
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/10 border border-white/15 rounded-full font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider backdrop-blur-md"
+            id="hero-kicker-wrap">
+            <span class="material-symbols-outlined text-base" id="hero-kicker-icon">campaign</span>
+            <span id="hero-kicker-text">GLOBAL EXPO // DUBAI WORLD TRADE CENTRE</span>
           </div>
-          <!-- Telemetry Box -->
-          <div class="lg:col-span-4 hidden lg:block">
-            <div class="bg-[#0f1c2c]/90 border border-white/15 p-6 rounded-2xl shadow-2xl backdrop-blur-xl space-y-4">
-              <div class="flex items-center justify-between pb-3 border-b border-white/10">
-                <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span
-                    class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider font-semibold">Active
-                    Engineering Profile</span>
-                </div>
-                <span class="font-label-sm text-label-sm text-slate-400">SYS-LOU-2025</span>
-              </div>
-              <div class="space-y-3 font-label-sm text-label-sm">
-                <div class="flex justify-between items-center py-1 border-b border-white/5">
-                  <span class="text-slate-400">Actuation:</span>
-                  <span class="text-white font-medium">BMS Direct Linear (24V DC / Modbus)</span>
-                </div>
-                <div class="flex justify-between items-center py-1 border-b border-white/5">
-                  <span class="text-slate-400">Rotation Capability:</span>
-                  <span class="text-white font-medium">0° to 90° Continuous Stepless</span>
-                </div>
-                <div class="flex justify-between items-center py-1 border-b border-white/5">
-                  <span class="text-slate-400">Wind Pressure Rating:</span>
-                  <span class="text-white font-medium">Tested up to Typhoon Class 12 (5.8 kPa)</span>
-                </div>
-                <div class="flex justify-between items-center py-1 border-b border-white/5">
-                  <span class="text-slate-400">Acoustic Reduction:</span>
-                  <span class="text-white font-medium">Rw 32 dB Acoustic Chamber Tested</span>
-                </div>
-                <div class="flex justify-between items-center py-1">
-                  <span class="text-slate-400">Coating Spec:</span>
-                  <span class="text-secondary-fixed font-medium">PPG Duranar XL 3-Coat PVDF (30-Yr)</span>
-                </div>
-              </div>
-              <div class="pt-2">
-                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-                  <div class="h-full bg-secondary w-3/4 rounded-full"></div>
-                </div>
-                <div class="flex justify-between text-[11px] text-slate-400 font-label-sm mt-1">
-                  <span class="">Solar Heat Gain (SHGC): 0.14</span>
-                  <span class="">Energy Savings: -38%</span>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <!-- Dynamic Title H1 -->
+          <h1
+            class="font-display-xl text-display-xl uppercase tracking-tight text-white leading-tight font-bold max-w-4xl drop-shadow-sm"
+            id="hero-title">
+            Meet ALUVIONA at The Big 5 Dubai: Shaping Global Skylines          </h1>
+
+          <!-- Dynamic Description Subtitle -->
+          <p class="font-body-lg text-body-lg text-slate-200 max-w-3xl leading-relaxed" id="hero-desc">
+            Unveiling our next-generation EN A2 fire-safe solid cladding, intelligent solar louvers, and bespoke hyperbolic fabrication. Schedule a dedicated VIP consultation with our senior facade engineering directors.          </p>
+
+          <!-- Dynamic Specification Tags -->
+          <div class="flex flex-wrap items-center gap-3 pt-1" id="hero-tags">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 border border-white/15 rounded-lg text-xs font-medium text-slate-200 backdrop-blur-md">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              <span>Stand Z2-H38 · Hall 2</span>
+            </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 border border-white/15 rounded-lg text-xs font-medium text-slate-200 backdrop-blur-md">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              <span>Nov 26 — 29, 2026</span>
+            </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 border border-white/15 rounded-lg text-xs font-medium text-slate-200 backdrop-blur-md">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              <span>Live 1:1 Facade Mockups</span>
+            </span>
+                      </div>
+
+          <!-- Dynamic Action Buttons (CTA) -->
+          <div class="flex flex-wrap items-center gap-4 pt-3" id="hero-cta-wrap">
+            <a
+              class="h-12 px-7 bg-secondary text-on-secondary hover:bg-secondary-fixed-dim font-headline-sm text-label-md uppercase tracking-wider font-semibold rounded-lg shadow-lg flex items-center gap-2 transition-all hover:scale-105"
+              id="hero-cta1"
+              href="/contact/">
+              <span id="hero-cta1-text">Book a VIP Booth Meeting</span>
+              <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </a>
+                        <a
+              class="h-12 px-6 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-headline-sm text-label-md uppercase tracking-wider font-semibold rounded-lg backdrop-blur-md flex items-center gap-2 transition-colors"
+              id="hero-cta2"
+              href="/contact/">
+              <span id="hero-cta2-text">Download Expo Preview</span>
+              <span class="material-symbols-outlined text-lg">description</span>
+            </a>
+                      </div>
         </div>
       </div>
-      <!-- Hero Scenario Switcher (kept above the stretched link so controls stay clickable) -->
+
+      <!-- Hero Strategic Focus Switcher (Clean Two-Line Engineering Pills) -->
       <div class="relative z-30 max-w-[1440px] w-full mx-auto px-margin-mobile md:px-margin pt-4">
-        <div
-          class="bg-black/40 border border-white/15 backdrop-blur-xl rounded-xl p-3 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div class="flex items-center gap-3 shrink-0">
-            <button
-              class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
-              id="playback-toggle-btn" title="Toggle Auto-presentation" type="button">
-              <span class="material-symbols-outlined text-lg" id="playback-icon">pause</span>
-            </button>
-            <div class="flex flex-col">
-              <span class="font-label-sm text-label-sm text-white uppercase tracking-wider font-semibold">Cinematic
-                Showcase</span>
-              <span class="font-label-sm text-[11px] text-slate-400">3 Architectural Sequences</span>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="hero-pills-nav">
+                    <button
+            type="button"
+            class="hero-pill-btn group relative p-3.5 rounded-xl border text-left transition-all backdrop-blur-xl overflow-hidden active bg-white/15 border-secondary shadow-lg"
+            data-slide-index="0">
+            <!-- Smooth Progress Bar Indicator -->
+            <div
+              class="hero-progress-line absolute bottom-0 left-0 h-[3px] bg-secondary transition-none w-0 block"></div>
+            <div class="flex items-center justify-between mb-1">
+              <span class="hero-tab-cat font-label-sm text-[11px] uppercase tracking-wider text-secondary-fixed">
+                01 · GLOBAL EXPO              </span>
+              <span class="hero-tab-dot w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
             </div>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 w-full md:max-w-3xl" id="hero-slide-nav">
-                        <button
-              class="hero-slide-btn flex items-center gap-3 p-2.5 rounded-lg border text-left transition-all active bg-white/15 border-secondary"
-              data-bg="/wp-content/uploads/alumax-site-a976756a20.jpg"
-              type="button">
-              <span class="w-2 h-2 rounded-full shrink-0 bg-secondary"></span>
-              <div class="min-w-0">
-                <div class="font-label-sm text-label-sm text-white font-semibold truncate uppercase">1. Kinetic Intelligent Facade</div>
-                <div class="text-[11px] text-slate-300 font-label-sm truncate">Automated Motorized Sunshades</div>
-              </div>
-            </button>
-                        <button
-              class="hero-slide-btn flex items-center gap-3 p-2.5 rounded-lg border text-left transition-all hover:bg-white/10 bg-white/5 border-white/5"
-              data-bg="/wp-content/uploads/alumax-site-6d8e8a28dd.jpg"
-              type="button">
-              <span class="w-2 h-2 rounded-full shrink-0 bg-slate-500"></span>
-              <div class="min-w-0">
-                <div class="font-label-sm text-label-sm text-white font-semibold truncate uppercase">2. Landmark Airport Canopy</div>
-                <div class="text-[11px] text-slate-300 font-label-sm truncate">Dubai Concourse Honeycomb</div>
-              </div>
-            </button>
-                        <button
-              class="hero-slide-btn flex items-center gap-3 p-2.5 rounded-lg border text-left transition-all hover:bg-white/10 bg-white/5 border-white/5"
-              data-bg="/wp-content/uploads/alumax-site-9e0d7c5ef9.jpg"
-              type="button">
-              <span class="w-2 h-2 rounded-full shrink-0 bg-slate-500"></span>
-              <div class="min-w-0">
-                <div class="font-label-sm text-label-sm text-white font-semibold truncate uppercase">3. Hyperboloid Metal Tower</div>
-                <div class="text-[11px] text-slate-300 font-label-sm truncate">Curved Solid Aluminum Panels</div>
-              </div>
-            </button>
-                      </div>
-          <div class="hidden xl:flex items-center gap-2 font-label-sm text-label-sm text-secondary-fixed shrink-0">
-            <span class="material-symbols-outlined text-lg">flight_takeoff</span>
-            <span class="">Worldwide DHL 24h Express Dispatch</span>
-          </div>
-        </div>
+            <div class="hero-tab-title font-headline-sm text-sm text-white font-semibold truncate">
+              The Big 5 Dubai 2026            </div>
+          </button>
+                    <button
+            type="button"
+            class="hero-pill-btn group relative p-3.5 rounded-xl border text-left transition-all backdrop-blur-xl overflow-hidden bg-black/35 hover:bg-white/10 border-white/10"
+            data-slide-index="1">
+            <!-- Smooth Progress Bar Indicator -->
+            <div
+              class="hero-progress-line absolute bottom-0 left-0 h-[3px] bg-secondary transition-none w-0 hidden"></div>
+            <div class="flex items-center justify-between mb-1">
+              <span class="hero-tab-cat font-label-sm text-[11px] uppercase tracking-wider text-slate-400 group-hover:text-slate-200">
+                02 · LANDMARK CASE              </span>
+              <span class="hero-tab-dot w-1.5 h-1.5 rounded-full bg-transparent"></span>
+            </div>
+            <div class="hero-tab-title font-headline-sm text-sm text-white font-semibold truncate">
+              High-Speed Rail Terminal            </div>
+          </button>
+                    <button
+            type="button"
+            class="hero-pill-btn group relative p-3.5 rounded-xl border text-left transition-all backdrop-blur-xl overflow-hidden bg-black/35 hover:bg-white/10 border-white/10"
+            data-slide-index="2">
+            <!-- Smooth Progress Bar Indicator -->
+            <div
+              class="hero-progress-line absolute bottom-0 left-0 h-[3px] bg-secondary transition-none w-0 hidden"></div>
+            <div class="flex items-center justify-between mb-1">
+              <span class="hero-tab-cat font-label-sm text-[11px] uppercase tracking-wider text-slate-400 group-hover:text-slate-200">
+                03 · R&amp;D INNOVATION              </span>
+              <span class="hero-tab-dot w-1.5 h-1.5 rounded-full bg-transparent"></span>
+            </div>
+            <div class="hero-tab-title font-headline-sm text-sm text-white font-semibold truncate">
+              Hyperbolic 3D Panels            </div>
+          </button>
+                  </div>
       </div>
     </section>
     <!-- ========================================================================= -->
@@ -1213,72 +1197,169 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const heroBg = document.getElementById('hero-bg-slide');
-      const slideBtns = document.querySelectorAll('.hero-slide-btn');
-      const playbackToggle = document.getElementById('playback-toggle-btn');
-      const playbackIcon = document.getElementById('playback-icon');
+      const slidesData = [{"tab_cat":"01 \u00b7 GLOBAL EXPO","tab_title":"The Big 5 Dubai 2026","kicker":"GLOBAL EXPO \/\/ DUBAI WORLD TRADE CENTRE","kicker_icon":"campaign","title":"Meet ALUVIONA at The Big 5 Dubai: Shaping Global Skylines","desc":"Unveiling our next-generation EN A2 fire-safe solid cladding, intelligent solar louvers, and bespoke hyperbolic fabrication. Schedule a dedicated VIP consultation with our senior facade engineering directors.","image":"\/wp-content\/uploads\/alumax-site-a976756a20.jpg","tag1":"Stand Z2-H38 \u00b7 Hall 2","tag2":"Nov 26 \u2014 29, 2026","tag3":"Live 1:1 Facade Mockups","cta1_text":"Book a VIP Booth Meeting","cta1_url":"\/contact\/","cta2_text":"Download Expo Preview","cta2_url":"\/contact\/"},{"tab_cat":"02 \u00b7 LANDMARK CASE","tab_title":"High-Speed Rail Terminal","kicker":"LANDMARK MILESTONE \/\/ TRANSIT INFRASTRUCTURE","kicker_icon":"domain","title":"Huaibei West High-Speed Rail Hub: 45,000 m\u00b2 Facade Delivered","desc":"Engineered for extreme cyclic air-piston pressures and Class A1 non-combustible public transit standards. Precision 3.0mm roll-curved solid aluminum panels manufactured to \u00b10.3mm CNC tolerance.","image":"\/wp-content\/uploads\/alumax-site-6d8e8a28dd.jpg","tag1":"45,000 m\u00b2 Cladding Area","tag2":"EN 13501 Class A1 Fire Safe","tag3":"BIM LOD 400 Coordination","cta1_text":"Explore Project Case Study","cta1_url":"\/case\/huaibei-west-high-speed-railway-terminal\/","cta2_text":"Structural Verification Data","cta2_url":"\/contact\/"},{"tab_cat":"03 \u00b7 R&D INNOVATION","tab_title":"Hyperbolic 3D Panels","kicker":"R&D INNOVATION \/\/ PARAMETRIC METALLURGY","kicker_icon":"architecture","title":"Bespoke Freeform Hyperbolic Panels: Flawless Complex Geometry","desc":"Breaking the boundaries of sheet metal forming. Automated multi-axis stretch-bending eliminates skin thinning and cosmetic heat deformation for bold fluid architectural envelopes.","image":"\/wp-content\/uploads\/alumax-site-9e0d7c5ef9.jpg","tag1":"\u00b10.05mm CNC Positioning","tag2":"Multi-Axis Stretch Forming","tag3":"AAMA 2605 70% PVDF","cta1_text":"View Technical Specifications","cta1_url":"\/product\/solid-aluminum-cladding-panels\/","cta2_text":"Order Architectural Samples","cta2_url":"\/contact\/"}];
+      const bgLayers = document.querySelectorAll('.hero-bg-layer');
+      const pillBtns = document.querySelectorAll('.hero-pill-btn');
+      const contentWrap = document.getElementById('hero-content-wrap');
+      const kickerIcon = document.getElementById('hero-kicker-icon');
+      const kickerText = document.getElementById('hero-kicker-text');
+      const titleElem = document.getElementById('hero-title');
+      const descElem = document.getElementById('hero-desc');
+      const tagsContainer = document.getElementById('hero-tags');
+      const cta1Btn = document.getElementById('hero-cta1');
+      const cta1Text = document.getElementById('hero-cta1-text');
+      const cta2Btn = document.getElementById('hero-cta2');
+      const cta2Text = document.getElementById('hero-cta2-text');
+      const heroSection = document.getElementById('hero-strategic-section');
 
       let currentSlide = 0;
-      let isPlaying = true;
+      let slideDuration = 6000; // 6s per slide
+      let progressInterval = 50; // update every 50ms
+      let progressElapsed = 0;
       let timer = null;
+      let isPaused = false;
 
-      function switchSlide(index) {
-        slideBtns.forEach((btn, i) => {
-          const dot = btn.querySelector('span');
+      function updateActivePills(index) {
+        pillBtns.forEach((btn, i) => {
+          const progLine = btn.querySelector('.hero-progress-line');
+          const catLabel = btn.querySelector('.hero-tab-cat');
+          const dot = btn.querySelector('.hero-tab-dot');
           if (i === index) {
-            btn.classList.add('active', 'bg-white/15', 'border-secondary');
-            btn.classList.remove('bg-white/5', 'border-white/5');
-            if (dot) {
-              dot.classList.add('bg-secondary');
-              dot.classList.remove('bg-slate-500');
+            btn.classList.add('active', 'bg-white/15', 'border-secondary', 'shadow-lg');
+            btn.classList.remove('bg-black/35', 'border-white/10');
+            if (catLabel) {
+              catLabel.classList.add('text-secondary-fixed');
+              catLabel.classList.remove('text-slate-400');
             }
-            const newBg = btn.getAttribute('data-bg');
-            if (newBg && heroBg) {
-              heroBg.src = newBg;
+            if (dot) {
+              dot.classList.add('bg-secondary', 'animate-pulse');
+              dot.classList.remove('bg-transparent');
+            }
+            if (progLine) {
+              progLine.classList.remove('hidden');
+              progLine.style.width = '0%';
             }
           } else {
-            btn.classList.remove('active', 'bg-white/15', 'border-secondary');
-            btn.classList.add('bg-white/5', 'border-white/5');
+            btn.classList.remove('active', 'bg-white/15', 'border-secondary', 'shadow-lg');
+            btn.classList.add('bg-black/35', 'border-white/10');
+            if (catLabel) {
+              catLabel.classList.remove('text-secondary-fixed');
+              catLabel.classList.add('text-slate-400');
+            }
             if (dot) {
-              dot.classList.remove('bg-secondary');
-              dot.classList.add('bg-slate-500');
+              dot.classList.remove('bg-secondary', 'animate-pulse');
+              dot.classList.add('bg-transparent');
+            }
+            if (progLine) {
+              progLine.classList.add('hidden');
+              progLine.style.width = '0%';
             }
           }
         });
-        currentSlide = index;
       }
 
-      slideBtns.forEach((btn, idx) => {
+      function updateBackground(index) {
+        bgLayers.forEach((layer, i) => {
+          if (i === index) {
+            layer.classList.add('opacity-65', 'scale-100', 'pointer-events-auto');
+            layer.classList.remove('opacity-0', 'scale-105', 'pointer-events-none');
+          } else {
+            layer.classList.remove('opacity-65', 'scale-100', 'pointer-events-auto');
+            layer.classList.add('opacity-0', 'scale-105', 'pointer-events-none');
+          }
+        });
+      }
+
+      function updateContent(index) {
+        const data = slidesData[index];
+        if (!data) return;
+
+        // Smooth fade-and-slide transition
+        contentWrap.classList.add('opacity-0', '-translate-y-2');
+
+        setTimeout(() => {
+          // Update texts
+          if (kickerIcon) kickerIcon.textContent = data.kicker_icon || 'campaign';
+          if (kickerText) kickerText.textContent = data.kicker || '';
+          if (titleElem) titleElem.textContent = data.title || '';
+          if (descElem) descElem.textContent = data.desc || '';
+
+          // Update tags
+          if (tagsContainer) {
+            tagsContainer.innerHTML = '';
+            [data.tag1, data.tag2, data.tag3].forEach(tag => {
+              if (tag && tag.trim()) {
+                const chip = document.createElement('span');
+                chip.className = 'inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 border border-white/15 rounded-lg text-xs font-medium text-slate-200 backdrop-blur-md';
+                chip.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>' + tag + '</span>';
+                tagsContainer.appendChild(chip);
+              }
+            });
+          }
+
+          // Update CTA 1
+          if (cta1Btn && data.cta1_url) {
+            cta1Btn.href = data.cta1_url;
+            if (cta1Text) cta1Text.textContent = data.cta1_text || 'Learn More';
+            cta1Btn.classList.remove('hidden');
+          } else if (cta1Btn) {
+            cta1Btn.classList.add('hidden');
+          }
+
+          // Update CTA 2
+          if (cta2Btn && data.cta2_text && data.cta2_url) {
+            cta2Btn.href = data.cta2_url;
+            if (cta2Text) cta2Text.textContent = data.cta2_text;
+            cta2Btn.classList.remove('hidden');
+          } else if (cta2Btn) {
+            cta2Btn.classList.add('hidden');
+          }
+
+          // Animate back in
+          contentWrap.classList.remove('opacity-0', '-translate-y-2');
+        }, 180);
+      }
+
+      function switchSlide(index) {
+        currentSlide = index;
+        progressElapsed = 0;
+        updateActivePills(index);
+        updateBackground(index);
+        updateContent(index);
+      }
+
+      pillBtns.forEach((btn, idx) => {
         btn.addEventListener('click', () => {
           switchSlide(idx);
         });
       });
 
-      function startSlideshow() {
-        timer = setInterval(() => {
-          let next = (currentSlide + 1) % slideBtns.length;
-          switchSlide(next);
-        }, 5500);
-      }
-
-      function stopSlideshow() {
-        if (timer) clearInterval(timer);
-      }
-
-      if (playbackToggle) {
-        playbackToggle.addEventListener('click', () => {
-          isPlaying = !isPlaying;
-          if (isPlaying) {
-            playbackIcon.textContent = 'pause';
-            startSlideshow();
-          } else {
-            playbackIcon.textContent = 'play_arrow';
-            stopSlideshow();
+      // Progress bar loop
+      function runProgress() {
+        if (!isPaused) {
+          progressElapsed += progressInterval;
+          const activePill = pillBtns[currentSlide];
+          if (activePill) {
+            const progLine = activePill.querySelector('.hero-progress-line');
+            if (progLine) {
+              const pct = Math.min((progressElapsed / slideDuration) * 100, 100);
+              progLine.style.width = pct + '%';
+            }
           }
-        });
+          if (progressElapsed >= slideDuration) {
+            let next = (currentSlide + 1) % slidesData.length;
+            switchSlide(next);
+          }
+        }
       }
 
-      startSlideshow();
+      timer = setInterval(runProgress, progressInterval);
+
+      // Pause on hover
+      if (heroSection) {
+        heroSection.addEventListener('mouseenter', () => { isPaused = true; });
+        heroSection.addEventListener('mouseleave', () => { isPaused = false; });
+      }
     });
   </script>
   <footer class="w-full bg-[#0d1b2a] text-white border-t border-white/10">
