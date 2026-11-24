@@ -70,7 +70,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <link rel='stylesheet' id='alumax-fonts-local-css' href='/wp-content/themes/alumax/assets/css/fonts.css?ver=1795411951' media='all' />
 <link rel='stylesheet' id='alumax-main-css' href='/wp-content/themes/alumax/assets/css/main.min.css?ver=1795497277' media='all' />
-<link rel="https://api.w.org/" href="http://localhost:8881/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="https://api.w.org/" href="https://gw-8a.aluviona.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 7.1.3" />
 <script>(() => {
 	if (window.parent === window) return;
@@ -1037,7 +1037,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           body.append('inquiry_name', 'Newsletter Subscriber');
           body.append('inquiry_email', email);
           body.append('inquiry_page', 'Newsletter Signup');
-          fetch('http://localhost:8881/wp-json/alumax/v1/inquiry', { method: 'POST', body: body })
+          fetch('https://gw-8a.aluviona.com/wp-json/alumax/v1/inquiry', { method: 'POST', body: body })
             .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
             .then(function (res) {
               if (res.ok && res.data && res.data.success) {
