@@ -4,12 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M836KPG9"></script>
+  <!-- Google Tag Manager (Loaded strictly upon user cookie consent, GDPR / ePrivacy compliant) -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    window.aluvionaLoadGtm = function () {
+      if (window.__aluvionaGtmLoaded) return;
+      window.__aluvionaGtmLoaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-M836KPG9';
+      document.head.appendChild(s);
+    };
+    (function () {
+      var consent = null;
+      try { consent = localStorage.getItem('aluviona_cookie_consent'); } catch (e) {}
+      if (consent === 'accepted') window.aluvionaLoadGtm();
+    })();
   </script>
   <!-- End Google Tag Manager -->
   <link rel="icon" type="image/svg+xml" href="/wp-content/themes/alumax/assets/images/favicon.svg">
@@ -130,9 +141,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 })();</script></head>
 
 <body class="wp-singular news-template-default single single-news postid-144 wp-theme-alumax bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-white">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M836KPG9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
     <header
     class="fixed top-0 left-0 right-0 z-50 bg-[#0d1b2a]/95 backdrop-blur-xl border-b border-white/10 transition-all">
     <div
@@ -362,50 +370,48 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <!-- LinkedIn -->
             <button type="button"
               onclick="shareLinkedIn('/news/bespoke-architectural-aluminum-decorative-grilles-2026/')"
-              class="w-9 h-9 rounded-md border border-slate-200 bg-white hover:border-[#0A66C2] hover:bg-[#0A66C2]/10 hover:shadow-sm flex items-center justify-center transition-all hover:-translate-y-0.5 p-0"
+              class="w-9 h-9 rounded-xl overflow-hidden hover:scale-110 active:scale-95 transition-transform flex items-center justify-center p-0 drop-shadow-xs"
               title="Share on LinkedIn">
-              <svg class="w-5 h-5 rounded-xs" viewBox="0 0 24 24"><path fill="#0A66C2" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
+              <img src="/wp-content/themes/alumax/assets/images/social/linkedin.png" alt="LinkedIn" class="w-full h-full object-contain">
             </button>
             <!-- X (Twitter) -->
             <button type="button"
               onclick="shareTwitter('/news/bespoke-architectural-aluminum-decorative-grilles-2026/', 'Bespoke Architectural Aluminum Decorative Grilles: Engineering Precision, BIM Integration and 2026 Design Trends')"
-              class="w-9 h-9 rounded-md border border-slate-200 bg-white hover:border-black hover:bg-black/5 hover:shadow-sm flex items-center justify-center transition-all hover:-translate-y-0.5 p-0"
+              class="w-9 h-9 rounded-xl overflow-hidden hover:scale-110 active:scale-95 transition-transform flex items-center justify-center p-0 drop-shadow-xs"
               title="Post on X">
-              <svg class="w-5 h-5 rounded-xs" viewBox="0 0 24 24"><rect width="24" height="24" rx="3.5" fill="#000000"/><path fill="#FFFFFF" d="M14.63 6h1.69l-3.69 4.22 4.34 5.78h-3.41l-2.67-3.49-3.06 3.49H6.14l3.96-4.52L6 6h3.5l2.42 3.2L14.63 6zm-.6 8.99h.94L8.74 7.08H7.74l6.29 8.91z"/></svg>
+              <img src="/wp-content/themes/alumax/assets/images/social/x.png" alt="X" class="w-full h-full object-contain">
             </button>
             <!-- Facebook -->
             <button type="button"
               onclick="shareFacebook('/news/bespoke-architectural-aluminum-decorative-grilles-2026/')"
-              class="w-9 h-9 rounded-md border border-slate-200 bg-white hover:border-[#1877F2] hover:bg-[#1877F2]/10 hover:shadow-sm flex items-center justify-center transition-all hover:-translate-y-0.5 p-0"
+              class="w-9 h-9 rounded-xl overflow-hidden hover:scale-110 active:scale-95 transition-transform flex items-center justify-center p-0 drop-shadow-xs"
               title="Share on Facebook">
-              <svg class="w-5 h-5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1877F2"/><path fill="#FFFFFF" d="M15.12 12.72l.46-3.02h-2.9V7.74c0-.83.41-1.64 1.71-1.64h1.32V3.53c-.76-.1-1.53-.16-2.3-.16-2.35 0-3.89 1.42-3.89 4v2.33H6.84v3.02h2.68v7.31c.54.08 1.09.13 1.65.13s1.11-.05 1.65-.13v-7.31h2.3z"/></svg>
+              <img src="/wp-content/themes/alumax/assets/images/social/facebook.png" alt="Facebook" class="w-full h-full object-contain">
             </button>
             <!-- WhatsApp -->
             <button type="button"
               onclick="shareWhatsApp('/news/bespoke-architectural-aluminum-decorative-grilles-2026/', 'Bespoke Architectural Aluminum Decorative Grilles: Engineering Precision, BIM Integration and 2026 Design Trends')"
-              class="w-9 h-9 rounded-md border border-slate-200 bg-white hover:border-[#25D366] hover:bg-[#25D366]/10 hover:shadow-sm flex items-center justify-center transition-all hover:-translate-y-0.5 p-0"
+              class="w-9 h-9 rounded-xl overflow-hidden hover:scale-110 active:scale-95 transition-transform flex items-center justify-center p-0 drop-shadow-xs"
               title="Share via WhatsApp">
-              <svg class="w-5 h-5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25D366"/><path fill="#FFFFFF" d="M12.04 4.5a7.54 7.54 0 0 0-6.52 11.33L4.5 19.5l3.8-1a7.54 7.54 0 1 0 3.74-14m3.84 10.23c-.16.45-.8.83-1.28.93-.34.07-.78.12-2.27-.5a9.23 9.23 0 0 1-3.69-3.25c-.2-.27-.72-.96-.72-1.83s.46-1.3.62-1.48c.17-.17.37-.22.5-.22h.36c.12 0 .27 0 .39.29.13.3.44 1.08.48 1.16.04.08.06.18.01.29s-.07.17-.15.26l-.22.25c-.08.09-.17.18-.07.35.1.17.44.73 1 1.22.64.57 1.18.75 1.35.83.17.09.27.07.37-.04.1-.11.43-.5.55-.67.12-.17.23-.14.39-.08s1 .47 1.17.56c.17.08.28.13.32.2.04.08.04.47-.12.92z"/></svg>
+              <img src="/wp-content/themes/alumax/assets/images/social/whatsapp.png" alt="WhatsApp" class="w-full h-full object-contain">
             </button>
             <!-- WeChat -->
             <button type="button"
               onclick="openWechatModal('/news/bespoke-architectural-aluminum-decorative-grilles-2026/')"
-              class="w-9 h-9 rounded-md border border-slate-200 bg-white hover:border-[#07C160] hover:bg-[#07C160]/10 hover:shadow-sm flex items-center justify-center transition-all hover:-translate-y-0.5 p-0"
+              class="w-9 h-9 rounded-xl overflow-hidden hover:scale-110 active:scale-95 transition-transform flex items-center justify-center p-0 drop-shadow-xs"
               title="Share via WeChat QR">
-              <svg class="w-5 h-5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#07C160"/><path fill="#FFFFFF" d="M9.13 6.36C6.18 6.36 3.8 8.4 3.8 10.92c0 1.43.77 2.7 1.97 3.55l-.5 1.5 1.76-.88c.64.19 1.36.3 2.1.3.15 0 .29 0 .44-.02-.16-.43-.25-.9-.25-1.38 0-2.3 2.18-4.18 4.88-4.18.24 0 .47.02.7.05C14.4 7.82 11.97 6.36 9.13 6.36zm-1.66 2.64c.45 0 .81.36.81.81s-.36.81-.81.81-.81-.36-.81-.81.36-.81.81-.81zm3.32 0c.45 0 .81.36.81.81s-.36.81-.81.81-.81-.36-.81-.81.36-.81.81-.81zm4.1 2.94c-2.42 0-4.38 1.65-4.38 3.68 0 2.03 1.96 3.68 4.38 3.68.6 0 1.18-.1 1.7-.3l1.41.7-.4-1.2c.97-.68 1.57-1.7 1.57-2.88 0-2.03-1.96-3.68-4.38-3.68zm-1.21 2.12c.36 0 .65.29.65.65s-.29.65-.65.65-.65-.29-.65-.65.29-.65.65-.65zm2.42 0c.36 0 .65.29.65.65s-.29.65-.65.65-.65-.29-.65-.65.29-.65.65-.65z"/></svg>
+              <img src="/wp-content/themes/alumax/assets/images/social/wechat.svg" alt="WeChat" class="w-full h-full object-contain">
             </button>
             <!-- Email Share Popover -->
             <div class="relative email-share-wrapper">
               <button type="button"
                 onclick="toggleEmailMenu('email-share-top', event)"
-                class="w-9 h-9 rounded-md border border-slate-200 bg-white hover:border-[#B88E56] hover:bg-[#B88E56]/10 hover:shadow-sm flex items-center justify-center transition-all hover:-translate-y-0.5 p-0"
+                class="w-9 h-9 rounded-xl bg-gradient-to-br from-[#c99a5e] to-[#9e763b] text-white flex items-center justify-center hover:scale-110 active:scale-95 transition-transform drop-shadow-xs p-0"
                 title="Share via Email">
-                <div class="w-5 h-5 rounded-xs bg-[#B88E56] text-white flex items-center justify-center shadow-2xs">
-                  <span class="material-symbols-outlined text-[13px]">mail</span>
-                </div>
+                <span class="material-symbols-outlined text-[18px]">mail</span>
               </button>
               <!-- Popover Menu -->
-              <div id="email-share-top" class="email-share-menu hidden absolute right-0 sm:right-auto sm:left-0 mt-2 w-72 bg-surface-container-lowest border border-outline-variant/80 shadow-2xl rounded-sm z-50 p-3 space-y-2">
+              <div id="email-share-top" class="email-share-menu hidden absolute right-0 sm:right-auto sm:left-0 mt-2 w-72 bg-surface-container-lowest border border-outline-variant/80 shadow-2xl rounded-xl z-50 p-3 space-y-2">
                 <div class="flex items-center justify-between pb-2 border-b border-outline-variant/30 text-on-surface">
                   <span class="font-label-sm text-[11px] font-bold uppercase tracking-wider text-secondary">Share via Email</span>
                   <button type="button" onclick="closeAllEmailMenus()" class="text-outline hover:text-on-surface p-0.5 rounded transition-colors">
@@ -467,12 +473,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <!-- Copy Link -->
             <button type="button"
               onclick="copyArticleLink('/news/bespoke-architectural-aluminum-decorative-grilles-2026/', this)"
-              class="h-9 px-3 rounded-md border border-slate-200 bg-white hover:border-primary hover:bg-slate-50 hover:shadow-sm flex items-center gap-1.5 transition-all hover:-translate-y-0.5 text-on-surface"
+              class="h-9 px-3 rounded-xl bg-[#0d1b2a] text-white hover:bg-secondary hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5 drop-shadow-xs"
               title="Copy Article Link">
-              <div class="w-5 h-5 rounded-xs bg-[#0d1b2a] text-white flex items-center justify-center shadow-2xs">
-                <span class="material-symbols-outlined text-[13px]">link</span>
-              </div>
-              <span class="hidden sm:inline font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Copy Link</span>
+              <span class="material-symbols-outlined text-[16px]">link</span>
+              <span class="hidden sm:inline font-label-sm text-[11px] uppercase tracking-wider font-semibold">Copy Link</span>
             </button>
           </div>
         </div>
@@ -498,16 +502,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div class="flex items-center gap-2 mb-3 text-secondary font-label text-xs uppercase tracking-wider font-bold"><span class="material-symbols-outlined text-sm">verified</span> Specification &#038; Compliance Matrix</div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-label text-on-surface-variant">
 <div><span class="text-outline font-semibold">Primary Alloy:</span> Architectural Grade AA3003 / AA5052 / AA6063-T6</div>
-<div><span class="text-outline font-semibold">Surface Finish:</span> Multi-Coat PVDF (70% Kynar 500) / AAMA 2605 Architectural Specification</div>
-<div><span class="text-outline font-semibold">Fire Rating:</span> Class A1 / A2-s1,d0 (EN 13501-1 / ASTM E84)</div>
+<div><span class="text-outline font-semibold">Surface Finish:</span> Multi-Coat PVDF (70% PVDF resin) / AAMA 2605 Architectural Specification</div>
+<div><span class="text-outline font-semibold">Fire Rating:</span> Class A1 / A2 GB 8624 / EN 13501-1</div>
 <div><span class="text-outline font-semibold">Quality Standard:</span> ISO 9001:2015 / AAMA 2605 Tested</div>
 </div>
 </div>
         </div>
 
-        <!-- Bottom Article Share Card -->
-        <div class="p-6 sm:p-8 bg-surface-container-low border border-outline-variant/40 rounded-sm mb-12">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <!-- Bottom Article Share & Official Social Channels Master Card -->
+        <div class="p-6 sm:p-8 bg-surface-container-low border border-outline-variant/40 rounded-2xl mb-12 shadow-sm space-y-8">
+          <!-- Part A: Share This Article -->
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-outline-variant/30">
             <div class="space-y-1">
               <div class="inline-flex items-center gap-1.5 text-secondary font-label-sm text-[11px] uppercase tracking-wider font-semibold">
                 <span class="material-symbols-outlined text-[15px]">share</span>
@@ -518,58 +523,69 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 Circulate this technical bulletin to your project engineering team, architectural specifiers, or industry colleagues.
               </p>
             </div>
-            <!-- Bottom Share Action Buttons -->
-            <div class="flex flex-wrap items-center gap-2">
+            <!-- Share Buttons Row with Squircle Icons -->
+            <div class="flex items-center flex-wrap gap-3">
               <!-- LinkedIn -->
               <button type="button"
                 onclick="shareLinkedIn('/news/bespoke-architectural-aluminum-decorative-grilles-2026/')"
-                class="h-9 px-3.5 rounded-md border border-slate-200 bg-white hover:border-[#0A66C2] hover:bg-[#0A66C2]/10 hover:shadow-sm flex items-center gap-2 font-label-sm text-[12px] uppercase tracking-wider transition-all hover:-translate-y-0.5 text-slate-800 font-semibold"
+                class="group flex flex-col items-center focus:outline-none"
                 title="Share on LinkedIn">
-                <svg class="w-4 h-4 rounded-xs shrink-0" viewBox="0 0 24 24"><path fill="#0A66C2" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
-                <span>LinkedIn</span>
+                <div class="w-10 h-10 rounded-xl overflow-hidden drop-shadow-sm group-hover:scale-110 active:scale-95 transition-transform flex items-center justify-center">
+                  <img src="/wp-content/themes/alumax/assets/images/social/linkedin.png" alt="LinkedIn" class="w-full h-full object-contain">
+                </div>
+                <span class="text-[10px] text-on-surface-variant group-hover:text-[#0A66C2] font-semibold mt-1 transition-colors">LinkedIn</span>
               </button>
-              <!-- X (Twitter) -->
+              <!-- X -->
               <button type="button"
                 onclick="shareTwitter('/news/bespoke-architectural-aluminum-decorative-grilles-2026/', 'Bespoke Architectural Aluminum Decorative Grilles: Engineering Precision, BIM Integration and 2026 Design Trends')"
-                class="h-9 px-3 rounded-md border border-slate-200 bg-white hover:border-black hover:bg-black/5 hover:shadow-sm flex items-center gap-2 font-label-sm text-[12px] uppercase tracking-wider transition-all hover:-translate-y-0.5 text-slate-800 font-semibold"
+                class="group flex flex-col items-center focus:outline-none"
                 title="Post on X">
-                <svg class="w-4 h-4 rounded-xs shrink-0" viewBox="0 0 24 24"><rect width="24" height="24" rx="3.5" fill="#000000"/><path fill="#FFFFFF" d="M14.63 6h1.69l-3.69 4.22 4.34 5.78h-3.41l-2.67-3.49-3.06 3.49H6.14l3.96-4.52L6 6h3.5l2.42 3.2L14.63 6zm-.6 8.99h.94L8.74 7.08H7.74l6.29 8.91z"/></svg>
-                <span>X</span>
+                <div class="w-10 h-10 rounded-xl overflow-hidden drop-shadow-sm group-hover:scale-110 active:scale-95 transition-transform flex items-center justify-center">
+                  <img src="/wp-content/themes/alumax/assets/images/social/x.png" alt="X" class="w-full h-full object-contain">
+                </div>
+                <span class="text-[10px] text-on-surface-variant group-hover:text-black font-semibold mt-1 transition-colors">X</span>
               </button>
-              <!-- Facebook -->
+              <!-- FB -->
               <button type="button"
                 onclick="shareFacebook('/news/bespoke-architectural-aluminum-decorative-grilles-2026/')"
-                class="w-9 h-9 rounded-md border border-slate-200 bg-white hover:border-[#1877F2] hover:bg-[#1877F2]/10 hover:shadow-sm flex items-center justify-center transition-all hover:-translate-y-0.5"
+                class="group flex flex-col items-center focus:outline-none"
                 title="Share on Facebook">
-                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1877F2"/><path fill="#FFFFFF" d="M15.12 12.72l.46-3.02h-2.9V7.74c0-.83.41-1.64 1.71-1.64h1.32V3.53c-.76-.1-1.53-.16-2.3-.16-2.35 0-3.89 1.42-3.89 4v2.33H6.84v3.02h2.68v7.31c.54.08 1.09.13 1.65.13s1.11-.05 1.65-.13v-7.31h2.3z"/></svg>
+                <div class="w-10 h-10 rounded-xl overflow-hidden drop-shadow-sm group-hover:scale-110 active:scale-95 transition-transform flex items-center justify-center">
+                  <img src="/wp-content/themes/alumax/assets/images/social/facebook.png" alt="Facebook" class="w-full h-full object-contain">
+                </div>
+                <span class="text-[10px] text-on-surface-variant group-hover:text-[#1877F2] font-semibold mt-1 transition-colors">FB</span>
               </button>
-              <!-- WhatsApp -->
+              <!-- WA -->
               <button type="button"
                 onclick="shareWhatsApp('/news/bespoke-architectural-aluminum-decorative-grilles-2026/', 'Bespoke Architectural Aluminum Decorative Grilles: Engineering Precision, BIM Integration and 2026 Design Trends')"
-                class="w-9 h-9 rounded-md border border-slate-200 bg-white hover:border-[#25D366] hover:bg-[#25D366]/10 hover:shadow-sm flex items-center justify-center transition-all hover:-translate-y-0.5"
+                class="group flex flex-col items-center focus:outline-none"
                 title="Share via WhatsApp">
-                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#25D366"/><path fill="#FFFFFF" d="M12.04 4.5a7.54 7.54 0 0 0-6.52 11.33L4.5 19.5l3.8-1a7.54 7.54 0 1 0 3.74-14m3.84 10.23c-.16.45-.8.83-1.28.93-.34.07-.78.12-2.27-.5a9.23 9.23 0 0 1-3.69-3.25c-.2-.27-.72-.96-.72-1.83s.46-1.3.62-1.48c.17-.17.37-.22.5-.22h.36c.12 0 .27 0 .39.29.13.3.44 1.08.48 1.16.04.08.06.18.01.29s-.07.17-.15.26l-.22.25c-.08.09-.17.18-.07.35.1.17.44.73 1 1.22.64.57 1.18.75 1.35.83.17.09.27.07.37-.04.1-.11.43-.5.55-.67.12-.17.23-.14.39-.08s1 .47 1.17.56c.17.08.28.13.32.2.04.08.04.47-.12.92z"/></svg>
+                <div class="w-10 h-10 rounded-xl overflow-hidden drop-shadow-sm group-hover:scale-110 active:scale-95 transition-transform flex items-center justify-center">
+                  <img src="/wp-content/themes/alumax/assets/images/social/whatsapp.png" alt="WhatsApp" class="w-full h-full object-contain">
+                </div>
+                <span class="text-[10px] text-on-surface-variant group-hover:text-[#25D366] font-semibold mt-1 transition-colors">WA</span>
               </button>
               <!-- WeChat -->
               <button type="button"
                 onclick="openWechatModal('/news/bespoke-architectural-aluminum-decorative-grilles-2026/')"
-                class="w-9 h-9 rounded-md border border-slate-200 bg-white hover:border-[#07C160] hover:bg-[#07C160]/10 hover:shadow-sm flex items-center justify-center transition-all hover:-translate-y-0.5"
+                class="group flex flex-col items-center focus:outline-none"
                 title="Share via WeChat QR">
-                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#07C160"/><path fill="#FFFFFF" d="M9.13 6.36C6.18 6.36 3.8 8.4 3.8 10.92c0 1.43.77 2.7 1.97 3.55l-.5 1.5 1.76-.88c.64.19 1.36.3 2.1.3.15 0 .29 0 .44-.02-.16-.43-.25-.9-.25-1.38 0-2.3 2.18-4.18 4.88-4.18.24 0 .47.02.7.05C14.4 7.82 11.97 6.36 9.13 6.36zm-1.66 2.64c.45 0 .81.36.81.81s-.36.81-.81.81-.81-.36-.81-.81.36-.81.81-.81zm3.32 0c.45 0 .81.36.81.81s-.36.81-.81.81-.81-.36-.81-.81.36-.81.81-.81zm4.1 2.94c-2.42 0-4.38 1.65-4.38 3.68 0 2.03 1.96 3.68 4.38 3.68.6 0 1.18-.1 1.7-.3l1.41.7-.4-1.2c.97-.68 1.57-1.7 1.57-2.88 0-2.03-1.96-3.68-4.38-3.68zm-1.21 2.12c.36 0 .65.29.65.65s-.29.65-.65.65-.65-.29-.65-.65.29-.65.65-.65zm2.42 0c.36 0 .65.29.65.65s-.29.65-.65.65-.65-.29-.65-.65.29-.65.65-.65z"/></svg>
+                <div class="w-10 h-10 rounded-xl overflow-hidden drop-shadow-sm group-hover:scale-110 active:scale-95 transition-transform flex items-center justify-center">
+                  <img src="/wp-content/themes/alumax/assets/images/social/wechat.svg" alt="WeChat" class="w-full h-full object-contain">
+                </div>
+                <span class="text-[10px] text-on-surface-variant group-hover:text-[#07C160] font-semibold mt-1 transition-colors">WeChat</span>
               </button>
               <!-- Email Dropdown (Bottom) -->
-              <div class="relative email-share-wrapper">
+              <div class="relative email-share-wrapper group flex flex-col items-center">
                 <button type="button"
                   onclick="toggleEmailMenu('email-share-bottom', event)"
-                  class="h-9 px-3 rounded-md border border-slate-200 bg-white hover:border-[#B88E56] hover:bg-[#B88E56]/10 hover:shadow-sm flex items-center gap-2 font-label-sm text-[12px] uppercase tracking-wider transition-all hover:-translate-y-0.5 text-slate-800 font-semibold"
+                  class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#c99a5e] to-[#9e763b] text-white flex items-center justify-center drop-shadow-sm group-hover:scale-110 active:scale-95 transition-transform"
                   title="Share via Email">
-                  <div class="w-4 h-4 rounded-xs bg-[#B88E56] text-white flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[11px]">mail</span>
-                  </div>
-                  <span>Email</span>
+                  <span class="material-symbols-outlined text-[20px]">mail</span>
                 </button>
+                <span class="text-[10px] text-on-surface-variant group-hover:text-secondary font-semibold mt-1 transition-colors">Email</span>
                 <!-- Popover Menu (Popping upward) -->
-                <div id="email-share-bottom" class="email-share-menu hidden absolute right-0 bottom-full mb-2 w-72 bg-surface-container-lowest border border-outline-variant/80 shadow-2xl rounded z-50 p-3 space-y-2">
+                <div id="email-share-bottom" class="email-share-menu hidden absolute right-0 bottom-full mb-2 w-72 bg-surface-container-lowest border border-outline-variant/80 shadow-2xl rounded-xl z-50 p-3 space-y-2">
                   <div class="flex items-center justify-between pb-2 border-b border-outline-variant/30 text-on-surface">
                     <span class="font-label-sm text-[11px] font-bold uppercase tracking-wider text-secondary">Share via Email</span>
                     <button type="button" onclick="closeAllEmailMenus()" class="text-outline hover:text-on-surface p-0.5 rounded transition-colors">
@@ -631,14 +647,112 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
               <!-- Copy Link -->
               <button type="button"
                 onclick="copyArticleLink('/news/bespoke-architectural-aluminum-decorative-grilles-2026/', this)"
-                class="h-9 px-3 rounded-md border border-slate-200 bg-white hover:border-[#0d1b2a] hover:bg-slate-50 hover:shadow-sm flex items-center gap-2 font-label-sm text-[12px] uppercase tracking-wider transition-all hover:-translate-y-0.5 text-slate-800 font-semibold"
+                class="group flex flex-col items-center focus:outline-none"
                 title="Copy Article Link">
-                <div class="w-4 h-4 rounded-xs bg-[#0d1b2a] text-white flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[11px]">link</span>
+                <div class="w-10 h-10 rounded-xl bg-[#0d1b2a] text-white flex items-center justify-center drop-shadow-sm group-hover:scale-110 active:scale-95 transition-transform">
+                  <span class="material-symbols-outlined text-[18px]">link</span>
                 </div>
-                <span>Copy Link</span>
+                <span class="text-[10px] text-on-surface-variant group-hover:text-primary font-semibold mt-1 transition-colors">Copy Link</span>
               </button>
             </div>
+          </div>
+
+          <!-- Part B: Official Media & Channels Showcase (Directly Synchronized with Backend Social Accounts!) -->
+                              <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-2">
+            <div class="space-y-1">
+              <div class="inline-flex items-center gap-1.5 text-secondary font-label-sm text-[11px] uppercase tracking-wider font-semibold">
+                <span class="material-symbols-outlined text-[15px]">public</span>
+                <span>Follow Aluviona Global</span>
+              </div>
+              <h4 class="font-headline-sm text-base font-bold text-on-surface">Official Social &amp; Project Channels</h4>
+              <p class="font-body-sm text-[12px] text-on-surface-variant max-w-md leading-relaxed">
+                Connect with our international engineering team across official media networks for daily fabrication stories and live project updates.
+              </p>
+            </div>
+            <!-- Connected Official Social Capsule Bar -->
+            <div class="bg-surface-container-highest/60 border border-outline-variant/60 rounded-2xl p-2.5 sm:p-3 shadow-inner">
+              <div class="flex items-center gap-2 sm:gap-3">
+                                <a href="https://www.instagram.com/aluviona_facades" target="_blank" rel="noopener noreferrer"
+                   aria-label="Follow Aluviona on Instagram"
+                   class="group flex flex-col items-center focus:outline-none transition-transform"
+                   title="Instagram">
+                  <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 active:scale-95">
+                    <img src="/wp-content/themes/alumax/assets/images/social/instagram.png" alt="Instagram"
+                         class="w-9 h-9 object-contain drop-shadow-xs rounded-xl">
+                  </div>
+                  <span class="text-[9px] text-on-surface-variant mt-1 font-semibold group-hover:text-pink-400 transition-colors tracking-tight">
+                    Ins                  </span>
+                </a>
+                                <a href="https://www.tiktok.com/@aluviona" target="_blank" rel="noopener noreferrer"
+                   aria-label="Follow Aluviona on TikTok"
+                   class="group flex flex-col items-center focus:outline-none transition-transform"
+                   title="TikTok">
+                  <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 active:scale-95">
+                    <img src="/wp-content/themes/alumax/assets/images/social/tiktok.png" alt="TikTok"
+                         class="w-9 h-9 object-contain drop-shadow-xs rounded-xl">
+                  </div>
+                  <span class="text-[9px] text-on-surface-variant mt-1 font-semibold group-hover:text-cyan-400 transition-colors tracking-tight">
+                    TikTok                  </span>
+                </a>
+                                <a href="https://www.youtube.com/@aluviona" target="_blank" rel="noopener noreferrer"
+                   aria-label="Follow Aluviona on YouTube"
+                   class="group flex flex-col items-center focus:outline-none transition-transform"
+                   title="YouTube">
+                  <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 active:scale-95">
+                    <img src="/wp-content/themes/alumax/assets/images/social/youtube.png" alt="YouTube"
+                         class="w-9 h-9 object-contain drop-shadow-xs rounded-xl">
+                  </div>
+                  <span class="text-[9px] text-on-surface-variant mt-1 font-semibold group-hover:text-red-400 transition-colors tracking-tight">
+                    YouTube                  </span>
+                </a>
+                                <a href="https://x.com/aluviona" target="_blank" rel="noopener noreferrer"
+                   aria-label="Follow Aluviona on X (Twitter)"
+                   class="group flex flex-col items-center focus:outline-none transition-transform"
+                   title="X (Twitter)">
+                  <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 active:scale-95">
+                    <img src="/wp-content/themes/alumax/assets/images/social/x.png" alt="X (Twitter)"
+                         class="w-9 h-9 object-contain drop-shadow-xs rounded-xl">
+                  </div>
+                  <span class="text-[9px] text-on-surface-variant mt-1 font-semibold group-hover:text-white transition-colors tracking-tight">
+                    X                  </span>
+                </a>
+                                <a href="https://www.facebook.com/aluviona" target="_blank" rel="noopener noreferrer"
+                   aria-label="Follow Aluviona on Facebook"
+                   class="group flex flex-col items-center focus:outline-none transition-transform"
+                   title="Facebook">
+                  <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 active:scale-95">
+                    <img src="/wp-content/themes/alumax/assets/images/social/facebook.png" alt="Facebook"
+                         class="w-9 h-9 object-contain drop-shadow-xs rounded-xl">
+                  </div>
+                  <span class="text-[9px] text-on-surface-variant mt-1 font-semibold group-hover:text-blue-400 transition-colors tracking-tight">
+                    FB                  </span>
+                </a>
+                                <a href="https://www.linkedin.com/company/aluviona/" target="_blank" rel="noopener noreferrer"
+                   aria-label="Follow Aluviona on LinkedIn"
+                   class="group flex flex-col items-center focus:outline-none transition-transform"
+                   title="LinkedIn">
+                  <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 active:scale-95">
+                    <img src="/wp-content/themes/alumax/assets/images/social/linkedin.png" alt="LinkedIn"
+                         class="w-9 h-9 object-contain drop-shadow-xs rounded-xl">
+                  </div>
+                  <span class="text-[9px] text-on-surface-variant mt-1 font-semibold group-hover:text-sky-400 transition-colors tracking-tight">
+                    LinkedIn                  </span>
+                </a>
+                                <a href="https://wa.me/8618930079759" target="_blank" rel="noopener noreferrer"
+                   aria-label="Follow Aluviona on WhatsApp"
+                   class="group flex flex-col items-center focus:outline-none transition-transform"
+                   title="WhatsApp">
+                  <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 active:scale-95">
+                    <img src="/wp-content/themes/alumax/assets/images/social/whatsapp.png" alt="WhatsApp"
+                         class="w-9 h-9 object-contain drop-shadow-xs rounded-xl">
+                  </div>
+                  <span class="text-[9px] text-on-surface-variant mt-1 font-semibold group-hover:text-emerald-400 transition-colors tracking-tight">
+                    WA                  </span>
+                </a>
+                              </div>
+            </div>
+          </div>
+                  </div>
           </div>
         </div>
         <!-- Related News / Article Navigation -->
@@ -928,14 +1042,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           </p>
           <p class="font-body-md text-body-md text-slate-300 max-w-md">
             Pioneering manufacturer of precision-engineered architectural metal envelopes, solid aluminum cladding, and adaptive facade systems. Anchored in China&#039;s world-class industrial manufacturing ecosystem and advanced supply chain, Aluviona delivers cutting-edge metallurgical engineering certified to international ASTM &amp; EN standards—built for landmark architecture worldwide.          </p>
-          <!-- Social Media Icons for International B2B Reach -->
-          <div class="space-y-2 pt-2">
-            <span
-              class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider block font-semibold">Global
-              Social &amp; Project Channels</span>
-            <div class="flex items-center gap-2">
-                          </div>
-          </div>
           <div class="flex flex-wrap gap-space-sm pt-space-xs">
                         <span
               class="inline-flex items-center gap-1.5 font-label-sm text-label-sm px-space-sm py-space-xs bg-white/10 text-white uppercase rounded">
@@ -1010,7 +1116,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           <div class="font-label-sm text-label-sm space-y-space-xs text-slate-300">
                         <p class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-base text-secondary-fixed shrink-0">location_on</span>
-                            <span>No. 8, Yinque Rd, Lu&#039;an Economic Development Zone, Jin&#039;an District, Lu&#039;an, Anhui, China</span>
+                            <span>No. 8-1, Yinque Rd, Lu&#039;an Economic Development Zone, Luan, Anhui</span>
             </p>
                         <p class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-base text-secondary-fixed shrink-0">call</span>
@@ -1028,7 +1134,95 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           </div>
         </div>
       </div>
-      <!-- Bottom Legal & Copyright -->
+      <!-- Social Media Showcase Bar (Styled per Reference) -->
+                  <div class="py-10 border-t border-white/10 relative">
+        <div class="max-w-2xl mx-auto flex flex-col items-center text-center">
+          <!-- Section Tag & Title -->
+          <span class="inline-block font-label-sm text-[11px] uppercase tracking-widest font-semibold text-secondary-fixed bg-secondary-fixed/10 px-3.5 py-1 rounded-full mb-2.5 border border-secondary-fixed/20">
+            Stay Connected          </span>
+          <h3 class="font-headline-sm text-xl sm:text-2xl font-bold text-white tracking-tight">
+            Connect With Our Global Media Network          </h3>
+          <p class="font-body-sm text-xs sm:text-[13px] text-slate-300 mt-1.5 max-w-md mx-auto leading-relaxed">
+            Follow Aluviona across international architectural channels for latest technical bulletins, project case studies, and engineering updates.          </p>
+
+          <!-- Social Icons Capsule Container -->
+          <div class="w-full mt-6 bg-slate-950/70 border border-slate-800/90 rounded-2xl p-3.5 sm:p-4 shadow-2xl backdrop-blur-md">
+            <div class="flex items-center justify-between gap-1 sm:gap-2">
+                            <a href="https://www.instagram.com/aluviona_facades" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on Instagram"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/instagram.png" alt="Instagram"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-pink-400 transition-colors tracking-tight">
+                  Ins                </span>
+              </a>
+                            <a href="https://www.tiktok.com/@aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on TikTok"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/tiktok.png" alt="TikTok"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-cyan-400 transition-colors tracking-tight">
+                  TikTok                </span>
+              </a>
+                            <a href="https://www.youtube.com/@aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on YouTube"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/youtube.png" alt="YouTube"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-red-400 transition-colors tracking-tight">
+                  YouTube                </span>
+              </a>
+                            <a href="https://x.com/aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on X (Twitter)"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/x.png" alt="X (Twitter)"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-white transition-colors tracking-tight">
+                  X                </span>
+              </a>
+                            <a href="https://www.facebook.com/aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on Facebook"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/facebook.png" alt="Facebook"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-blue-400 transition-colors tracking-tight">
+                  FB                </span>
+              </a>
+                            <a href="https://www.linkedin.com/company/aluviona/" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on LinkedIn"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/linkedin.png" alt="LinkedIn"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-sky-400 transition-colors tracking-tight">
+                  LinkedIn                </span>
+              </a>
+                            <a href="https://wa.me/8618930079759" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on WhatsApp"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/whatsapp.png" alt="WhatsApp"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-emerald-400 transition-colors tracking-tight">
+                  WA                </span>
+              </a>
+                          </div>
+          </div>
+        </div>
+      </div>
+            <!-- Bottom Legal & Copyright -->
       <div
         class="pt-space-lg border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-space-md">
         <p class="font-label-sm text-label-sm text-slate-400">© 2026 Aluviona Architectural Metal Solutions Co., Ltd. All rights reserved.</p>
@@ -1097,7 +1291,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       }
       var acceptBtn = document.getElementById('cookie-accept-all');
       var essentialBtn = document.getElementById('cookie-essential-only');
-      if (acceptBtn) acceptBtn.addEventListener('click', function () { dismiss('accepted'); });
+      if (acceptBtn) acceptBtn.addEventListener('click', function () {
+        dismiss('accepted');
+        if (window.aluvionaLoadGtm) window.aluvionaLoadGtm();
+      });
       if (essentialBtn) essentialBtn.addEventListener('click', function () { dismiss('essential'); });
     })();
   </script>

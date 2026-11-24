@@ -4,12 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M836KPG9"></script>
+  <!-- Google Tag Manager (Loaded strictly upon user cookie consent, GDPR / ePrivacy compliant) -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    window.aluvionaLoadGtm = function () {
+      if (window.__aluvionaGtmLoaded) return;
+      window.__aluvionaGtmLoaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-M836KPG9';
+      document.head.appendChild(s);
+    };
+    (function () {
+      var consent = null;
+      try { consent = localStorage.getItem('aluviona_cookie_consent'); } catch (e) {}
+      if (consent === 'accepted') window.aluvionaLoadGtm();
+    })();
   </script>
   <!-- End Google Tag Manager -->
   <link rel="icon" type="image/svg+xml" href="/wp-content/themes/alumax/assets/images/favicon.svg">
@@ -130,9 +141,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 })();</script></head>
 
 <body class="wp-singular product-template-default single single-product postid-10 wp-theme-alumax bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-white">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M836KPG9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
     <header
     class="fixed top-0 left-0 right-0 z-50 bg-[#0d1b2a]/95 backdrop-blur-xl border-b border-white/10 transition-all">
     <div
@@ -343,7 +351,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       <h1 class="font-headline font-bold text-3xl sm:text-4xl lg:text-5xl text-on-primary leading-tight tracking-tight mb-4">
         Solid Aluminum<br>Cladding Panels      </h1>
               <div class="flex items-center gap-3 mb-5">
-          <span class="font-headline font-medium text-lg sm:text-xl text-secondary-fixed">Monolithic 3003/5052 Alloy. A2-s1,d0 Non-Combustible. 30-Year Architectural Coating.</span>
+          <span class="font-headline font-medium text-lg sm:text-xl text-secondary-fixed">Monolithic 3003/5052 Alloy. Class A1 / A2 GB 8624 / EN 13501-1. 30-Year Architectural Coating.</span>
         </div>
                     <p class="font-body text-sm sm:text-base text-primary-fixed-dim leading-relaxed mb-8 max-w-2xl">
           Engineered brake-formed solid aluminum rainscreen cassettes for monumental facades, high-wind envelopes, and demanding non-combustible architectural specifications. Zero combustible core. Spec ID: ALU-SLD-3003.        </p>
@@ -386,7 +394,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
               <span class="material-symbols-outlined text-[20px]">local_fire_department</span>
             </div>
             <div class="flex flex-col">
-              <span class="font-headline font-semibold text-xs text-on-primary">A2-s1,d0 Non-Combustible</span>
+              <span class="font-headline font-semibold text-xs text-on-primary">Class A1 / A2 GB 8624 / EN 13501-1</span>
               <span class="font-body text-[11px] text-primary-fixed-dim leading-tight">EN 13501-1 &amp; ASTM E84 Class A flame spread index 0.</span>
             </div>
           </div>
@@ -396,7 +404,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             </div>
             <div class="flex flex-col">
               <span class="font-headline font-semibold text-xs text-on-primary">30-Year Coating Warranty</span>
-              <span class="font-body text-[11px] text-primary-fixed-dim leading-tight">AAMA 2605 tested 70% Kynar 500® PVDF fluoropolymer.</span>
+              <span class="font-body text-[11px] text-primary-fixed-dim leading-tight">AAMA 2605 tested 70% PVDF resin® PVDF fluoropolymer.</span>
             </div>
           </div>
               </div>
@@ -449,7 +457,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 </div>
                 <div class="flex flex-col">
                   <h3 class="font-headline font-bold text-sm text-on-surface">Coating Technologies</h3>
-                  <p class="font-body text-xs text-on-surface-variant mt-0.5">PPG Duranar® 3-coat 70% PVDF (AAMA 2605), AkzoNobel Interpon® D3000 architectural powder, Class I hard anodizing, and stone sublimation.</p>
+                  <p class="font-body text-xs text-on-surface-variant mt-0.5">3-coat 70% PVDF fluoropolymer (AAMA 2605), hyper-durable architectural powder, Class I hard anodizing, and stone sublimation.</p>
                 </div>
               </div>
                           <div class="flex items-start gap-4 p-4 bg-surface-container-lowest shadow-sm">
@@ -501,7 +509,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <div class="w-9 h-9 rounded-sm bg-surface-container flex items-center justify-center text-secondary mb-3">
               <span class="material-symbols-outlined text-[20px]">local_fire_department</span>
             </div>
-            <h3 class="font-headline font-bold text-base text-on-surface mb-2">A2-s1,d0 Non-Combustible</h3>
+            <h3 class="font-headline font-bold text-base text-on-surface mb-2">Class A1 / A2 GB 8624 / EN 13501-1</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
               100% solid aluminum construction with 0 flame spread index and zero toxic smoke development — strictly non-combustible under EN 13501-1 and ASTM E84 Class A.            </p>
           </div>
@@ -518,7 +526,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             </div>
             <h3 class="font-headline font-bold text-base text-on-surface mb-2">30-Year Exterior Weatherability</h3>
             <p class="font-body text-xs text-on-surface-variant leading-relaxed">
-              PPG Duranar® 3-coat PVDF and D3000 powder finishes preserve gloss and resist chalking for over 30 years; AAMA 2605 10-year South Florida exposure verified with ΔE &lt; 3.0.            </p>
+              3-coat PVDF and hyper-durable powder finishes preserve gloss and resist chalking for over 30 years; AAMA 2605 10-year South Florida exposure verified with ΔE &lt; 3.0.            </p>
           </div>
         </div>
               <div class="flex flex-col bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow group">
@@ -580,7 +588,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
               <span class="font-headline font-semibold text-on-surface">Fire Reaction Classification</span>
-              <span class="sm:col-span-2 font-body text-on-surface-variant">Class A2-s1,d0 (EN 13501-1) ｜ Flame Spread Index 0 (ASTM E84 Class A)</span>
+              <span class="sm:col-span-2 font-body text-on-surface-variant">Class A1 / A2 GB 8624 / EN 13501-1</span>
             </div>
                       <div class="grid grid-cols-1 sm:grid-cols-3 py-3">
               <span class="font-headline font-semibold text-on-surface">Wind Load Sustained Pressure</span>
@@ -680,13 +688,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       <h2 class="font-headline font-bold text-2xl sm:text-3xl text-primary tracking-tight">
         Colors &amp; Architectural Finishes      </h2>
               <p class="font-body text-sm text-on-surface-variant mt-2 max-w-2xl">
-          Formulated to withstand harsh UV exposure, coastal marine salt atmosphere, and aggressive industrial environments. Choose from AAMA 2605 compliant PPG Duranar® 70% Kynar 500® PVDF, AkzoNobel Interpon® D3000 hyper-durable powder, Class I hard anodizing, and architectural sublimation faux stone/wood.        </p>
+          Formulated to withstand harsh UV exposure, coastal marine salt atmosphere, and aggressive industrial environments. Choose from AAMA 2605 compliant 70% PVDF coil coatings, hyper-durable architectural powder coatings, Class I hard anodizing, and architectural sublimation faux stone/wood.        </p>
           </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
               <div class="bg-surface-container-lowest p-3 shadow-sm hover:shadow-md transition-all ">
                       <div class="h-24 w-full mb-3 shadow-inner" style="background-color: #927B5E"></div>
             <div class="font-headline text-xs font-bold text-on-surface">Champagne Bronze</div>
-            <div class="font-label text-[10px] text-on-surface-variant">Duranar® Sunstorm // PVDF</div>
+            <div class="font-label text-[10px] text-on-surface-variant">Sunstorm // PVDF</div>
                   </div>
               <div class="bg-surface-container-lowest p-3 shadow-sm hover:shadow-md transition-all ">
                       <div class="h-24 w-full mb-3 shadow-inner" style="background-color: #2A3439"></div>
@@ -956,7 +964,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
               </div>
               <div class="flex flex-col">
                 <span class="font-headline font-semibold text-sm text-on-primary">Third-Party Inspection Support</span>
-                <span class="font-body text-xs text-on-primary-container">Supports client-commissioned third-party inspections (e.g. SGS, TÜV, BV) prior to port dispatch.</span>
+                <span class="font-body text-xs text-on-primary-container">Supports client-commissioned third-party pre-shipment inspections prior to port dispatch.</span>
               </div>
             </div>
                   </div>
@@ -1130,7 +1138,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   if (!window.jspdf) return;
-  var DATA = {"product":"Solid Aluminum Cladding Panels","date":"2026-11-24","eyebrow":"Technical Specifications","title":"Product Parameters & Engineering Details","tableTitle":"ALU-SLD-3003 Comprehensive Engineering Matrix","tableRef":"SPEC REF: ASTM B209M \/\/ EN 1396 \/\/ AAMA 2605","rows":[["Aluminum Alloy Substrates","AA3003-H24 (Standard Architectural) \/ AA5052-H32 (Marine Coastal)"],["Temper Condition","H14 \/ H24 (AA3003) \uff5c H32 (AA5052)"],["Standard Panel Thickness","2.0mm (Soffit\/Interior) \uff5c 2.5mm (Standard) \uff5c 3.0mm (Heavy-Duty) \uff5c 4.0mm (Mega-Span)"],["Maximum Panel Dimensions","Width up to 2,200 mm \uff5c Length up to 6,000 mm (Monolithic Single-Piece)"],["Panel Geometry Formats","Flat Cassettes, Single-Radius Curved, Hyperbolic 3D, CNC Perforated"],["Fabrication Technologies","CNC Turret Punching, Laser Cutting, 3D Brake Forming, Robotic TIG Stud Welding"],["Fire Reaction Classification","Class A2-s1,d0 (EN 13501-1) \uff5c Flame Spread Index 0 (ASTM E84 Class A)"],["Wind Load Sustained Pressure","2.5mm: 3.8 kPa \uff5c 3.0mm: 5.2 kPa Super-Tower (ASTM E330 \/ EN 12179)"],["Tensile Strength (Rm)","145\u2013180 MPa (AA3003-H24) \uff5c 215\u2013265 MPa (AA5052-H32)"],["Yield Strength (Rp0.2)","\u2265 115 MPa (AA3003-H24) \uff5c \u2265 160 MPa (AA5052-H32)"],["Elongation at Break (A50)","\u2265 8% (AA3003) \uff5c \u2265 10% (AA5052)"],["Surface Coating Systems","3-Coat 70% PVDF (35\u03bcm), Architectural Powder (60-80\u03bcm), Class I Anodized (25\u03bcm)"],["Salt Spray Resistance","ASTM B117 4,000h: Zero blistering, scribe creep < 1.0mm (3.0mm < 0.5mm)"],["Color & Gloss Retention","AAMA 2605 10-Yr Florida: \u0394E < 3.0 Hunters, Gloss Retention > 80%"],["Acoustic Transmission Loss","Rw 28 dB (2.5mm) \uff5c Rw 32 dB (3.0mm) \uff5c Up to 48 dB with insulated back-pan"],["Mounting Typologies","Open-Joint Drained (TYPE 01), Weatherproof Sealed (TYPE 02), Hook-On Cassette (TYPE 03)"]],"cards":[{"title":"Cassette & Stiffener Schematic","tag":"LOD 400","caption":"Robotic-welded channel stiffeners every 500mm eliminate optical oil-canning"},{"title":"Thermal Expansion Calc","tag":"ENG-NOTE-02","caption":"Aluminum linear expansion rate is 2.4 mm\/m at \u0394T = 100\u00b0C. All fixing bracket slots feature 6mm ovalized thermal glide tolerances to prevent buckling."},{"title":"LEED v4 Green Credit","tag":"ENG-NOTE-03","caption":"Contains up to 45% post-industrial recycled aluminum billet. 100% infinitely recyclable at building decommissioning with negligible carbon degradation."}]};
+  var DATA = {"product":"Solid Aluminum Cladding Panels","date":"2026-11-24","eyebrow":"Technical Specifications","title":"Product Parameters & Engineering Details","tableTitle":"ALU-SLD-3003 Comprehensive Engineering Matrix","tableRef":"SPEC REF: ASTM B209M \/\/ EN 1396 \/\/ AAMA 2605","rows":[["Aluminum Alloy Substrates","AA3003-H24 (Standard Architectural) \/ AA5052-H32 (Marine Coastal)"],["Temper Condition","H14 \/ H24 (AA3003) \uff5c H32 (AA5052)"],["Standard Panel Thickness","2.0mm (Soffit\/Interior) \uff5c 2.5mm (Standard) \uff5c 3.0mm (Heavy-Duty) \uff5c 4.0mm (Mega-Span)"],["Maximum Panel Dimensions","Width up to 2,200 mm \uff5c Length up to 6,000 mm (Monolithic Single-Piece)"],["Panel Geometry Formats","Flat Cassettes, Single-Radius Curved, Hyperbolic 3D, CNC Perforated"],["Fabrication Technologies","CNC Turret Punching, Laser Cutting, 3D Brake Forming, Robotic TIG Stud Welding"],["Fire Reaction Classification","Class A1 \/ A2 GB 8624 \/ EN 13501-1"],["Wind Load Sustained Pressure","2.5mm: 3.8 kPa \uff5c 3.0mm: 5.2 kPa Super-Tower (ASTM E330 \/ EN 12179)"],["Tensile Strength (Rm)","145\u2013180 MPa (AA3003-H24) \uff5c 215\u2013265 MPa (AA5052-H32)"],["Yield Strength (Rp0.2)","\u2265 115 MPa (AA3003-H24) \uff5c \u2265 160 MPa (AA5052-H32)"],["Elongation at Break (A50)","\u2265 8% (AA3003) \uff5c \u2265 10% (AA5052)"],["Surface Coating Systems","3-Coat 70% PVDF (35\u03bcm), Architectural Powder (60-80\u03bcm), Class I Anodized (25\u03bcm)"],["Salt Spray Resistance","ASTM B117 4,000h: Zero blistering, scribe creep < 1.0mm (3.0mm < 0.5mm)"],["Color & Gloss Retention","AAMA 2605 10-Yr Florida: \u0394E < 3.0 Hunters, Gloss Retention > 80%"],["Acoustic Transmission Loss","Rw 28 dB (2.5mm) \uff5c Rw 32 dB (3.0mm) \uff5c Up to 48 dB with insulated back-pan"],["Mounting Typologies","Open-Joint Drained (TYPE 01), Weatherproof Sealed (TYPE 02), Hook-On Cassette (TYPE 03)"]],"cards":[{"title":"Cassette & Stiffener Schematic","tag":"LOD 400","caption":"Robotic-welded channel stiffeners every 500mm eliminate optical oil-canning"},{"title":"Thermal Expansion Calc","tag":"ENG-NOTE-02","caption":"Aluminum linear expansion rate is 2.4 mm\/m at \u0394T = 100\u00b0C. All fixing bracket slots feature 6mm ovalized thermal glide tolerances to prevent buckling."},{"title":"LEED v4 Green Credit","tag":"ENG-NOTE-03","caption":"Contains up to 45% post-industrial recycled aluminum billet. 100% infinitely recyclable at building decommissioning with negligible carbon degradation."}]};
   // jsPDF default font only supports Latin-1; lazy load CJK font if needed
   var FONT_URL = 'https://cdn.jsdelivr.net/gh/StellarCN/scp_zh@master/fonts/SimHei.ttf';
   var fontPromise = null;
@@ -1317,14 +1325,6 @@ document.addEventListener('DOMContentLoaded', function () {
           </p>
           <p class="font-body-md text-body-md text-slate-300 max-w-md">
             Pioneering manufacturer of precision-engineered architectural metal envelopes, solid aluminum cladding, and adaptive facade systems. Anchored in China&#039;s world-class industrial manufacturing ecosystem and advanced supply chain, Aluviona delivers cutting-edge metallurgical engineering certified to international ASTM &amp; EN standards—built for landmark architecture worldwide.          </p>
-          <!-- Social Media Icons for International B2B Reach -->
-          <div class="space-y-2 pt-2">
-            <span
-              class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider block font-semibold">Global
-              Social &amp; Project Channels</span>
-            <div class="flex items-center gap-2">
-                          </div>
-          </div>
           <div class="flex flex-wrap gap-space-sm pt-space-xs">
                         <span
               class="inline-flex items-center gap-1.5 font-label-sm text-label-sm px-space-sm py-space-xs bg-white/10 text-white uppercase rounded">
@@ -1399,7 +1399,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="font-label-sm text-label-sm space-y-space-xs text-slate-300">
                         <p class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-base text-secondary-fixed shrink-0">location_on</span>
-                            <span>No. 8, Yinque Rd, Lu&#039;an Economic Development Zone, Jin&#039;an District, Lu&#039;an, Anhui, China</span>
+                            <span>No. 8-1, Yinque Rd, Lu&#039;an Economic Development Zone, Luan, Anhui</span>
             </p>
                         <p class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-base text-secondary-fixed shrink-0">call</span>
@@ -1417,7 +1417,95 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
       </div>
-      <!-- Bottom Legal & Copyright -->
+      <!-- Social Media Showcase Bar (Styled per Reference) -->
+                  <div class="py-10 border-t border-white/10 relative">
+        <div class="max-w-2xl mx-auto flex flex-col items-center text-center">
+          <!-- Section Tag & Title -->
+          <span class="inline-block font-label-sm text-[11px] uppercase tracking-widest font-semibold text-secondary-fixed bg-secondary-fixed/10 px-3.5 py-1 rounded-full mb-2.5 border border-secondary-fixed/20">
+            Stay Connected          </span>
+          <h3 class="font-headline-sm text-xl sm:text-2xl font-bold text-white tracking-tight">
+            Connect With Our Global Media Network          </h3>
+          <p class="font-body-sm text-xs sm:text-[13px] text-slate-300 mt-1.5 max-w-md mx-auto leading-relaxed">
+            Follow Aluviona across international architectural channels for latest technical bulletins, project case studies, and engineering updates.          </p>
+
+          <!-- Social Icons Capsule Container -->
+          <div class="w-full mt-6 bg-slate-950/70 border border-slate-800/90 rounded-2xl p-3.5 sm:p-4 shadow-2xl backdrop-blur-md">
+            <div class="flex items-center justify-between gap-1 sm:gap-2">
+                            <a href="https://www.instagram.com/aluviona_facades" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on Instagram"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/instagram.png" alt="Instagram"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-pink-400 transition-colors tracking-tight">
+                  Ins                </span>
+              </a>
+                            <a href="https://www.tiktok.com/@aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on TikTok"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/tiktok.png" alt="TikTok"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-cyan-400 transition-colors tracking-tight">
+                  TikTok                </span>
+              </a>
+                            <a href="https://www.youtube.com/@aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on YouTube"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/youtube.png" alt="YouTube"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-red-400 transition-colors tracking-tight">
+                  YouTube                </span>
+              </a>
+                            <a href="https://x.com/aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on X (Twitter)"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/x.png" alt="X (Twitter)"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-white transition-colors tracking-tight">
+                  X                </span>
+              </a>
+                            <a href="https://www.facebook.com/aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on Facebook"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/facebook.png" alt="Facebook"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-blue-400 transition-colors tracking-tight">
+                  FB                </span>
+              </a>
+                            <a href="https://www.linkedin.com/company/aluviona/" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on LinkedIn"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/linkedin.png" alt="LinkedIn"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-sky-400 transition-colors tracking-tight">
+                  LinkedIn                </span>
+              </a>
+                            <a href="https://wa.me/8618930079759" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on WhatsApp"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/whatsapp.png" alt="WhatsApp"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-emerald-400 transition-colors tracking-tight">
+                  WA                </span>
+              </a>
+                          </div>
+          </div>
+        </div>
+      </div>
+            <!-- Bottom Legal & Copyright -->
       <div
         class="pt-space-lg border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-space-md">
         <p class="font-label-sm text-label-sm text-slate-400">© 2026 Aluviona Architectural Metal Solutions Co., Ltd. All rights reserved.</p>
@@ -1486,7 +1574,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       var acceptBtn = document.getElementById('cookie-accept-all');
       var essentialBtn = document.getElementById('cookie-essential-only');
-      if (acceptBtn) acceptBtn.addEventListener('click', function () { dismiss('accepted'); });
+      if (acceptBtn) acceptBtn.addEventListener('click', function () {
+        dismiss('accepted');
+        if (window.aluvionaLoadGtm) window.aluvionaLoadGtm();
+      });
       if (essentialBtn) essentialBtn.addEventListener('click', function () { dismiss('essential'); });
     })();
   </script>

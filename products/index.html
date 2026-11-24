@@ -4,12 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <!-- Google Tag Manager -->
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M836KPG9"></script>
+  <!-- Google Tag Manager (Loaded strictly upon user cookie consent, GDPR / ePrivacy compliant) -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    window.aluvionaLoadGtm = function () {
+      if (window.__aluvionaGtmLoaded) return;
+      window.__aluvionaGtmLoaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-M836KPG9';
+      document.head.appendChild(s);
+    };
+    (function () {
+      var consent = null;
+      try { consent = localStorage.getItem('aluviona_cookie_consent'); } catch (e) {}
+      if (consent === 'accepted') window.aluvionaLoadGtm();
+    })();
   </script>
   <!-- End Google Tag Manager -->
   <link rel="icon" type="image/svg+xml" href="/wp-content/themes/alumax/assets/images/favicon.svg">
@@ -126,9 +137,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 })();</script></head>
 
 <body class="archive post-type-archive post-type-archive-product wp-theme-alumax bg-surface font-body-md text-on-surface antialiased selection:bg-secondary selection:text-white">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M836KPG9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
     <header
     class="fixed top-0 left-0 right-0 z-50 bg-[#0d1b2a]/95 backdrop-blur-xl border-b border-white/10 transition-all">
     <div
@@ -399,7 +407,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 class="w-full appearance-none bg-none bg-surface-container px-3 py-2 rounded font-label-sm text-label-sm text-on-surface cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary pr-8"
                 id="filter-fire">
                 <option value="all">Fire Rating: All Standards</option>
-                <option value="A2">EN 13501-1 Class A2-s1, d0</option>
+                <option value="A2">Class A1 / A2 GB 8624 / EN 13501-1</option>
                 <option value="A1">ASTM E84 Non-Combustible</option>
                 <option value="B1">Class B1 Flame Retardant</option>
               </select>
@@ -426,7 +434,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 class="w-full appearance-none bg-none bg-surface-container px-3 py-2 rounded font-label-sm text-label-sm text-on-surface cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary pr-8"
                 id="filter-coating">
                 <option value="all">Surface Coating: All Finishes</option>
-                <option value="pvdf">PPG Duranar® PVDF 3-Coat (70% Kynar)</option>
+                <option value="pvdf">3-Coat 70% PVDF Fluoropolymer</option>
                 <option value="anodized">Class I Anodized (25μm Marine)</option>
                 <option value="powder">AAMA 2605 Architectural Powder</option>
                 <option value="wood-stone">Sublimated Stone / Woodgrain</option>
@@ -547,7 +555,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div
   class="product-item product-card--standard bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group flex flex-col h-full"
   data-categories="exterior-cladding"
-  data-specs="max sheet size 2,200mm × 6,000mm | substrate alloy aa3003-h24 / aa5052-h32 | surface coating pvdf 3-coat (70% kynar 500) | fire &amp; tensile class a (a2-s1,d0) / tensile ≥ 140 mpa |">
+  data-specs="max sheet size 2,200mm × 6,000mm | substrate alloy aa3003-h24 / aa5052-h32 | surface coating pvdf 3-coat (70% pvdf resin) | fire &amp; tensile class a1 / a2 gb 8624 / en 13501-1 ｜ tensile ≥ 140 mpa |">
   <div class="product-card-row flex flex-col flex-1 h-full">
     <div class="product-card-media relative aspect-[16/10] overflow-hidden bg-surface-container shrink-0">
       <img alt="Solid Aluminum Cladding Panels"
@@ -580,12 +588,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
           <span class="spec-name text-on-surface-variant block text-[10.5px] uppercase tracking-wider truncate">Surface Coating:</span>
-          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="PVDF 3-Coat (70% Kynar 500)">PVDF 3-Coat (70% Kynar 500)</span>
+          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="PVDF 3-Coat (70% PVDF resin)">PVDF 3-Coat (70% PVDF resin)</span>
         </div>
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
           <span class="spec-name text-on-surface-variant block text-[10.5px] uppercase tracking-wider truncate">Fire &amp; Tensile:</span>
-          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Class A (A2-s1,d0) / Tensile ≥ 140 MPa">Class A (A2-s1,d0) / Tensile ≥ 140 MPa</span>
+          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Class A1 / A2 GB 8624 / EN 13501-1 ｜ Tensile ≥ 140 MPa">Class A1 / A2 GB 8624 / EN 13501-1 ｜ Tensile ≥ 140 MPa</span>
         </div>
               </div>
             <div class="card-footer mt-auto pt-3 border-t border-surface-container-high/60">
@@ -602,7 +610,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div
   class="product-item product-card--standard bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group flex flex-col h-full"
   data-categories="insulated-composites"
-  data-specs="thermal insulation k ≤ 0.022 w/(m·k) (pir core) | fire rating class a / en a2-s1,d0 | wind resistance ≥ 5.0 kpa (cwct certified) | coating warranty pvdf 35μm / 20-year warranty |">
+  data-specs="thermal insulation k ≤ 0.022 w/(m·k) (pir core) | fire rating class a1 / a2 gb 8624 / en 13501-1 | wind resistance ≥ 5.0 kpa (cwct certified) | coating warranty pvdf 35μm / 30-year warranty |">
   <div class="product-card-row flex flex-col flex-1 h-full">
     <div class="product-card-media relative aspect-[16/10] overflow-hidden bg-surface-container shrink-0">
       <img alt="Pre-Insulated Integrated Wall Panels"
@@ -630,7 +638,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
           <span class="spec-name text-on-surface-variant block text-[10.5px] uppercase tracking-wider truncate">Fire Rating:</span>
-          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Class A / EN A2-s1,d0">Class A / EN A2-s1,d0</span>
+          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Class A1 / A2 GB 8624 / EN 13501-1">Class A1 / A2 GB 8624 / EN 13501-1</span>
         </div>
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
@@ -640,7 +648,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
           <span class="spec-name text-on-surface-variant block text-[10.5px] uppercase tracking-wider truncate">Coating Warranty:</span>
-          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="PVDF 35μm / 20-Year Warranty">PVDF 35μm / 20-Year Warranty</span>
+          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="PVDF 35μm / 30-Year Warranty">PVDF 35μm / 30-Year Warranty</span>
         </div>
               </div>
             <div class="card-footer mt-auto pt-3 border-t border-surface-container-high/60">
@@ -657,7 +665,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div
   class="product-item product-card--standard bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group flex flex-col h-full"
   data-categories="exterior-cladding"
-  data-specs="alloy substrate aa3003-h14 / aa5052-h32 solid aluminum | panel caliber 1.5mm / 2.0mm / 2.5mm / 3.0mm | coating system factory roller-coated pvdf / pe / hdp (≥ 25–35μm) | fire &amp; durability class a non-combustible | 20-year warranty |">
+  data-specs="alloy substrate aa3003-h14 / aa5052-h32 solid aluminum | panel caliber 1.5mm / 2.0mm / 2.5mm / 3.0mm | coating system factory roller-coated pvdf / pe / hdp (≥ 25–35μm) | fire &amp; durability class a1 / a2 gb 8624 / en 13501-1 | 30-year warranty |">
   <div class="product-card-row flex flex-col flex-1 h-full">
     <div class="product-card-media relative aspect-[16/10] overflow-hidden bg-surface-container shrink-0">
       <img alt="Roll-Coated Aluminum Panels"
@@ -674,7 +682,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           title="Roll-Coated Aluminum Panels">
           Roll-Coated Aluminum Panels        </h4>
         <div class="card-desc font-body-sm text-body-sm text-on-surface-variant line-clamp-2 min-h-[2.5rem]">
-          Automated roll-coated architectural aluminum panels delivering microscopic film uniformity, zero orange peel, and 20-year PVDF durability. Contact Aluviona.        </div>
+          Automated roll-coated architectural aluminum panels delivering microscopic film uniformity, zero orange peel, and 30-year PVDF durability. Contact Aluviona.        </div>
       </div>
             <div class="grid grid-cols-2 gap-2.5 font-label-sm text-label-sm my-4">
                 <div
@@ -695,7 +703,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
           <span class="spec-name text-on-surface-variant block text-[10.5px] uppercase tracking-wider truncate">Fire &amp; Durability:</span>
-          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Class A Non-Combustible | 20-Year Warranty">Class A Non-Combustible | 20-Year Warranty</span>
+          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Class A1 / A2 GB 8624 / EN 13501-1 | 30-Year Warranty">Class A1 / A2 GB 8624 / EN 13501-1 | 30-Year Warranty</span>
         </div>
               </div>
             <div class="card-footer mt-auto pt-3 border-t border-surface-container-high/60">
@@ -712,7 +720,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div
   class="product-item product-card--standard bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group flex flex-col h-full"
   data-categories="insulated-composites"
-  data-specs="core architecture 100% sinusoidal corrugated aluminum wave | panel thickness 4mm / 6mm / 8mm / 10mm (custom gauges) | areal weight &amp; stiffness 4.3 kg/m² (60% lighter than solid plate) | fire classification en 13501-1 class a2-s1,d0 / astm e84 class a |">
+  data-specs="core architecture 100% sinusoidal corrugated aluminum wave | panel thickness 4mm / 6mm / 8mm / 10mm (custom gauges) | areal weight &amp; stiffness 4.3 kg/m² (60% lighter than solid plate) | fire classification class a1 / a2 gb 8624 / en 13501-1 |">
   <div class="product-card-row flex flex-col flex-1 h-full">
     <div class="product-card-media relative aspect-[16/10] overflow-hidden bg-surface-container shrink-0">
       <img alt="Corrugated Core Aluminum Composite Panels"
@@ -750,7 +758,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
           <span class="spec-name text-on-surface-variant block text-[10.5px] uppercase tracking-wider truncate">Fire Classification:</span>
-          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="EN 13501-1 Class A2-s1,d0 / ASTM E84 Class A">EN 13501-1 Class A2-s1,d0 / ASTM E84 Class A</span>
+          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Class A1 / A2 GB 8624 / EN 13501-1">Class A1 / A2 GB 8624 / EN 13501-1</span>
         </div>
               </div>
             <div class="card-footer mt-auto pt-3 border-t border-surface-container-high/60">
@@ -767,7 +775,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div
   class="product-item product-card--standard bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group flex flex-col h-full"
   data-categories="exterior-cladding"
-  data-specs="steel substrate galvanized (z275) / galvalume / cor-ten / 316l | sheet gauge 0.8mm – 3.0mm (standard 1.0–2.0mm) | rigidity &amp; wind 210 gpa modulus ｜ design wind ≤ 5.5 kpa | coating &amp; fire 70% pvdf / smp ｜ class a1/a2 non-combustible |">
+  data-specs="steel substrate galvanized (z275) / galvalume / cor-ten / 316l | sheet gauge 0.8mm – 3.0mm (standard 1.0–2.0mm) | rigidity &amp; wind 210 gpa modulus ｜ design wind ≤ 5.5 kpa | coating &amp; fire 70% pvdf / smp ｜ class a1 / a2 gb 8624 / en 13501-1 |">
   <div class="product-card-row flex flex-col flex-1 h-full">
     <div class="product-card-media relative aspect-[16/10] overflow-hidden bg-surface-container shrink-0">
       <img alt="Architectural Steel Wall Panels"
@@ -805,7 +813,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
           <span class="spec-name text-on-surface-variant block text-[10.5px] uppercase tracking-wider truncate">Coating &amp; Fire:</span>
-          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="70% PVDF / SMP ｜ Class A1/A2 Non-Combustible">70% PVDF / SMP ｜ Class A1/A2 Non-Combustible</span>
+          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="70% PVDF / SMP ｜ Class A1 / A2 GB 8624 / EN 13501-1">70% PVDF / SMP ｜ Class A1 / A2 GB 8624 / EN 13501-1</span>
         </div>
               </div>
             <div class="card-footer mt-auto pt-3 border-t border-surface-container-high/60">
@@ -877,7 +885,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div
   class="product-item product-card--standard bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group flex flex-col h-full"
   data-categories="ceilings-screens"
-  data-specs="substrates &amp; gauge aa3003-h14 / aa5052-h32 / steel (0.8–3.0mm) | custom typologies wave baffles / curved vaults / sculptural free-form | acoustic control nrc 0.75 – 0.90 (micro-perf + soundtex fleece) | fire &amp; seismic class a1 / a2 non-combustible ｜ seismic cat. d–f |">
+  data-specs="substrates &amp; gauge aa3003-h14 / aa5052-h32 / steel (0.8–3.0mm) | custom typologies wave baffles / curved vaults / sculptural free-form | acoustic control nrc 0.75 – 0.90 (micro-perf + soundtex fleece) | fire &amp; seismic class a1 / a2 gb 8624 / en 13501-1 ｜ seismic cat. d–f |">
   <div class="product-card-row flex flex-col flex-1 h-full">
     <div class="product-card-media relative aspect-[16/10] overflow-hidden bg-surface-container shrink-0">
       <img alt="Architectural Metal Ceiling Systems"
@@ -915,7 +923,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
           <span class="spec-name text-on-surface-variant block text-[10.5px] uppercase tracking-wider truncate">Fire &amp; Seismic:</span>
-          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Class A1 / A2 Non-Combustible ｜ Seismic Cat. D–F">Class A1 / A2 Non-Combustible ｜ Seismic Cat. D–F</span>
+          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Class A1 / A2 GB 8624 / EN 13501-1 ｜ Seismic Cat. D–F">Class A1 / A2 GB 8624 / EN 13501-1 ｜ Seismic Cat. D–F</span>
         </div>
               </div>
             <div class="card-footer mt-auto pt-3 border-t border-surface-container-high/60">
@@ -987,7 +995,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <div
   class="product-item product-card--standard bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all group flex flex-col h-full"
   data-categories="exterior-cladding"
-  data-specs="panel thickness 2mm, 3mm, 4mm, 5mm, 6mm, 8mm, 10mm (customizable) | panel width 1220mm, 1250mm, 1500mm, 2000mm | aluminum raw material high-quality series 1100, 3003, 5005 | coating &amp; finishes ppg / akzonobel pvdf, pe, acrylic &amp; specialty |">
+  data-specs="panel thickness 2mm, 3mm, 4mm, 5mm, 6mm, 8mm, 10mm (customizable) | panel width 1220mm, 1250mm, 1500mm, 2000mm | aluminum raw material high-quality series 1100, 3003, 5005 | coating &amp; finishes premium pvdf, pe, acrylic &amp; specialty finishes |">
   <div class="product-card-row flex flex-col flex-1 h-full">
     <div class="product-card-media relative aspect-[16/10] overflow-hidden bg-surface-container shrink-0">
       <img alt="Aluminum Composite Panels"
@@ -1025,7 +1033,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <div
           class="spec-chip bg-surface-container-low p-2 rounded border border-surface-container-high flex flex-col justify-center min-h-[50px]">
           <span class="spec-name text-on-surface-variant block text-[10.5px] uppercase tracking-wider truncate">Coating &amp; Finishes:</span>
-          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="PPG / AkzoNobel PVDF, PE, Acrylic &amp; Specialty">PPG / AkzoNobel PVDF, PE, Acrylic &amp; Specialty</span>
+          <span class="spec-value text-on-surface font-semibold text-xs truncate" title="Premium PVDF, PE, Acrylic &amp; Specialty Finishes">Premium PVDF, PE, Acrylic &amp; Specialty Finishes</span>
         </div>
               </div>
             <div class="card-footer mt-auto pt-3 border-t border-surface-container-high/60">
@@ -1138,7 +1146,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                   </td>
                   <td class="p-4 text-on-surface-variant">AA3003-H14 / AA5052-H32 (Customized per Project)</td>
                   <td class="p-4">
-                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A (A2-s1,d0)</span>
+                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A1 / A2</span>
                     <span class="font-label-sm text-[11px] text-outline block mt-0.5">EN 13501-1 / ASTM E84</span>
                   </td>
                   <td class="p-4 font-label-sm text-label-sm">6.8 – 8.1 kg/m²</td>
@@ -1154,8 +1162,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                   </td>
                   <td class="p-4 text-on-surface-variant">AA3003-H24 (0.4–1.5mm Skins) + Anodized Hex Core (Foil 0.04–0.06mm, Cell 4–6mm)</td>
                   <td class="p-4">
-                    <span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold block w-fit">Class A2-s1,d0</span>
-                    <span class="font-label-sm text-[11px] text-outline block mt-0.5">EN 13501-1 / GB 8624 A</span>
+                    <span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold block w-fit">Class A1 / A2</span>
+                    <span class="font-label-sm text-[11px] text-outline block mt-0.5">GB 8624 / EN 13501-1</span>
                   </td>
                   <td class="p-4 font-label-sm text-label-sm">5.5 – 6.8 kg/m²</td>
                   <td class="p-4 text-secondary font-semibold">EI ≥ 450 N·m²; unassisted span 2,400mm (Zero oil-canning)</td>
@@ -1170,7 +1178,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                   </td>
                   <td class="p-4 text-on-surface-variant">AL3003 H16-H18 (0.5–1.0mm Face) + 0.15–0.3mm Wave Core</td>
                   <td class="p-4">
-                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A2 Non-Comb.</span>
+                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A1 / A2</span>
                     <span class="font-label-sm text-[11px] text-outline block mt-0.5">100% Recyclable Metal</span>
                   </td>
                   <td class="p-4 font-label-sm text-label-sm">4.5 – 5.0 kg/m²</td>
@@ -1186,8 +1194,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                   </td>
                   <td class="p-4 text-on-surface-variant">Hot-Dip Galvanized Steel (0.6–1.0mm) + Calcium Silicate / Gypsum / Honeycomb</td>
                   <td class="p-4">
-                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A1 Incomb.</span>
-                    <span class="font-label-sm text-[11px] text-outline block mt-0.5">GB 8624 A1 / Zero Smoke</span>
+                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A1 / A2</span>
+                    <span class="font-label-sm text-[11px] text-outline block mt-0.5">GB 8624 / EN 13501-1</span>
                   </td>
                   <td class="p-4 font-label-sm text-label-sm">12.5 – 16.0 kg/m²</td>
                   <td class="p-4">High surface hardness, scratch/impact resistant; tongue-and-groove dry lock</td>
@@ -1202,7 +1210,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                   </td>
                   <td class="p-4 text-on-surface-variant">Hydrophobic Rockwool (120kg/m³) + Metal Face</td>
                   <td class="p-4">
-                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A1 Incomb.</span>
+                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A1 / A2</span>
                     <span class="font-label-sm text-[11px] text-outline block mt-0.5">Zero Flame Spread</span>
                   </td>
                   <td class="p-4 font-label-sm text-label-sm">14.5 – 18.0 kg/m²</td>
@@ -1218,7 +1226,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                   </td>
                   <td class="p-4 text-on-surface-variant">Extruded Aluminum Alloy 6063-T5 / T6 Profiles</td>
                   <td class="p-4">
-                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A1 Non-Comb.</span>
+                    <span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold block w-fit">Class A1 / A2</span>
                     <span class="font-label-sm text-[11px] text-outline block mt-0.5">Structural Aluminum</span>
                   </td>
                   <td class="p-4 font-label-sm text-label-sm">8.5 – 16.0 kg/m²</td>
@@ -1251,7 +1259,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <span class="px-2 py-0.5 bg-secondary/10 text-secondary font-label-sm text-xs rounded font-semibold uppercase">Fire Reaction</span>
               </div>
               <div class="font-label-md text-base font-bold text-on-surface">GB 8624 &amp; EN 13501-1</div>
-              <div class="font-label-sm text-xs font-semibold text-secondary">Class A1 / Class A2-s1, d0</div>
+              <div class="font-label-sm text-xs font-semibold text-secondary">Class A1 / A2</div>
               <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
                 NFTC tested. Non-combustible core, FIGRA ≤ 120 W/s, zero toxic smoke &amp; flaming droplets for high-rise egress compliance.
               </p>
@@ -1299,7 +1307,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                 <span class="px-2 py-0.5 bg-secondary/10 text-secondary font-label-sm text-xs rounded font-semibold uppercase">Coating Standard</span>
               </div>
               <div class="font-label-md text-base font-bold text-on-surface">AAMA 2605 / 70% PVDF</div>
-              <div class="font-label-sm text-xs font-semibold text-secondary">Genuine PPG &amp; AkzoNobel Systems</div>
+              <div class="font-label-sm text-xs font-semibold text-secondary">30-Year Coating Warranty</div>
               <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
                 10-Year South Florida exposure test qualified. 3-coat 2-bake vertical line coating with color retention ΔE &lt; 3.0 over 20–30 years.
               </p>
@@ -1350,7 +1358,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
               <div>
                 <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Need Certified Laboratory Reports for Project Tender Submittals?</h4>
                 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-3xl">
-                  We supply complete formal test reports, including National Fireproof Building Materials (NFTC) test sheets, PPG &amp; AkzoNobel coating warranties, mill test certificates (EN 10204 3.1 MTC), and structural calculation sheets for commercial tenders.
+                  We supply complete formal test reports, including National Fireproof Building Materials (NFTC) test sheets, PVDF coating performance warranties, mill test certificates (EN 10204 3.1 MTC), and structural calculation sheets for commercial tenders.
                 </p>
               </div>
             </div>
@@ -1683,7 +1691,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             content: `
           <div class="grid grid-cols-2 gap-4 bg-surface-container-low p-4 rounded font-label-sm text-label-sm mb-4">
             <div><strong class="text-secondary">Standard Thickness:</strong> 2.5mm / 3.0mm / 4.0mm</div>
-            <div><strong class="text-secondary">Surface Coating:</strong> 3-Coat 70% Kynar 500 PVDF (35μm)</div>
+            <div><strong class="text-secondary">Surface Coating:</strong> 3-Coat 70% PVDF Fluoropolymer (35μm)</div>
             <div><strong class="text-secondary">Fire Classification:</strong> EN 13501-1 Class A1 / A2</div>
             <div><strong class="text-secondary">Standard ASTM:</strong> ASTM B209M / AAMA 2605</div>
           </div>
@@ -1829,14 +1837,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           </p>
           <p class="font-body-md text-body-md text-slate-300 max-w-md">
             Pioneering manufacturer of precision-engineered architectural metal envelopes, solid aluminum cladding, and adaptive facade systems. Anchored in China&#039;s world-class industrial manufacturing ecosystem and advanced supply chain, Aluviona delivers cutting-edge metallurgical engineering certified to international ASTM &amp; EN standards—built for landmark architecture worldwide.          </p>
-          <!-- Social Media Icons for International B2B Reach -->
-          <div class="space-y-2 pt-2">
-            <span
-              class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider block font-semibold">Global
-              Social &amp; Project Channels</span>
-            <div class="flex items-center gap-2">
-                          </div>
-          </div>
           <div class="flex flex-wrap gap-space-sm pt-space-xs">
                         <span
               class="inline-flex items-center gap-1.5 font-label-sm text-label-sm px-space-sm py-space-xs bg-white/10 text-white uppercase rounded">
@@ -1911,7 +1911,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           <div class="font-label-sm text-label-sm space-y-space-xs text-slate-300">
                         <p class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-base text-secondary-fixed shrink-0">location_on</span>
-                            <span>No. 8, Yinque Rd, Lu&#039;an Economic Development Zone, Jin&#039;an District, Lu&#039;an, Anhui, China</span>
+                            <span>No. 8-1, Yinque Rd, Lu&#039;an Economic Development Zone, Luan, Anhui</span>
             </p>
                         <p class="flex items-start gap-2">
                             <span class="material-symbols-outlined text-base text-secondary-fixed shrink-0">call</span>
@@ -1929,7 +1929,95 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
           </div>
         </div>
       </div>
-      <!-- Bottom Legal & Copyright -->
+      <!-- Social Media Showcase Bar (Styled per Reference) -->
+                  <div class="py-10 border-t border-white/10 relative">
+        <div class="max-w-2xl mx-auto flex flex-col items-center text-center">
+          <!-- Section Tag & Title -->
+          <span class="inline-block font-label-sm text-[11px] uppercase tracking-widest font-semibold text-secondary-fixed bg-secondary-fixed/10 px-3.5 py-1 rounded-full mb-2.5 border border-secondary-fixed/20">
+            Stay Connected          </span>
+          <h3 class="font-headline-sm text-xl sm:text-2xl font-bold text-white tracking-tight">
+            Connect With Our Global Media Network          </h3>
+          <p class="font-body-sm text-xs sm:text-[13px] text-slate-300 mt-1.5 max-w-md mx-auto leading-relaxed">
+            Follow Aluviona across international architectural channels for latest technical bulletins, project case studies, and engineering updates.          </p>
+
+          <!-- Social Icons Capsule Container -->
+          <div class="w-full mt-6 bg-slate-950/70 border border-slate-800/90 rounded-2xl p-3.5 sm:p-4 shadow-2xl backdrop-blur-md">
+            <div class="flex items-center justify-between gap-1 sm:gap-2">
+                            <a href="https://www.instagram.com/aluviona_facades" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on Instagram"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/instagram.png" alt="Instagram"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-pink-400 transition-colors tracking-tight">
+                  Ins                </span>
+              </a>
+                            <a href="https://www.tiktok.com/@aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on TikTok"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/tiktok.png" alt="TikTok"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-cyan-400 transition-colors tracking-tight">
+                  TikTok                </span>
+              </a>
+                            <a href="https://www.youtube.com/@aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on YouTube"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/youtube.png" alt="YouTube"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-red-400 transition-colors tracking-tight">
+                  YouTube                </span>
+              </a>
+                            <a href="https://x.com/aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on X (Twitter)"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/x.png" alt="X (Twitter)"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-white transition-colors tracking-tight">
+                  X                </span>
+              </a>
+                            <a href="https://www.facebook.com/aluviona" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on Facebook"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/facebook.png" alt="Facebook"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-blue-400 transition-colors tracking-tight">
+                  FB                </span>
+              </a>
+                            <a href="https://www.linkedin.com/company/aluviona/" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on LinkedIn"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/linkedin.png" alt="LinkedIn"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-sky-400 transition-colors tracking-tight">
+                  LinkedIn                </span>
+              </a>
+                            <a href="https://wa.me/8618930079759" target="_blank" rel="noopener noreferrer"
+                 aria-label="Aluviona on WhatsApp"
+                 class="group flex flex-col items-center flex-1 focus:outline-none transition-transform">
+                <div class="relative flex items-center justify-center transition-transform duration-200 group-hover:scale-110 group-active:scale-95">
+                  <img src="/wp-content/themes/alumax/assets/images/social/whatsapp.png" alt="WhatsApp"
+                       class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md rounded-xl">
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-1.5 font-medium group-hover:text-emerald-400 transition-colors tracking-tight">
+                  WA                </span>
+              </a>
+                          </div>
+          </div>
+        </div>
+      </div>
+            <!-- Bottom Legal & Copyright -->
       <div
         class="pt-space-lg border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-space-md">
         <p class="font-label-sm text-label-sm text-slate-400">© 2026 Aluviona Architectural Metal Solutions Co., Ltd. All rights reserved.</p>
@@ -1998,7 +2086,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       }
       var acceptBtn = document.getElementById('cookie-accept-all');
       var essentialBtn = document.getElementById('cookie-essential-only');
-      if (acceptBtn) acceptBtn.addEventListener('click', function () { dismiss('accepted'); });
+      if (acceptBtn) acceptBtn.addEventListener('click', function () {
+        dismiss('accepted');
+        if (window.aluvionaLoadGtm) window.aluvionaLoadGtm();
+      });
       if (essentialBtn) essentialBtn.addEventListener('click', function () { dismiss('essential'); });
     })();
   </script>
