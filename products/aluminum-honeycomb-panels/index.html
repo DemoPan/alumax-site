@@ -543,11 +543,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <div class="flex flex-col mb-10">
       <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Technical Specifications</span>
       <h2 class="font-headline font-bold text-2xl sm:text-3xl lg:text-4xl text-primary tracking-tight">
-        Product Parameters &amp; Engineering Details      </h2>
+        Product Parameters      </h2>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
       <!-- Left: Engineering Spec Table -->
-      <div class="lg:col-span-7 flex flex-col bg-surface-container-lowest shadow-sm p-6 sm:p-8">
+      <div class="lg:col-span-12 flex flex-col bg-surface-container-lowest shadow-sm p-6 sm:p-8">
         <div class="flex items-center justify-between pb-4 border-b border-surface-variant mb-4">
           <span class="font-headline font-bold text-base text-primary">Aluminum Honeycomb Panels Engineering Specifications</span>
                       <span class="font-label text-xs text-on-surface-variant uppercase">ASTM C393 / EN 13501-1</span>
@@ -627,16 +627,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
               </a>
                       </div>
               </div>
-            <!-- Right: Engineering Schematic Graphics -->
-      <div class="lg:col-span-5 flex flex-col gap-6">
-          <div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
-                          <div class="bg-surface-container-lowest p-4 shadow-sm flex flex-col">
-                <div class="flex items-center justify-between mb-3">
-                  <span class="font-headline font-semibold text-xs text-on-surface">EI 450 N·m² vs Solid Plate</span>
-                                  </div>
-                                              </div>
-                      </div>
-      </div>
           </div>
   </div>
 </section>
@@ -979,7 +969,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   if (!window.jspdf) return;
-  var DATA = {"product":"Aluminum Honeycomb Panels","date":"2026-11-25","eyebrow":"Technical Specifications","title":"Product Parameters & Engineering Details","tableTitle":"Aluminum Honeycomb Panels Engineering Specifications","tableRef":"ASTM C393 \/ EN 13501-1","rows":[["Facing Metal Options","AA3003-H24 Aluminum, Stainless Steel, Titanium-Zinc, Natural Copper"],["Facing Sheet Caliber","Top: 0.4 mm \u2013 1.5 mm \/ Back: 0.4 mm \u2013 1.0 mm (AA3003-H24)"],["Honeycomb Core Material","Continuous hexagonal cellular core in anodized aluminum foil"],["Honeycomb Foil Thickness","0.04 mm \u2013 0.06 mm"],["Honeycomb Cell Size","4 mm \u2013 6 mm cell dimension"],["Structural Adhesive","Henkel two-component heat-curing polyurethane structural adhesive"],["Bonding Process","Continuous heat-curing roller lamination & vacuum consolidation"],["Standard Panel Thickness","6 mm, 10 mm, 15 mm, 20 mm, 25 mm, 50 mm (Custom up to 100 mm)"],["Maximum Panel Dimensions","Standard: 1,500 \u00d7 4,000 mm \/ Oversized Custom: Up to 2,200 \u00d7 6,000 mm"],["Surface Coating Standard","Architectural 3-Coat 70% PVDF (\u2265 35\u03bcm) or Anodized Class I"],["Flexural Rigidity (EI)","EI \u2265 450 N\u00b7m\u00b2 (20mm panel, ASTM C393)"],["Roller Drum Peel Strength","\u2265 120 N\u00b7mm\/mm (ASTM D1781)"],["Compressive Core Strength","\u2265 1.8 MPa (ASTM C365)"],["Reaction to Fire Classification","Class A1 \/ A2 GB 8624 \/ EN 13501-1"],["Architectural Applications","Exterior curtain walls, interior wall cladding, ceilings, rail transit interiors, industrial machine enclosures"],["Design Service Life","20+ Year Architectural Durability Warranty against delamination, fading, and chalking"]],"cards":[{"title":"EI 450 N\u00b7m\u00b2 vs Solid Plate","tag":"","caption":""}]};
+  var DATA = {"product":"Aluminum Honeycomb Panels","date":"2026-11-25","eyebrow":"Technical Specifications","title":"Product Parameters","tableTitle":"Aluminum Honeycomb Panels Engineering Specifications","tableRef":"ASTM C393 \/ EN 13501-1","rows":[["Facing Metal Options","AA3003-H24 Aluminum, Stainless Steel, Titanium-Zinc, Natural Copper"],["Facing Sheet Caliber","Top: 0.4 mm \u2013 1.5 mm \/ Back: 0.4 mm \u2013 1.0 mm (AA3003-H24)"],["Honeycomb Core Material","Continuous hexagonal cellular core in anodized aluminum foil"],["Honeycomb Foil Thickness","0.04 mm \u2013 0.06 mm"],["Honeycomb Cell Size","4 mm \u2013 6 mm cell dimension"],["Structural Adhesive","Henkel two-component heat-curing polyurethane structural adhesive"],["Bonding Process","Continuous heat-curing roller lamination & vacuum consolidation"],["Standard Panel Thickness","6 mm, 10 mm, 15 mm, 20 mm, 25 mm, 50 mm (Custom up to 100 mm)"],["Maximum Panel Dimensions","Standard: 1,500 \u00d7 4,000 mm \/ Oversized Custom: Up to 2,200 \u00d7 6,000 mm"],["Surface Coating Standard","Architectural 3-Coat 70% PVDF (\u2265 35\u03bcm) or Anodized Class I"],["Flexural Rigidity (EI)","EI \u2265 450 N\u00b7m\u00b2 (20mm panel, ASTM C393)"],["Roller Drum Peel Strength","\u2265 120 N\u00b7mm\/mm (ASTM D1781)"],["Compressive Core Strength","\u2265 1.8 MPa (ASTM C365)"],["Reaction to Fire Classification","Class A1 \/ A2 GB 8624 \/ EN 13501-1"],["Architectural Applications","Exterior curtain walls, interior wall cladding, ceilings, rail transit interiors, industrial machine enclosures"],["Design Service Life","20+ Year Architectural Durability Warranty against delamination, fading, and chalking"]],"cards":[]};
   // jsPDF default font only supports Latin-1; lazy load CJK font if needed
   var FONT_URL = 'https://cdn.jsdelivr.net/gh/StellarCN/scp_zh@master/fonts/SimHei.ttf';
   var fontPromise = null;

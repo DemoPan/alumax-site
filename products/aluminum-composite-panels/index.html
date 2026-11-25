@@ -543,11 +543,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <div class="flex flex-col mb-10">
       <span class="font-label text-xs font-semibold tracking-widest text-secondary uppercase mb-2">Technical Specifications</span>
       <h2 class="font-headline font-bold text-2xl sm:text-3xl lg:text-4xl text-primary tracking-tight">
-        Product Parameters &amp; Engineering Details      </h2>
+        Product Parameters      </h2>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
       <!-- Left: Engineering Spec Table -->
-      <div class="lg:col-span-7 flex flex-col bg-surface-container-lowest shadow-sm p-6 sm:p-8">
+      <div class="lg:col-span-12 flex flex-col bg-surface-container-lowest shadow-sm p-6 sm:p-8">
         <div class="flex items-center justify-between pb-4 border-b border-surface-variant mb-4">
           <span class="font-headline font-bold text-base text-primary">Aluminum Composite Panels Engineering Specifications</span>
                       <span class="font-label text-xs text-on-surface-variant uppercase">ASTM D1781 / EN 13501-1 / AAMA 2605</span>
@@ -611,16 +611,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
               </a>
                       </div>
               </div>
-            <!-- Right: Engineering Schematic Graphics -->
-      <div class="lg:col-span-5 flex flex-col gap-6">
-          <div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
-                          <div class="bg-surface-container-lowest p-4 shadow-sm flex flex-col">
-                <div class="flex items-center justify-between mb-3">
-                  <span class="font-headline font-semibold text-xs text-on-surface">92% Inorganic Mineral Matrix</span>
-                                  </div>
-                                              </div>
-                      </div>
-      </div>
           </div>
   </div>
 </section>
@@ -1010,7 +1000,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   if (!window.jspdf) return;
-  var DATA = {"product":"Aluminum Composite Panels","date":"2026-11-25","eyebrow":"Technical Specifications","title":"Product Parameters & Engineering Details","tableTitle":"Aluminum Composite Panels Engineering Specifications","tableRef":"ASTM D1781 \/ EN 13501-1 \/ AAMA 2605","rows":[["Panel Thickness Range","2 mm, 3 mm, 4 mm, 5 mm, 6 mm, 8 mm, 10 mm (Customizable)"],["Standard Panel Widths","1,220 mm, 1,250 mm, 1,500 mm, 2,000 mm (Custom widths available)"],["Panel Length Range","Custom fabricated per architectural elevation design requirements (Standard: 2,440 mm, 3,050 mm \/ Custom up to 6,000 mm)"],["Color Customization","According to RAL Classic & Design international charts, Pantone, or customer sample matching"],["Aluminum Raw Material","High-quality aluminum series AA1100, AA3003, AA5005 (Skin caliber: 0.20 mm to 0.50 mm)"],["Surface Coating Standards","Architectural-grade 70% PVDF fluoropolymer and powder coating systems (AAMA 2605 & ASTM compliant)"],["Coating Types & Finishes","PVDF (Fluorocarbon), Polyester (PE), Acrylic, Textured\/Stucco (Shark-Skin), Brushed, Mirror, Multi-Color, Chameleon, Scratch-Resistant, Antibacterial, Anti-Static"],["Core Material Options","Standard Polyethylene (PE) Core, Fire-Retardant (FR) Core, A2 Non-Combustible Mineral Core"],["180\u00b0 Drum Peel Adhesion","\u2265 9.0 N\/mm (ASTM D1781 standard requirement \u2265 4.0 N\/mm)"],["Reaction to Fire Rating","Class A1 \/ A2 GB 8624 \/ EN 13501-1"],["Fabrication Capabilities","Cutting, routing, V-grooving, right-angle folding, cold bending, curving, stamping, riveting, bolting"],["Architectural Warranty","15\u201320 Year Manufacturer Warranty against delamination, peeling, and color fading (PVDF)"]],"cards":[{"title":"92% Inorganic Mineral Matrix","tag":"","caption":""}]};
+  var DATA = {"product":"Aluminum Composite Panels","date":"2026-11-25","eyebrow":"Technical Specifications","title":"Product Parameters","tableTitle":"Aluminum Composite Panels Engineering Specifications","tableRef":"ASTM D1781 \/ EN 13501-1 \/ AAMA 2605","rows":[["Panel Thickness Range","2 mm, 3 mm, 4 mm, 5 mm, 6 mm, 8 mm, 10 mm (Customizable)"],["Standard Panel Widths","1,220 mm, 1,250 mm, 1,500 mm, 2,000 mm (Custom widths available)"],["Panel Length Range","Custom fabricated per architectural elevation design requirements (Standard: 2,440 mm, 3,050 mm \/ Custom up to 6,000 mm)"],["Color Customization","According to RAL Classic & Design international charts, Pantone, or customer sample matching"],["Aluminum Raw Material","High-quality aluminum series AA1100, AA3003, AA5005 (Skin caliber: 0.20 mm to 0.50 mm)"],["Surface Coating Standards","Architectural-grade 70% PVDF fluoropolymer and powder coating systems (AAMA 2605 & ASTM compliant)"],["Coating Types & Finishes","PVDF (Fluorocarbon), Polyester (PE), Acrylic, Textured\/Stucco (Shark-Skin), Brushed, Mirror, Multi-Color, Chameleon, Scratch-Resistant, Antibacterial, Anti-Static"],["Core Material Options","Standard Polyethylene (PE) Core, Fire-Retardant (FR) Core, A2 Non-Combustible Mineral Core"],["180\u00b0 Drum Peel Adhesion","\u2265 9.0 N\/mm (ASTM D1781 standard requirement \u2265 4.0 N\/mm)"],["Reaction to Fire Rating","Class A1 \/ A2 GB 8624 \/ EN 13501-1"],["Fabrication Capabilities","Cutting, routing, V-grooving, right-angle folding, cold bending, curving, stamping, riveting, bolting"],["Architectural Warranty","15\u201320 Year Manufacturer Warranty against delamination, peeling, and color fading (PVDF)"]],"cards":[]};
   // jsPDF default font only supports Latin-1; lazy load CJK font if needed
   var FONT_URL = 'https://cdn.jsdelivr.net/gh/StellarCN/scp_zh@master/fonts/SimHei.ttf';
   var fontPromise = null;
